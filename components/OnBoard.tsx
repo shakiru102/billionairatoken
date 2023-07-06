@@ -30,7 +30,7 @@ const OnBoard: FC = () => {
     
 
   return (
-    <div className="h-screen bg-[url('../assets/tokenbg.png')] bg-no-repeat bg-cover">
+    <div className="bg-[url('../assets/tokenbg.png')] bg-no-repeat bg-cover">
        <Layout classNames='flex items-center justify-center flex-col h-full md:mt-8'>
         <Image width={269} height={269} alt="logo" src={Logo} className='md:mb-8' />
         <div className='md:leading-[96px] text-center md:text-[90px] bg-gradient-to-r from-[#FAFAFA] to-[#AAA5A5] bg-clip-text text-transparent font-detacher'>The 

@@ -6,7 +6,7 @@ import Image from 'next/image'
 const About: FC = () => {
   return (
     <div className="min-h-screen">
-       <Layout classNames='flex gap-28 items-center justify-center md:h-screen'>
+       <Layout classNames='flex gap-28 items-center justify-center'>
           <Image className='md:h-[539px] md:w-[539px]' alt='about' src={AboutLogo} />
           <div>
              <div className="font-detacher md:text-[32px] text-transparent bg-gradient-to-r from-[#FDCE7B] to-[#CD8D03] bg-clip-text">

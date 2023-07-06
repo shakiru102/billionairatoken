@@ -5,7 +5,7 @@ import PartnerImages from '../assets/partners.png'
 
 const Partners: FC = () => {
   return (
-    <Layout classNames='h-screen'>
+    <Layout>
         <div className=" md:mb-16 text-center font-detacher md:text-[40px] uppercase text-transparent bg-gradient-to-r from-[#FDCE7B] to-[#CD8D03] bg-clip-text">
             Partners
         </div>
