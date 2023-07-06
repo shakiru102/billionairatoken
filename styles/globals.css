@@ -1,26 +1,38 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Detacher";
+  src: url(../assets/fonts/detacher/Detacher-Regular.otf);
+  font-weight: 400;
+  font-display: swap;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+@font-face {
+  font-family: "Larken DEMO";
+  src: url(../assets/fonts/Larken/LarkenDEMO-Regular.otf);
+  font-weight: 400;
+  font-display: swap;
 }
 
-* {
-  box-sizing: border-box;
+@font-face {
+  font-family: "Sora";
+  src: url(../assets/fonts/Sora/static/Sora-Regular.ttf);
+  font-weight: 400;
+  font-display: swap;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+@font-face {
+  font-family: "Sora";
+  src: url(../assets/fonts/Sora/static/Sora-SemiBold.ttf);
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "BiomeW04-Regular";
+  src: url(../assets/fonts/Biome-W01-Regular-1.ttf);
+  font-weight: 400;
+  font-display: swap;
 }
