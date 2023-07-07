@@ -1,8 +1,12 @@
 import type { NextPage } from 'next'
 import OnBoard from '../components/OnBoard'
 import About from '../components/About'
-import Partners from '../components/Partners'
 import Tokenomics from '../components/Tokenomics'
+import RenderComponent from '../components/RenderComponent'
+import Chess from '../assets/chess.png'
+import Image from 'next/image'
+import Timeline from '../assets/timeline.png'
+import LaunchCard from '../components/utils/LaunchCard'
 
 const Home: NextPage = () => {
   return (
@@ -12,9 +16,21 @@ const Home: NextPage = () => {
     <div className="bg-[url('../assets/partnerbg.png')] bg-no-repeat bg-cover relative">
       <div className="absolute z-0 blur-[250.11935424804688px] bg-[rgba(216,156,55,0.28)] md:h-[524px] md:w-[524px] md:rounded-[524px] top-0 left-0"></div>
       <div className="absolute z-0 blur-[250.11935424804688px] bg-[rgba(216,156,55,0.28)] md:h-[524px] md:w-[524px] md:rounded-[524px] bottom-0 right-0"></div>
-    <Partners />
+    <RenderComponent title='Partners' />
     <Tokenomics />
     </div>
+    <RenderComponent 
+    title='TBT launch process' 
+    children={<LaunchCard />} 
+    />
+    <Image alt='time line' src={Timeline}/>
+    <RenderComponent title='Backed by' />
+    <RenderComponent 
+    title='The team'  
+    subtitle='The Community constitutes the governing team of the project. No centralise authorities over the project. Built for the game-changers only!'
+    children={<Image alt='chess' src={Chess} />}
+    />
+
    </>
   )
 }
