@@ -6,7 +6,7 @@ import { NavlinksProps } from '../types'
 import { AppBar, Button, ThemeProvider, Toolbar } from '@mui/material'
 import ChevronIcon from '../assets/chevron.svg'
 import SolidButton from './utils/SolidButton'
-
+import ContainerLayout from "../Layout/ContainerLayout"
 const NavBar: FC = () => {
 
     
@@ -21,9 +21,11 @@ const NavBar: FC = () => {
     ]
 
   return (
+    <ContainerLayout>
     <AppBar 
     elevation={0}
-    className='bg-black'>
+      className='bg-black'>
+
       <Toolbar className='justify-between'>
       <div className='flex items-center gap-1'>
         <Image width={37} height={37} alt='logo' src={Logo} />
@@ -31,7 +33,7 @@ const NavBar: FC = () => {
       </div>
       <div className="hidden md:flex">
         {
-            navigations.map((item: NavlinksProps, index: number )=> item.contained ? 
+          navigations.map((item: NavlinksProps, index: number )=> item.contained ? 
                 (
                     <SolidButton 
                     key={index} 
@@ -39,7 +41,7 @@ const NavBar: FC = () => {
                     variant='transparent'/>
                 ) : 
                 (
-                    <Button 
+                  <Button 
                     className='capitalize text-[#A8A8A8] font-sora text-[16px]'
                     key={index} 
                     disableElevation 
@@ -56,6 +58,7 @@ const NavBar: FC = () => {
       </div>
       </Toolbar>
     </AppBar>
+                </ContainerLayout>
   )
 }
 
