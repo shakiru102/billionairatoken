@@ -7,22 +7,20 @@ import Chess from '../assets/chess.png'
 import Image from 'next/image'
 import Timeline from '../assets/timeline.png'
 import LaunchCard from '../components/utils/LaunchCard'
+import Launch from '../components/Launch'
 
 const Home: NextPage = () => {
   return (
    <>
     <OnBoard />
     <About />
-    <div className="bg-[url('../assets/partnerbg.png')] bg-no-repeat bg-cover relative">
+    <div className="bg-[url('../assets/partnerbg.png')] bg-no-repeat bg-cover relative md:h-[225vh] md:flex flex-col justify-between">
       <div className="absolute z-0 blur-[250.11935424804688px] bg-[rgba(216,156,55,0.28)] md:h-[524px] md:w-[524px] md:rounded-[524px] top-0 left-0"></div>
       <div className="absolute z-0 blur-[250.11935424804688px] bg-[rgba(216,156,55,0.28)] md:h-[524px] md:w-[524px] md:rounded-[524px] bottom-0 right-0"></div>
     <RenderComponent title='Partners' />
     <Tokenomics />
     </div>
-    <RenderComponent 
-    title='TBT launch process' 
-    children={<LaunchCard />} 
-    />
+    <Launch />
     <Image alt='time line' src={Timeline}/>
     <RenderComponent title='Backed by' />
     <RenderComponent 

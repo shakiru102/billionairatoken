@@ -18,7 +18,7 @@ const Tokenomics: FC = () => {
     ]
 
   return (
-    <div className='z-50 relative my-8'>
+    <div className='z-50 relative '>
         <ContainerLayout>
         <div className=" md:mb-4 text-center font-detacher md:text-[40px] uppercase text-transparent bg-gradient-to-r from-[#FDCE7B] to-[#CD8D03] bg-clip-text">
             Tokenomics
