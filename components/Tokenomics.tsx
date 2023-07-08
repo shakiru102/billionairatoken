@@ -4,6 +4,7 @@ import { Paper } from '@mui/material'
 import ContainerLayout from '../Layout/ContainerLayout'
 import Certik from '../assets/certik.png'
 import Image from 'next/image'
+import Tokenomics2 from '../assets/tokenomics2.png'
 
 const Tokenomics: FC = () => {
 
@@ -30,7 +31,9 @@ const Tokenomics: FC = () => {
             ONE TOKEN LIMITLESS POSSIBILITIES!
         </div>
         <div className="flex">
-            <div className='flex-1'></div>
+            <div className='flex-1'>
+                <Image alt='tokenomics' src={Tokenomics2}/>
+            </div>
             <div className='flex-1'>
                 <Paper elevation={0} className='md:h-[410px] bg-[#1A1613] flex flex-col justify-around md:p-10 md:mt-28'>
                    {

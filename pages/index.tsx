@@ -6,8 +6,9 @@ import RenderComponent from '../components/RenderComponent'
 import Chess from '../assets/chess.png'
 import Image from 'next/image'
 import Timeline from '../assets/timeline.png'
-import LaunchCard from '../components/utils/LaunchCard'
 import Launch from '../components/Launch'
+import FAQ from '../components/FAQ'
+import Footer from '../components/Footer'
 
 const Home: NextPage = () => {
   return (
@@ -28,7 +29,8 @@ const Home: NextPage = () => {
     subtitle='The Community constitutes the governing team of the project. No centralise authorities over the project. Built for the game-changers only!'
     children={<Image alt='chess' src={Chess} />}
     />
-
+    <FAQ />
+    <Footer />
    </>
   )
 }
