@@ -9,6 +9,7 @@ import Timeline from '../assets/timeline.png'
 import Launch from '../components/Launch'
 import FAQ from '../components/FAQ'
 import Footer from '../components/Footer'
+import ContainerLayout from '../Layout/ContainerLayout'
 
 const Home: NextPage = () => {
   return (
@@ -21,8 +22,11 @@ const Home: NextPage = () => {
     <RenderComponent title='Partners' />
     <Tokenomics />
     </div>
-    <Launch />
+      <Launch />
+      <ContainerLayout>
+
     <Image alt='time line' src={Timeline}/>
+      </ContainerLayout>
     <RenderComponent title='Backed by' />
     <RenderComponent 
     title='The team'  

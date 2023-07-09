@@ -1,11 +1,9 @@
 import React, { FC } from 'react'
-import Layout from './Layout'
 import { Paper } from '@mui/material'
 import ContainerLayout from '../Layout/ContainerLayout'
 import Certik from '../assets/certik.png'
 import Image from 'next/image'
-import Tokenomics2 from '../assets/tokenomics2.png'
-
+import tokenImage from "../assets/png/tokens.png"
 const Tokenomics: FC = () => {
 
     const tokenomics: { text: string; color: string }[] = [
@@ -30,11 +28,11 @@ const Tokenomics: FC = () => {
         <div className="md:mt-4 font-sora text-[#FECF81] md:text-[18px] uppercase font-semibold text-center">
             ONE TOKEN LIMITLESS POSSIBILITIES!
         </div>
-        <div className="flex">
-            <div className='flex-1'>
-                <Image alt='tokenomics' src={Tokenomics2}/>
+        <div className="flex items-center">
+                  <div className='flex-1 w-7/12'>
+                      <Image src={tokenImage} alt="token" />
             </div>
-            <div className='flex-1'>
+            <div className=' w-5/12'>
                 <Paper elevation={0} className='md:h-[410px] bg-[#1A1613] flex flex-col justify-around md:p-10 md:mt-28'>
                    {
                     tokenomics.map((item, i) => (
