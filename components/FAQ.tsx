@@ -43,7 +43,7 @@ const FAQ: FC = () => {
              </div>
             {
                 faqs.map((faq:FAQProps, i: number) => (
-                    <FaqExpansion {...faq}/>
+                    <FaqExpansion key={i} {...faq}/>
                 ))
             }
         </Paper>

@@ -57,7 +57,7 @@ const Ecosystem: FC = () => {
                             const isLastItem = i === ecosystems.length -1 
                             if(isLastItem) {
                                 return (
-                                    <li style={{ background: item.title === ecosystem?.title ? '#1A1613' : 'transparent' }} onClick={() => setEcosystem(item)} className=" relative text-[#A8A8A8] font-sora text-[18px] flex-1 flex gap-2 pl-16 items-center">
+                                    <li key={i} style={{ background: item.title === ecosystem?.title ? '#1A1613' : 'transparent' }} onClick={() => setEcosystem(item)} className=" relative text-[#A8A8A8] font-sora text-[18px] flex-1 flex gap-2 pl-16 items-center">
                                         { item.title === ecosystem?.title ? <ActiveEcoImage /> : null}
                                         <span className='inline-block w-[5px] h-[5px] bg-[#A8A8A8]' /> { item.title }
                                     </li>
@@ -65,7 +65,7 @@ const Ecosystem: FC = () => {
                             }
 
                             return (
-                                <li style={{ background: item.title === ecosystem?.title ? '#1A1613' : 'transparent' }} onClick={() => setEcosystem(item)} className=" relative text-[#A8A8A8] font-sora text-[18px] flex-1 flex border-b border-b-[#FECF81] gap-2 pl-16 items-center">
+                                <li key={i} style={{ background: item.title === ecosystem?.title ? '#1A1613' : 'transparent' }} onClick={() => setEcosystem(item)} className=" relative text-[#A8A8A8] font-sora text-[18px] flex-1 flex border-b border-b-[#FECF81] gap-2 pl-16 items-center">
                                     { item.title === ecosystem?.title ? <ActiveEcoImage /> : null}
                                     <span className='inline-block w-[5px] h-[5px] bg-[#A8A8A8]' /> { item.title }
                                 </li>

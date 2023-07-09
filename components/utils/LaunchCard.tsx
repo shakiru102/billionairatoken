@@ -42,7 +42,7 @@ const LaunchCard: FC<LaunchCardProps> = ({
           <div className='flex flex-col justify-center md:px-20 gap-4'>
             {
                 buttons.map((item: SolidButtonProps, i: number) => (
-                    <SolidButton text={item.text} variant={item.variant} handleClick={item.handleClick} />
+                    <SolidButton key={i} text={item.text} variant={item.variant} handleClick={item.handleClick} />
                 ))
             }
           </div>

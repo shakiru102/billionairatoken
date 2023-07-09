@@ -33,8 +33,9 @@ const Home: NextPage = () => {
     <RenderComponent 
     title='The team'  
     subtitle='The Community constitutes the governing team of the project. No centralise authorities over the project. Built for the game-changers only!'
-    children={<Image alt='chess' src={Chess} />}
-    />
+    >
+      <Image alt='chess' src={Chess} />
+    </RenderComponent>
     <FAQ />
     <Footer />
    </>

@@ -58,17 +58,16 @@ const Launch = () => {
   return (
     <div className="md:h-[150vh] md:flex justify-center items-center">
         <RenderComponent 
-            title='TBT launch process' 
-            children={
-                <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
-                    {
-                        launch.map((item: LaunchCardProps, i: number) => (
-                            <LaunchCard key={i} {...item}/>
-                        ))
-                    }
-                </div>
-            } 
-            />
+        title='TBT launch process' 
+        >
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
+                {
+                    launch.map((item: LaunchCardProps, i: number) => (
+                        <LaunchCard key={i} {...item}/>
+                    ))
+                }
+            </div>
+        </RenderComponent>
     </div>
   )
 }

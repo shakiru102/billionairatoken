@@ -33,8 +33,8 @@ const OnBoard: FC = () => {
         </div>
             <div className='flex gap-4 my-4'>
                 {
-                    buttons.map((item: SolidButtonProps, _index: number) => (
-                        <SolidButton {...item}/>
+                    buttons.map((item: SolidButtonProps, i: number) => (
+                        <SolidButton key={i} {...item}/>
                     ))
                 }
             </div>
