@@ -25,8 +25,8 @@ const Launch = () => {
     const launch: LaunchCardProps[] = [
         {
             buttons: [
-                { text: "Join community", variant: 'transparent' },
-                { text: "Join Airdrop", variant: 'solid' }
+                { text: "Join community", variant: 'transparent', classnames: '' },
+                { text: "Join Airdrop", variant: 'solid', classnames: '' }
             ],
             imageCols: '2',
             images: [ Airdrop1, Airdrop2 ],
@@ -35,8 +35,8 @@ const Launch = () => {
         },
         {
             buttons: [
-                { text: "Join community", variant: 'transparent' },
-                { text: "Join Airdrop", variant: 'solid' }
+                { text: "Join community", variant: 'transparent', classnames: '' },
+                { text: "Join Airdrop", variant: 'solid', classnames: '' }
             ],
             imageCols: '3',
             images: [ Presale1, Presale2, Presale3, Presale4, Presale5, Presale6],
@@ -45,8 +45,8 @@ const Launch = () => {
         },
         {
             buttons: [
-                { text: "Join community", variant: 'transparent' },
-                { text: "Join Airdrop", variant: 'solid' }
+                { text: "Join community", variant: 'transparent', classnames: '' },
+                { text: "Join Airdrop", variant: 'solid', classnames: '' }
             ],
             imageCols: '3',
             images: [ Listing1, Listing2, Listing3, Listing4, Listing5, Listing6, Listing7, Listing8, Listing9],

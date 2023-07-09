@@ -35,7 +35,8 @@ const FAQ: FC = () => {
     ]
 
   return (
-    <ContainerLayout>
+    <div className="min-h-[80vh]">
+        <ContainerLayout>
         <Paper className='bg-[#1A1A1A] md:mt-28 px-8 py-16 rounded-[20px]'>
              <div className="text-center font-detacher text-[32px] text-[#FECF81] py-4">
                 Frequently Asked Questions
@@ -47,6 +48,7 @@ const FAQ: FC = () => {
             }
         </Paper>
     </ContainerLayout>
+    </div>
   )
 }
 

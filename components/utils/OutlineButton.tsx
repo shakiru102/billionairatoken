@@ -2,11 +2,10 @@ import { ThemeProvider, Button, createTheme } from '@mui/material'
 import React, { FC } from 'react'
 import { SolidButtonProps } from '../../types';
 
-const SolidButton: FC<SolidButtonProps> = ({
+const OutlineButton: FC<SolidButtonProps> = ({
   text,
   handleClick,
-  variant,
-  classnames
+  variant
 }) => {
   const { palette } = createTheme();
   const { augmentColor } = palette;
@@ -22,14 +21,10 @@ const SolidButton: FC<SolidButtonProps> = ({
     <Button 
     onClick={handleClick}
     disableElevation 
-    variant={'contained'}
+    variant={'outlined'}
     // @ts-ignore
-    color={variant}
-    className={
-      variant === 'transparent' ? 
-      "text-[#FECF81] font-sora font-semibold bg-[#FECF810F] capitalize md:text-[16px] " + classnames :
-      "text-black font-sora font-semibold bg-[#FECF81] capitalize md:text-[16px] " + classnames
-    }
+    color={'solid'}
+    className={ "text-[#FECF81] font-sora font-semibold bg-[#FECF810F] normal-case border-[#FECF81] rounded-[8px] md:text-[16px]" }
     >
         { text }
     </Button>
@@ -37,4 +32,4 @@ const SolidButton: FC<SolidButtonProps> = ({
   )
 }
 
-export default SolidButton
+export default OutlineButton

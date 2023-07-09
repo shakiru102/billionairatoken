@@ -3,11 +3,8 @@ import Logo from '../assets/tokenlogo.png'
 import Image, { StaticImageData } from 'next/image'
 import { SolidButtonProps } from '../types'
 import SolidButton from './utils/SolidButton'
-import Twitter from '../assets/twitter.png'
-import Telegram from '../assets/telegram.png'
-import Instagram from '../assets/instagram.png'
-import SocialIcon from '../assets/socialicon.png'
 import Layout from './Layout'
+import MediaIcons from './utils/ MediaIcons'
 
 const OnBoard: FC = () => {
 
@@ -21,12 +18,7 @@ const OnBoard: FC = () => {
             variant: "transparent"
         }
     ]
-    const socialHandles: {image: StaticImageData, handle: string}[] = [ 
-        { image: Twitter, handle: "twitter" },
-        { image: Telegram, handle: "telegram" },
-        { image: SocialIcon, handle: "social icon" },
-        { image: Instagram, handle: "instagram" }
-    ] 
+   
     
 
   return (
@@ -46,13 +38,7 @@ const OnBoard: FC = () => {
                     ))
                 }
             </div>
-            <div className='flex gap-4 mt-4 items-center justify-center'>
-                {
-                    socialHandles.map((item, index: number) => (
-                        <Image width={32} height={32} alt={item.handle} src={item.image} key={index}/>
-                    ))
-                }
-            </div>
+           <MediaIcons />
        </Layout>
     </div>
   )
