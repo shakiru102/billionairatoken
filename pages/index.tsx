@@ -8,6 +8,7 @@ import Image from 'next/image'
 import Timeline from '../assets/timeline.png'
 import LaunchCard from '../components/utils/LaunchCard'
 import Launch from '../components/Launch'
+import ContainerLayout from '../Layout/ContainerLayout'
 
 const Home: NextPage = () => {
   return (
@@ -20,8 +21,11 @@ const Home: NextPage = () => {
     <RenderComponent title='Partners' />
     <Tokenomics />
     </div>
-    <Launch />
+      <Launch />
+      <ContainerLayout>
+
     <Image alt='time line' src={Timeline}/>
+      </ContainerLayout>
     <RenderComponent title='Backed by' />
     <RenderComponent 
     title='The team'  

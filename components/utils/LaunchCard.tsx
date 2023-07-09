@@ -30,7 +30,7 @@ const LaunchCard: FC<LaunchCardProps> = ({
           <div className={ imageCols == '3' ? 'grid grid-cols-3 gap-4' : 'grid grid-cols-2 gap-4'}>
             {
                images.map((item: StaticImageData, i: number) => (
-                <div key={i} className='rounded-[10px] md:h-[86px] bg-[#2A231E] flex justify-center items-center'>
+                <div key={i} className='rounded-[10px] h-[86px] bg-[#2A231E] flex justify-center items-center'>
                     <Image alt='launch image' src={item}/>
                 </div>
                ))
