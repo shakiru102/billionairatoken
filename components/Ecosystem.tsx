@@ -10,10 +10,10 @@ import BottomRight from '../assets/bottomright.png'
 
 const ActiveEcoImage = () => (
     <>
-     <Image src={TopLeft} alt='topleft' className='absolute top-1 left-1'  />
-     <Image src={TopRight} alt='topright' className='absolute top-1 right-1'  />
-     <Image src={BottomRight} alt='bottomright' className='absolute bottom-1 right-1'  />
-     <Image src={BottomLeft} alt='bottomright' className='absolute bottom-1 left-1'  />
+     <span className='absolute top-0 left-1' ><Image src={TopLeft} alt='topleft'  /></span>
+     <span className='absolute top-0 right-1'><Image src={TopRight} alt='topright' /></span>
+     <span className='absolute bottom-0 right-1'><Image src={BottomRight} alt='bottomright' /></span>
+     <span className='absolute bottom-0 left-1'><Image src={BottomLeft} alt='bottomright' /></span>
     </>
 )
 
