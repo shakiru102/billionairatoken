@@ -1,23 +1,33 @@
 import React, { FC } from 'react'
 import ContainerLayout from '../Layout/ContainerLayout'
-import FooterInputCard from './utils/FooterInputCard'
+import FooterInputCard, { FooterInputCardProps } from './utils/FooterInputCard'
 import MediaIcons from './utils/ MediaIcons'
 
 const Footer: FC = () => {
+
+    const footerInputDetails: FooterInputCardProps[] = [
+        { 
+            title: "Join our community",
+            content: "Subscribe to get latest updates about TBT Ecosystem"
+        },
+        { 
+            title: "Partner with us",
+            content: "Subscribe to get latest updates about TBT Ecosystem",
+            position: "right"
+        }
+    ]
+
   return (
     <div>
         <div className="md:h-[477px] bg-[url('../assets/footerbg.png')] py-16">
            <ContainerLayout>
            <div className="grid grid-cols-2 gap-36">
-           <FooterInputCard 
-            title='Join our community'
-            content='Subscribe to get latest updates about TBT Ecosystem'
-           />
-           <FooterInputCard 
-            title='Partner with us'
-            content='Subscribe to get latest updates about TBT Ecosystem'
-            position='right'
-           />
+
+            {
+                footerInputDetails.map((item: FooterInputCardProps, i: number) => (
+                    <FooterInputCard {...item} key={i}/>
+                ))
+            }
            </div>
            <div className="mt-16 pb-16 border-b border-b-[#4B4B4B]">
             <MediaIcons />

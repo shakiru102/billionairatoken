@@ -2,7 +2,7 @@ import { Input, InputAdornment } from '@mui/material'
 import React, { FC } from 'react'
 import SolidButton from './SolidButton'
 
-interface FooterInputCardProps {
+export interface FooterInputCardProps {
     title: string;
     content: string;
     position?: "left" | "right"
