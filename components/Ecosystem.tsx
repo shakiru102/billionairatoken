@@ -62,20 +62,20 @@ const Ecosystem: FC = () => {
         },
         { 
             title: "Blow Island & Casino",
-            content: <div>
+            content: <span>
                 Escape to the luxurious Blow Island & Casino, an exclusive paradise located in Ras Al Khaimah, UAE, and El Salvador Bitcoin City. Enjoy world-class gaming, lavish accommodations, gourmet dining experiences, exciting entertainment options, and VIP services. Experience luxury and entertainment like never before, exclusively for TBT prime hodlers and VVIPs. 
-                <span className='ml-1 bg-gradient-to-r cursor-fancy from-[#FDCE7B] to-[#CD8D03] bg-clip-text font-biomeW04Regular text-transparent inline-block underline'>(Discover) Blow Island & Casino and plan your unforgettable experience today!</span>
-            </div>, 
+                <span className=' bg-gradient-to-r cursor-fancy from-[#FDCE7B] to-[#CD8D03] bg-clip-text font-biomeW04Regular text-transparent underline'>(Discover) Blow Island & Casino and plan your unforgettable experience today!</span>
+            </span>, 
         },
         { 
             title: "BlowAVIA",
             header: "BlowAVIA (Smart Airport)",
-            content: <div>
+            content: <span>
                Redefine your travel experience with BlowAVIA Smart Airport. Seamlessly navigate through the airport with advanced biometric identification, intelligent self-service kiosks, real-time flight information, and smart luggage tracking. Experience convenience and efficiency at its best with BlowAVIA.
-                <span className='ml-1 bg-gradient-to-r cursor-fancy from-[#FDCE7B] to-[#CD8D03] bg-clip-text font-biomeW04Regular text-transparent inline-block underline'>
+                <span className=' bg-gradient-to-r cursor-fancy from-[#FDCE7B] to-[#CD8D03] bg-clip-text font-biomeW04Regular text-transparent underline'>
                     (Learn more) about BlowAVIA and embark on a hassle-free journey!
                 </span>
-            </div>,   
+            </span>,   
         },
         { 
             title: "Blow AI",
@@ -87,31 +87,31 @@ const Ecosystem: FC = () => {
         },
         { 
             title: "BlowBOT",
-            content: <div>
+            content: <span>
                     Introducing BlowBOT, your intelligent virtual assistant for personal and business needs! Experience 24/7 automated support, personalised recommendations, task automation, and more. Discover the power of BlowBOT and optimise your efficiency today! 
-                    <span className='ml-1 bg-gradient-to-r cursor-fancy from-[#FDCE7B] to-[#CD8D03] bg-clip-text font-biomeW04Regular text-transparent inline-block underline'>
+                    <span className=' bg-gradient-to-r cursor-fancy from-[#FDCE7B] to-[#CD8D03] bg-clip-text font-biomeW04Regular text-transparent underline'>
                     Get started with BlowBOT and revolutionize your daily tasks.
                     </span>
-                </div>,  
+                </span>,  
         },
         { 
             title: "BlowCALIFORNIUM",
             header: "BlowCALIFORNIUM Mineral",
-            content: <div>
+            content: <span>
                         Harness the power of nature with BlowCALIFORNIUM Mineral, a unique mineral formulation. Promote mineral balance, enhance cellular function, and support overall health. Unlock the potential of BlowCALIFORNIUM Mineral and experience its benefits! 
-                        <span className='ml-1 bg-gradient-to-r cursor-fancy from-[#FDCE7B] to-[#CD8D03] bg-clip-text font-biomeW04Regular text-transparent inline-block underline'>
+                        <span className='bg-gradient-to-r cursor-fancy from-[#FDCE7B] to-[#CD8D03] bg-clip-text font-biomeW04Regular text-transparent underline'>
                         Explore BlowCALIFORNIUM Mineral and elevate your well-being now!
                         </span>
-                    </div>, 
+                    </span>, 
         },
         { 
             title: "BlowLITHIUM",
-            content: <div>
-                        Empower smart product manufacturers with BlowLITHIUM, the ultimate power solution. Enjoy advanced power management, extended battery life, and quick charging technology. Join the future of smart devices with BlowLITHIUM! 
-                        <span className='ml-1 bg-gradient-to-r cursor-fancy from-[#FDCE7B] to-[#CD8D03] bg-clip-text font-biomeW04Regular text-transparent inline-block underline'>
-                        Upgrade your smart products with BlowLITHIUM and boost performance!
+            content: <span>
+                        Empower smart product manufacturers with BlowLITHIUM, the ultimate power solution. Enjoy advanced power management, extended battery life, and quick charging technology. Join the future of smart devices with BlowLITHIUM! {' '}
+                        <span className=' bg-gradient-to-r cursor-fancy from-[#FDCE7B] to-[#CD8D03] bg-clip-text font-biomeW04Regular text-transparent underline'>
+                         {' '} Upgrade your smart products with BlowLITHIUM and boost performance!
                         </span>
-                    </div>, 
+                    </span>, 
         },
         { 
             title: "BlowEVC Station",
