@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Logo from '../assets/tokenlogo.png'
 import LanguageIcon from '../assets/languageicon.png'
 import { NavlinksProps } from '../types'
-import { AppBar, Button, ThemeProvider, Toolbar } from '@mui/material'
+import { AppBar, Button, Toolbar } from '@mui/material'
 import ChevronIcon from '../assets/chevron.svg'
 import SolidButton from './utils/SolidButton'
 const NavBar: FC = () => {
