@@ -17,7 +17,11 @@ module.exports = {
         detacher: ["Detacher", "sans-serif"],
         biomeW04Regular: ["BiomeW04-Regular", "sans-serif"]
 
+      },
+      cursor: {
+        'fancy': 'url(../assets/cursorclick.svg), pointer',
       }
+
     },
   },
   plugins: [],

@@ -7,6 +7,8 @@ import TopLeft from '../assets/topleft.png'
 import TopRight from '../assets/topright.png'
 import BottomLeft from '../assets/bottomleft.png'
 import BottomRight from '../assets/bottomright.png'
+import EastSharpIcon from '@mui/icons-material/EastSharp';
+
 
 const ActiveEcoImage = () => (
     <>
@@ -19,24 +21,127 @@ const ActiveEcoImage = () => (
 
 const Ecosystem: FC = () => {
 
-    const [ecosystem, setEcosystem] = useState<EcosystemProps | null>({ title: "Blow.ai Web3 Mobile" })
-
     const ecosystems: EcosystemProps[] = [
-        { title: "Blow.ai Web3 Mobile" },
-        { title: "BlowVerse Marketplace" },
-        { title: "BlowPAY (BlackCard)" },
-        { title: "BlowEARN (Staking)" },
-        { title: "BlowNFT" },
-        { title: "Blow Island & Casino" },
-        { title: "BlowAVIA" },
-        { title: "Blow AI" },
-        { title: "BlowBOT" },
-        { title: "BlowCALIFORNIUM" },
-        { title: "BlowLITHIUM" },
-        { title: "BlowEVC Station" },
-        { title: "The BillionairesDAO" },
-        { title: "TBT Foundation" },
+        { 
+            title: "Blow.ai Web3 Mobile",
+            content: "Introducing Blow.ai Web3 Mobile, a blockchain-enabled mobile device that brings the power of blockchain and AI technology to your fingertips. Seamlessly integrate with decentralized applications (DApps), manage digital assets, and communicate securely with military-grade encryption.",
+            button: {
+                text: "LEARN MORE",
+                appendIcon: <EastSharpIcon className='text-[#CD8D03] text-[18px] relative left-2'/>
+            } 
+        },
+        { 
+            title: "BlowVerse Marketplace",
+            content: "Discover the BlowVerse Marketplace, your gateway to the decentralised economy. Explore a wide range of products and services, securely transact with smart contracts, empower creators and entrepreneurs, and enjoy frictionless payments using the native cryptocurrency, TBT.",
+            button: {
+                text: "Explore",
+                appendIcon: <EastSharpIcon className='text-[#CD8D03] text-[18px] relative left-2'/>
+            } 
+        },
+        { 
+            title: "BlowPAY (BlackCard)",
+            header: "BlowPAY & BlackCard:",
+            content: "Revolutionise payments with BlowPAY, leveraging blockchain technology for fast and secure transactions. The BlowPAY BlackCard offers exclusive benefits and privileges, enhanced security, global acceptance, instant fund access, expense tracking, and integration within the BlowPAY ecosystem.",
+            button: {
+                text: "Accept payment now",
+                appendIcon: <EastSharpIcon className='text-[#CD8D03] text-[18px] relative left-2'/>
+            }  
+        },
+        { 
+            title: "BlowEARN (Staking)",
+            header: "BlowEARN (Dynamic Staking)",
+            content: "Maximise Your Returns with Flexible Staking Solutions. Earn dynamic staking rewards based on market conditions and network performance. Stake your assets now.",
+            button: {
+                text: "Start Earning Now",
+                appendIcon: <EastSharpIcon className='text-[#CD8D03] text-[18px] relative left-2'/>
+            } 
+        },
+        { 
+            title: "BlowNFT",
+            content: "", 
+        },
+        { 
+            title: "Blow Island & Casino",
+            content: <div>
+                Escape to the luxurious Blow Island & Casino, an exclusive paradise located in Ras Al Khaimah, UAE, and El Salvador Bitcoin City. Enjoy world-class gaming, lavish accommodations, gourmet dining experiences, exciting entertainment options, and VIP services. Experience luxury and entertainment like never before, exclusively for TBT prime hodlers and VVIPs. 
+                <span className='ml-1 bg-gradient-to-r cursor-fancy from-[#FDCE7B] to-[#CD8D03] bg-clip-text font-biomeW04Regular text-transparent inline-block underline'>(Discover) Blow Island & Casino and plan your unforgettable experience today!</span>
+            </div>, 
+        },
+        { 
+            title: "BlowAVIA",
+            header: "BlowAVIA (Smart Airport)",
+            content: <div>
+               Redefine your travel experience with BlowAVIA Smart Airport. Seamlessly navigate through the airport with advanced biometric identification, intelligent self-service kiosks, real-time flight information, and smart luggage tracking. Experience convenience and efficiency at its best with BlowAVIA.
+                <span className='ml-1 bg-gradient-to-r cursor-fancy from-[#FDCE7B] to-[#CD8D03] bg-clip-text font-biomeW04Regular text-transparent inline-block underline'>
+                    (Learn more) about BlowAVIA and embark on a hassle-free journey!
+                </span>
+            </div>,   
+        },
+        { 
+            title: "Blow AI",
+            content: "Empower innovation and automation with Blow AI, a solution that utilises advanced artificial intelligence algorithms. Streamline workflows, personalise user experiences, gain valuable insights through predictive analytics, and enhance security measures with this intelligent decision-making platform.",
+            button: {
+                text: "Explore",
+                appendIcon: <EastSharpIcon className='text-[#CD8D03] text-[18px] relative left-2'/>
+            } 
+        },
+        { 
+            title: "BlowBOT",
+            content: <div>
+                    Introducing BlowBOT, your intelligent virtual assistant for personal and business needs! Experience 24/7 automated support, personalised recommendations, task automation, and more. Discover the power of BlowBOT and optimise your efficiency today! 
+                    <span className='ml-1 bg-gradient-to-r cursor-fancy from-[#FDCE7B] to-[#CD8D03] bg-clip-text font-biomeW04Regular text-transparent inline-block underline'>
+                    Get started with BlowBOT and revolutionize your daily tasks.
+                    </span>
+                </div>,  
+        },
+        { 
+            title: "BlowCALIFORNIUM",
+            header: "BlowCALIFORNIUM Mineral",
+            content: <div>
+                        Harness the power of nature with BlowCALIFORNIUM Mineral, a unique mineral formulation. Promote mineral balance, enhance cellular function, and support overall health. Unlock the potential of BlowCALIFORNIUM Mineral and experience its benefits! 
+                        <span className='ml-1 bg-gradient-to-r cursor-fancy from-[#FDCE7B] to-[#CD8D03] bg-clip-text font-biomeW04Regular text-transparent inline-block underline'>
+                        Explore BlowCALIFORNIUM Mineral and elevate your well-being now!
+                        </span>
+                    </div>, 
+        },
+        { 
+            title: "BlowLITHIUM",
+            content: <div>
+                        Empower smart product manufacturers with BlowLITHIUM, the ultimate power solution. Enjoy advanced power management, extended battery life, and quick charging technology. Join the future of smart devices with BlowLITHIUM! 
+                        <span className='ml-1 bg-gradient-to-r cursor-fancy from-[#FDCE7B] to-[#CD8D03] bg-clip-text font-biomeW04Regular text-transparent inline-block underline'>
+                        Upgrade your smart products with BlowLITHIUM and boost performance!
+                        </span>
+                    </div>, 
+        },
+        { 
+            title: "BlowEVC Station",
+            header: "Blow Hybrid EVC Station",
+            content: "A versatile electric vehicle charging station that combines fast DC charging and standard AC charging in one unit. It offers compatibility with various EV models, user-friendly interface, intelligent charging management, and scalability for future expansion. Experience the future of electric vehicle charging with Blow Hybrid EVC Station. ",
+            button: {
+                text: "Explore",
+                appendIcon: <EastSharpIcon className='text-[#CD8D03] text-[18px] relative left-2'/>
+            } 
+        },
+        { 
+            title: "The BillionairesDAO",
+            header: "The Billionaires DAO",
+            content: "Join a decentralised autonomous organization built on blockchain technology. The Billionaires DAO empowers token holders to participate in governance, access investment opportunities, and earn rewards. Be part of a transparent and community-driven ecosystem that shapes the future of decentralized governance and investments.",
+            button: {
+                text: "Get Involved",
+                appendIcon: <EastSharpIcon className='text-[#CD8D03] text-[18px] relative left-2'/>
+            } 
+        },
+        { 
+            title: "TBT Foundation",
+            content: "The TBT Foundation is dedicated to nurturing talent, providing scholarships, and supporting educational initiatives globally. It offers programs for skill-building, entrepreneurship support, cultural exchange, environmental sustainability, and global outreach. Join us in making a lasting impact and empowering the next generation across the globe.",
+            button: {
+                text: "Support the Foundation",
+                appendIcon: <EastSharpIcon className='text-[#CD8D03] text-[18px] relative left-2'/>
+            } 
+        },
     ]
+
+    const [ecosystem, setEcosystem] = useState<EcosystemProps>(ecosystems[0])
 
 
   return (

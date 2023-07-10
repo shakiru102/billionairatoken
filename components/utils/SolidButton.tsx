@@ -27,8 +27,8 @@ const SolidButton: FC<SolidButtonProps> = ({
     color={variant}
     className={
       variant === 'transparent' ? 
-      "text-[#FECF81] font-sora font-semibold bg-[#FECF810F] capitalize md:text-[16px] " + classnames :
-      "text-black font-sora font-semibold bg-[#FECF81] capitalize md:text-[16px] " + classnames
+      "text-[#FECF81] cursor-fancy font-sora font-semibold bg-[#FECF810F] capitalize md:text-[16px] " + classnames :
+      "text-black cursor-fancy font-sora font-semibold bg-[#FECF81] capitalize md:text-[16px] " + classnames
     }
     >
         { text }

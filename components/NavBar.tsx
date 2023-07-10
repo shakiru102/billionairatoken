@@ -40,7 +40,7 @@ const NavBar: FC = () => {
                 ) : 
                 (
                   <Button 
-                    className='capitalize text-[#A8A8A8] font-sora text-[16px]'
+                    className='capitalize cursor-fancy text-[#A8A8A8] font-sora text-[16px]'
                     key={index} 
                     disableElevation 
                     variant={'text'} >

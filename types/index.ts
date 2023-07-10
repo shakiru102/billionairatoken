@@ -7,7 +7,7 @@ export interface NavlinksProps {
 }
 
 export interface SolidButtonProps {
-    text: string;
+    text: string | ReactNode;
     handleClick?: () => void;
     variant?: 'solid' | 'transparent';
     prependIcon?: ReactNode;

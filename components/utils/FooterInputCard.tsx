@@ -22,7 +22,7 @@ const FooterInputCard: FC<FooterInputCardProps> = ({
        placeholder='Enter your email'
         endAdornment= {
             <InputAdornment position="end">
-                <SolidButton text='SUBSCRIBE' classnames='rounded-[10px]' />
+                <SolidButton text='SUBSCRIBE'  variant='solid' classnames='rounded-[10px]' />
             </InputAdornment>
         }
       />
