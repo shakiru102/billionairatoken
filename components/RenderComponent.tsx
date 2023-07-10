@@ -24,7 +24,10 @@ const RenderComponent: FC<RenderComponentProps> = ({
         </div>
          <div className="font-sora md:mx-36 text-[#A8A8A8] md:text-[16px] text-center">{ subtitle }</div>
         </div>
-        { children ? children : <Image alt='partners'className='w-[100%]' src={PartnerImages} /> }
+         <div className='flex justify-center'>
+         { children ? children :   <Image alt='partners'className='w-[100%]' src={PartnerImages} /> }
+          </div>
+         
     </ContainerLayout>
     </div>
   )
