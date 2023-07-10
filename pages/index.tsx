@@ -11,10 +11,12 @@ import FAQ from '../components/FAQ'
 import Footer from '../components/Footer'
 import ContainerLayout from '../Layout/ContainerLayout'
 import Ecosystem from '../components/Ecosystem'
+import NavBar from '../components/NavBar'
 
 const Home: NextPage = () => {
   return (
    <>
+   <NavBar />
     <OnBoard />
     <About />
     <div className="bg-[url('../assets/partnerbg.png')] bg-no-repeat bg-cover relative md:h-[250vh] md:flex flex-col justify-between">

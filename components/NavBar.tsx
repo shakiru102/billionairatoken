@@ -6,7 +6,6 @@ import { NavlinksProps } from '../types'
 import { AppBar, Button, ThemeProvider, Toolbar } from '@mui/material'
 import ChevronIcon from '../assets/chevron.svg'
 import SolidButton from './utils/SolidButton'
-import ContainerLayout from "../Layout/ContainerLayout"
 const NavBar: FC = () => {
 
     
@@ -21,7 +20,6 @@ const NavBar: FC = () => {
     ]
 
   return (
-    <ContainerLayout>
     <AppBar 
     elevation={0}
       className='bg-black'>
@@ -58,7 +56,6 @@ const NavBar: FC = () => {
       </div>
       </Toolbar>
     </AppBar>
-                </ContainerLayout>
   )
 }
 
