@@ -14,7 +14,7 @@ const Footer: FC = () => {
             title: "Partner with us",
             content: "Subscribe to get latest updates about TBT Ecosystem",
             position: "right",
-            buttoText: "Submit"
+            buttoText: "SUBMIT"
         }
     ]
 

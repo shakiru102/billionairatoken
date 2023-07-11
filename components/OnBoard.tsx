@@ -25,10 +25,10 @@ const OnBoard: FC = () => {
     <div className="bg-[url('../assets/tokenbg.png')] bg-no-repeat bg-cover">
        <Layout classNames='flex items-center justify-center flex-col h-full md:mt-8'>
         <Image width={269} height={269} alt="logo" src={Logo} className='md:mb-8' />
-        <div className='md:leading-[96px] text-center md:text-[90px] bg-gradient-to-r from-[#FAFAFA] to-[#AAA5A5] bg-clip-text text-transparent font-detacher'>The 
+        <div className='md:leading-[96px] text-center text-[36px] md:text-[90px] bg-gradient-to-r from-[#FAFAFA] to-[#AAA5A5] bg-clip-text text-transparent font-detacher'>The 
         <span className='bg-gradient-to-r from-[#FDCE7B] to-[#CD8D03] bg-clip-text'> Billionaires </span>
         Token</div>
-        <div className=' my-4 text-center md:text-[18px] bg-gradient-to-r from-[#FAFAFA] to-[#AAA5A5] bg-clip-text text-transparent font-sora'>
+        <div className=' my-4 text-center text-[12px] mx-8 md:mx-0 md:text-[18px] bg-gradient-to-r from-[#FAFAFA] to-[#AAA5A5] bg-clip-text text-transparent font-sora'>
         Pioneering a comprehensive digital currency ecosystem with real-world utilities!
         </div>
             <div className='flex gap-4 my-4'>
