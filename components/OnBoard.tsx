@@ -23,8 +23,9 @@ const OnBoard: FC = () => {
 
   return (
     <div className="bg-[url('../assets/tokenbg.png')] bg-no-repeat bg-cover">
-       <Layout classNames='flex items-center justify-center flex-col h-full md:mt-8'>
-        <Image width={269} height={269} alt="logo" src={Logo} className='md:mb-8' />
+       <Layout classNames='flex items-center justify-center flex-col h-[70vh] md:mt-8'>
+        <span className='hidden md:inline'><Image width={269} height={269} alt="logo" src={Logo} /></span>
+        <span className='md:hidden mt-16'><Image width={123} height={123} alt="logo" src={Logo} /></span>
         <div className='md:leading-[96px] text-center text-[36px] md:text-[90px] bg-gradient-to-r from-[#FAFAFA] to-[#AAA5A5] bg-clip-text text-transparent font-detacher'>The 
         <span className='bg-gradient-to-r from-[#FDCE7B] to-[#CD8D03] bg-clip-text'> Billionaires </span>
         Token</div>
