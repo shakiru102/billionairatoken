@@ -145,24 +145,24 @@ const Ecosystem: FC = () => {
 
 
   return (
-    <div className='min-h-[130vh]'>
+    <div className='min-h-[130vh] '>
       <ContainerLayout>
             <div className="text-center">
-                    <div className="inline-block md:mb-4 font-detacher md:text-[40px] uppercase text-transparent bg-gradient-to-r from-[#FDCE7B] to-[#CD8D03] bg-clip-text">
+                    <div className="inline-block my-4 font-detacher text-[20px] md:text-[40px] uppercase text-transparent bg-gradient-to-r from-[#FDCE7B] to-[#CD8D03] bg-clip-text">
                         Ecosystem Overview
                     </div>
-                    <div className="font-sora text-[18px] text-[#FECF81] mb-6">
+                    <div className=" hidden md:block font-sora text-[18px] text-[#FECF81] mb-6">
                     Many times people get confused. They sometimes think an economy is money. Money in real sense is database for exchange of goods and services. Money is simply a database and driven force of the economy. Money doesn’t have power in and of itself. The actual economy is goods and services with TBT leveraging the blockchain and other disruptive technologies.
                     </div>
                 </div>
-            <div className="grid grid-cols-3 md:h-[782px]">
-                <ul className="border-t border-r border-b border-l border-[#FECF81] flex flex-col">
+            <div className="grid grid-rows-3 md:grid-rows-1 md:grid-cols-3 md:h-[782px]">
+                <ul className="border-t border-r row-span-2 md:row-span-1 md:col-span-1  border-b border-l border-[#FECF81] flex flex-col">
                     {
                         ecosystems.map((item:EcosystemProps, i: number) => {
                             const isLastItem = i === ecosystems.length -1 
                             if(isLastItem) {
                                 return (
-                                    <li key={i} style={{ background: item.title === ecosystem?.title ? '#1A1613' : 'transparent' }} onClick={() => setEcosystem(item)} className=" relative text-[#A8A8A8] font-sora text-[18px] flex-1 flex gap-2 pl-16 items-center">
+                                    <li key={i} style={{ background: item.title === ecosystem?.title ? '#1A1613' : 'transparent' }} onClick={() => setEcosystem(item)} className=" relative text-[#A8A8A8] font-sora text-[15px] md:text-[18px] flex-1 flex gap-2 pl-16 items-center">
                                         { item.title === ecosystem?.title ? <ActiveEcoImage /> : null}
                                         <span className='inline-block w-[5px] h-[5px] bg-[#A8A8A8]' /> { item.title }
                                     </li>
@@ -170,7 +170,7 @@ const Ecosystem: FC = () => {
                             }
 
                             return (
-                                <li key={i} style={{ background: item.title === ecosystem?.title ? '#1A1613' : 'transparent' }} onClick={() => setEcosystem(item)} className=" relative text-[#A8A8A8] font-sora text-[18px] flex-1 flex border-b border-b-[#FECF81] gap-2 pl-16 items-center">
+                                <li key={i} style={{ background: item.title === ecosystem?.title ? '#1A1613' : 'transparent' }} onClick={() => setEcosystem(item)} className=" relative text-[#A8A8A8] font-sora text-[15px] md:text-[18px] flex-1 flex border-b border-b-[#FECF81] gap-2 pl-16 items-center">
                                     { item.title === ecosystem?.title ? <ActiveEcoImage /> : null}
                                     <span className='inline-block w-[5px] h-[5px] bg-[#A8A8A8]' /> { item.title }
                                 </li>
@@ -178,13 +178,13 @@ const Ecosystem: FC = () => {
                         })
                     }
                 </ul>
-                <div className=" grid grid-rows-4 bg-[url('../assets/tokenbg.png')] bg-no-repeat bg-cover bg-center col-span-2">
-                    <div className="row-span-3 border-t border-r border-[#FECF81]">
+                <div className=" grid grid-rows-4 bg-[url('../assets/tokenbg.png')] bg-no-repeat bg-cover bg-center order-first md:order-last md:col-span-2">
+                    <div className=" row-span-4 md:row-span-3 border-t border-l md:border-l-0 border-r border-[#FECF81]">
                         <EcosystemCard 
                         {...ecosystem}
                         />
                     </div>
-                    <div className="bg-[#00000080] border-t border-r border-b border-[#FECF81] pl-8 flex flex-col justify-center">
+                    <div className="bg-[#00000080] hidden border-t border-r border-b border-[#FECF81] pl-8 md:flex flex-col justify-center">
                         <div>
                         <div className="bg-gradient-to-r inline-block from-[#FDCE7B] to-[#CD8D03] bg-clip-text font-detacher text-[24px] text-transparent">
                             Swaps
@@ -197,7 +197,23 @@ const Ecosystem: FC = () => {
                         <OutlineButton text='Coming soon' />
                         </div>
                     </div>
+
+                    
                 </div>
+                {/* mobile */}
+                <div className="bg-[#00000080] py-10 md:py-0 md:hidden border-t border-l md:border-l-0 border-r border-b border-[#FECF81] pl-4 md:pl-8 flex flex-col justify-center">
+                        <div>
+                        <div className="bg-gradient-to-r inline-block from-[#FDCE7B] to-[#CD8D03] bg-clip-text font-detacher text-[20px] md:text-[24px] text-transparent">
+                            Swaps
+                        </div>
+                        </div>
+                        <div className="text-[14px] md:text-[18px] text-[#A8A8A8] font-sora my-3 md:my-4">
+                            Quickly and easily exchange one token for another.
+                        </div>
+                        <div>
+                        <OutlineButton text='Coming soon' />
+                        </div>
+                    </div>
             </div>
       </ContainerLayout>
     </div>

@@ -29,7 +29,7 @@ const OnBoard: FC = () => {
         <span className='bg-gradient-to-r from-[#FDCE7B] to-[#CD8D03] bg-clip-text'> Billionaires </span>
         Token</div>
         <div className=' my-4 text-center md:text-[18px] bg-gradient-to-r from-[#FAFAFA] to-[#AAA5A5] bg-clip-text text-transparent font-sora'>
-        Experience Blockchain , A.I and the Metaverse in one Place
+        Pioneering a comprehensive digital currency ecosystem with real-world utilities!
         </div>
             <div className='flex gap-4 my-4'>
                 {

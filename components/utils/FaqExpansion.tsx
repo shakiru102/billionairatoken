@@ -18,12 +18,12 @@ const FaqExpansion: FC<FAQProps> = ({
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
-          <Typography className='text-[#FECF81] md:text-[18px] font-sora font-semibold'>{title}</Typography>
+          <Typography className='text-[#FECF81] text-[12px] md:text-[18px] font-sora font-semibold'>{title}</Typography>
         </AccordionSummary>
         <AccordionDetails>
           {
             texts.map((text: string, i: number) => (
-                <Typography key={i} className='text-[#D9D9D9] mb-8  md:text-[15px]  font-biomeW04Regular'>
+                <Typography key={i} className='text-[#D9D9D9] mb-8 text-[10px]  md:text-[15px]  font-biomeW04Regular'>
                     { text }
                 </Typography>
             ))

@@ -18,11 +18,11 @@ const EcosystemCard: FC<EcosystemProps> = ({
     header
 }) => {
   return (
-   <Paper className='rounded-[10px] relative mt-24 -left-1 bg-[#1A1613] w-[90%] px-4 py-8'>
-      <div className="text-[20px] font-sora text-[#FECF81] font-semibold">
+   <Paper className='rounded-[10px] relative md:m-8 bg-[#1A1613] md:w-[90%] p-4 md:px-4 md:py-8'>
+      <div className=" text-[18px] md:text-[20px] font-sora text-[#FECF81] font-semibold">
         { header || title }
       </div>
-      <div className="text-[18px] font-biomeW04Regular mt-6 mb-4 text-[#A8A8A8]">
+      <div className="text-[14px] md:text-[18px] font-biomeW04Regular mt-6 mb-4 text-[#A8A8A8]">
         { content }
       </div>
      { button && <TextButton { ...button}  /> }

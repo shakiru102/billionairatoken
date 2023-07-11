@@ -33,12 +33,11 @@ const FAQ: FC = () => {
             texts: ["Join our waitlist and we'll notify you when the public sale starts on May 15, 2023. We expect a lot of interest, which is why you will receive a KYC link ahead of time so you can get set up for the sale early."]
          } 
     ]
-
   return (
-    <div className="min-h-[80vh]">
+    <div className="md:min-h-[80vh]">
         <ContainerLayout>
         <Paper className='bg-[#1A1A1A] md:mt-28 px-8 py-16 rounded-[20px]'>
-             <div className="text-center font-detacher text-[32px] text-[#FECF81] py-4">
+             <div className="text-center font-detacher text-[20px] md:text-[32px] text-[#FECF81] py-4">
                 Frequently Asked Questions
              </div>
             {

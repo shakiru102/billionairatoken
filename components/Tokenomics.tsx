@@ -17,7 +17,7 @@ const Tokenomics: FC = () => {
     ]
 
   return (
-    <div className='z-50 relative '>
+    <div className='z-50 relative  mt-24'>
         <ContainerLayout>
         <div className=" md:mb-4 text-center font-detacher md:text-[40px] uppercase text-transparent bg-gradient-to-r from-[#FDCE7B] to-[#CD8D03] bg-clip-text">
             Tokenomics
@@ -33,7 +33,7 @@ const Tokenomics: FC = () => {
                       <Image src={tokenImage} alt="token" />
             </div>
             <div className=' w-5/12'>
-                <Paper elevation={0} className='md:h-[410px] bg-[#1A1613] flex flex-col justify-around md:p-10 md:mt-28'>
+                <Paper elevation={0} className='md:h-[410px] bg-[#1A1613] flex flex-col justify-around md:p-10 md:mt-28 mb-8'>
                    {
                     tokenomics.map((item, i) => (
                         <div key={i} className='flex items-center gap-6 text-white font-sora text-[14px]'>
@@ -43,7 +43,7 @@ const Tokenomics: FC = () => {
                     ))
                    }
                 </Paper>
-                <Image className='mt-4' alt="certik" src={Certik} />
+                <Image alt="certik" src={Certik} />
             </div>
         </div>
         </ContainerLayout>

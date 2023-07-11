@@ -14,8 +14,7 @@ const NavBar: FC = () => {
     const navigations:NavlinksProps[] = [
         { text: 'About us', to: '' },
         { text: 'Ecosystem', to: '' },
-        { text: 'Learn More', to: '' },
-        { text: 'Team', to: '' },
+        { text: 'Whitepaper', to: '' },
         { text: 'Join Presale', to: '', contained: true }
     ]
 

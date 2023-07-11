@@ -12,7 +12,6 @@ import Listing2 from '../assets/listing2.png'
 import Listing3 from '../assets/listing3.png'
 import Listing4 from '../assets/listing4.png'
 import Listing5 from '../assets/listing5.png'
-import Listing6 from '../assets/listing6.png'
 import Listing7 from '../assets/listing7.png'
 import Listing8 from '../assets/listing8.png'
 import Listing9 from '../assets/listing9.png'
@@ -35,8 +34,7 @@ const Launch = () => {
         },
         {
             buttons: [
-                { text: "Join community", variant: 'transparent', classnames: '' },
-                { text: "Join Airdrop", variant: 'solid', classnames: '' }
+                { text: "Buy $TBT Presale", variant: 'solid', classnames: '' }
             ],
             imageCols: '3',
             images: [ Presale1, Presale2, Presale3, Presale4, Presale5, Presale6],
@@ -45,11 +43,10 @@ const Launch = () => {
         },
         {
             buttons: [
-                { text: "Join community", variant: 'transparent', classnames: '' },
-                { text: "Join Airdrop", variant: 'solid', classnames: '' }
+                { text: "Public Sale", variant: 'solid', classnames: '' }
             ],
             imageCols: '3',
-            images: [ Listing1, Listing2, Listing3, Listing4, Listing5, Listing6, Listing7, Listing8, Listing9],
+            images: [ Listing1, Listing2, Listing3, Listing4, Listing5, Listing7, Listing8, Listing9],
             text: "Download metamask or your wallet of choice from the app store or google play store.",
             title: "CEX Listing"
         }
