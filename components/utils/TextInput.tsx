@@ -30,7 +30,7 @@ const TextInput: FC<TextinputProps> = ({
                 <InputAdornment position="end" className='my-4 flex gap-1'>
                   {
                      inputAdorments.map((item: SolidButtonProps, i: number) => (
-                      <SolidButton {...item}   variant='textinput' />
+                      <SolidButton key={i} {...item}   variant='textinput' />
                      ))
                   }
               </InputAdornment>

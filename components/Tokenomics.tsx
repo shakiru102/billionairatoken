@@ -66,7 +66,7 @@ const Tokenomics: FC = () => {
                <div className="tokenomics flex flex-col gap-6">
                  {
                     tokenomicsList.map((item: TokenomicsCardProps, i: number) => (
-                        <TokenomicsCard  {...item}/>
+                        <TokenomicsCard key={i}  {...item}/>
                     ))
                  }
                </div>

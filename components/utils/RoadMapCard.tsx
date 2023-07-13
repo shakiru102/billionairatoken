@@ -20,7 +20,7 @@ const RoadMapCard: FC<RoadMapProps> = ({
       <div className="text-white font-detacher bg-gradient-to-r from-[#FDCE7B] to-[#CD8D03] text-[20px] py-6 px-8">{title}</div>
       {
         list.map((item: string, i: number) => (
-            <div className='flex gap-3 px-8 py-4 font-sora text-[#D9D9D9] text-[14px]'>
+            <div key={i} className='flex gap-3 px-8 py-4 font-sora text-[#D9D9D9] text-[14px]'>
                 <div className="inline-block" />
                 <div>{item}</div>
             </div>
