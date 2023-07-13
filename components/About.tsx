@@ -8,13 +8,13 @@ const About: FC = () => {
      <div className="md:min-h-screen bg-black">
         <ContainerLayout>
            
-           <div className=' w-full flex lg:flex-row flex-col justify-between py-[80px]'>
+           <div className=' w-full flex lg:flex-row flex-col justify-between pt-[40px] md:py-[80px]'>
               <div className=" w-full lg:w-5/12">
                  
           <Image className='md:h-[539px] md:w-[539px]' alt='about' src={AboutLogo} />
               </div>
               <div className=' w-full lg:w-5/12 flex items-center '>
-                 <div className="flex flex-col mt-16">
+                 <div className="flex flex-col mt-10 md:mt-16">
                     
              <div className="font-detacher text-[20px] text-center md:text-left md:text-[32px] text-transparent bg-gradient-to-r from-[#FDCE7B] to-[#CD8D03] bg-clip-text">
                 About TBT

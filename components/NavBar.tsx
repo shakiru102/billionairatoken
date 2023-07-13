@@ -1,15 +1,24 @@
-import React, { FC } from 'react'
+import React, { FC, useState } from 'react'
 import Image from 'next/image'
 import Logo from '../assets/tokenlogo.png'
 import LanguageIcon from '../assets/languageicon.png'
 import { NavlinksProps } from '../types'
-import { AppBar, Button, Toolbar } from '@mui/material'
+import { AppBar, Box, Button, Drawer, List, ListItem, ListItemButton, ListItemText, Toolbar } from '@mui/material'
 import ChevronIcon from '../assets/chevron.svg'
 import SolidButton from './utils/SolidButton'
-const NavBar: FC = () => {
+import CloseSharpIcon from '@mui/icons-material/CloseSharp';
+import MenuIcon from '@mui/icons-material/Menu';
+
+ interface NavBarProps {
+  openPresaleModal: () => void;
+ }
+
+const NavBar: FC<NavBarProps> = ({
+  openPresaleModal,
+}) => {
 
     
-
+ const [drawer, setDrawer] = useState<boolean>(false)
     
     const navigations:NavlinksProps[] = [
         { text: 'About us', to: '' },
@@ -19,9 +28,12 @@ const NavBar: FC = () => {
     ]
 
   return (
-    <AppBar 
+    <>
+      <AppBar 
     elevation={0}
-      className='bg-black'>
+      className='bg-black'
+      sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}
+      >
 
       <Toolbar className='justify-between'>
       <div className='flex items-center gap-1'>
@@ -34,7 +46,8 @@ const NavBar: FC = () => {
                 (
                     <SolidButton 
                     key={index} 
-                    text={item.text} 
+                    {...item}
+                    handleClick={openPresaleModal}
                     variant='transparent'/>
                 ) : 
                 (
@@ -53,8 +66,53 @@ const NavBar: FC = () => {
             <Image alt='icon' src={ChevronIcon} />
         </div>
       </div>
+      <div className="md:hidden">
+          {
+            drawer ? <CloseSharpIcon onClick={() => setDrawer(prev => !prev)} className='text-white text-[24px] '/> : <MenuIcon onClick={() => setDrawer(prev => !prev)} className=' text-[24px] text-white'/>
+          }
+        </div>
       </Toolbar>
     </AppBar>
+
+<Drawer
+variant="persistent"
+PaperProps={{
+  className: 'bg-black overflow-hidden'
+}}
+open={drawer}
+sx={{
+  width: '100%',
+  flexShrink: 0,
+  [`& .MuiDrawer-paper`]: { width: '100%', boxSizing: 'border-box' },
+}}
+>
+<Toolbar />
+<Box sx={{ overflow: 'auto' }}>
+  <List>
+    {navigations.map((item, index) => item.contained ? (
+     <ListItem key={index} >
+        <SolidButton 
+          key={index} 
+          {...item}
+          classnames='px-8 py-4 rounded-[8px]'
+          handleClick={openPresaleModal}
+          variant='transparent'/>
+   </ListItem>
+    ) : (
+      <ListItem key={index} >
+        <ListItemButton>
+          <ListItemText 
+          primary={item.text}
+          className='capitalize cursor-fancy text-[#A8A8A8] font-sora text-[16px]'
+          />
+        </ListItemButton>
+      </ListItem>
+    ))}
+  </List>
+</Box>
+<div className="absolute blur-[250.11935424804688px] bg-[rgba(216,156,55,0.7)] h-[457px] w-[457px] rounded-[457px] -bottom-20 -right-20"></div>
+</Drawer>
+    </>
   )
 }
 

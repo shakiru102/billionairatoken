@@ -8,7 +8,8 @@ const Footer: FC = () => {
     const footerInputDetails: FooterInputCardProps[] = [
         { 
             title: "Join our community",
-            content: "Subscribe to get latest updates about TBT Ecosystem"
+            content: "Subscribe to get latest updates about TBT Ecosystem",
+            footerChildren: <div className='flex justify-center md:justify-start'><MediaIcons /></div>
         },
         { 
             title: "Partner with us",
@@ -30,9 +31,7 @@ const Footer: FC = () => {
                 ))
             }
            </div>
-           <div className="mt-16 pb-16 border-b border-b-[#4B4B4B]">
-            <MediaIcons />
-           </div>
+           <div className="mt-16 pb-16 border-b border-b-[#4B4B4B]" />
            </ContainerLayout>
         </div>
         <div className='  md:p-16'>

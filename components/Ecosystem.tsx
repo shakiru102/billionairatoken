@@ -151,7 +151,7 @@ const Ecosystem: FC = () => {
                     <div className="inline-block my-4 font-detacher text-[20px] md:text-[40px] uppercase text-transparent bg-gradient-to-r from-[#FDCE7B] to-[#CD8D03] bg-clip-text">
                         Ecosystem Overview
                     </div>
-                    <div className=" hidden md:block font-sora text-[18px] text-[#FECF81] mb-6">
+                    <div className=" text-[12px] font-sora md:text-[18px] text-[#FECF81] mb-6">
                     Many times people get confused. They sometimes think an economy is money. Money in real sense is database for exchange of goods and services. Money is simply a database and driven force of the economy. Money doesn’t have power in and of itself. The actual economy is goods and services with TBT leveraging the blockchain and other disruptive technologies.
                     </div>
                 </div>

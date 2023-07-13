@@ -1,23 +1,37 @@
-import React, { FC } from 'react'
+import React, { FC, useState } from 'react'
 import Logo from '../assets/tokenlogo.png'
 import Image, { StaticImageData } from 'next/image'
 import { SolidButtonProps } from '../types'
 import SolidButton from './utils/SolidButton'
 import Layout from './Layout'
 import MediaIcons from './utils/ MediaIcons'
+import CoinModal from './utils/CoinModal'
+import { Formik } from 'formik'
+import SelectInput from './utils/SelectInput'
+import TextInput from './utils/TextInput'
 
-const OnBoard: FC = () => {
+interface onBoardProps {
+    openPresaleModal: () => void;
+   }
 
+const OnBoard: FC<onBoardProps> = ({
+    openPresaleModal
+}) => {
+    const [airdrop, setAirdrop] = useState<boolean>(false)
     const buttons: SolidButtonProps[] = [
         {
             text: "Join Presale",
-            variant: "solid"
+            variant: "solid",
+            handleClick: () => openPresaleModal()
         },
         {
             text: "Join Airdrop",
-            variant: "transparent"
+            variant: "transparent",
+            handleClick: () => setAirdrop(prev => !prev)
         }
     ]
+
+    
    
     
 
@@ -41,6 +55,68 @@ const OnBoard: FC = () => {
             </div>
            <MediaIcons />
        </Layout>
+
+       <CoinModal
+         open={airdrop}
+         onClose={() => setAirdrop(false)}
+         dialogTitle='Join Airdrop'
+         dialogText='You have now successfully joined the waitlist, you will be noticed when TBT lunches. '
+         dialogChildren={
+            <Formik
+            initialValues={{
+                walletAddress: '',
+                email: '',
+                twitter: '',
+                telegram: ''
+            }}
+            onSubmit={() => {}}
+            >
+                {({
+                    values,
+                    handleChange,
+                    handleSubmit
+                }) => (
+                    <form className="flex flex-col gap-6">
+                       <SelectInput
+                       label='Wallet Address'
+                       value={values.walletAddress}
+                       placeholder='example; Jones & Harii Int.'
+                       handleChange={handleChange('walletAddress')}
+                       menuItems={[
+                        { label: 'ENS',  value: 'ENS' }, 
+                        { label: 'ETH Address',  value: 'ETH Address' }, 
+                        { label: 'BSC Address',  value: 'BSC Address' }, 
+                        { label: 'ARB Address',  value: 'ARB Address' }
+                       ]}
+                       />
+                       <TextInput
+                       label='email'
+                       value={values.email}
+                       handleChange={handleChange('email')}
+                       placeholder='example; Jones & Harii Int.'
+                       />
+                       <TextInput
+                       label='Twitter Handle'
+                       value={values.twitter}
+                       handleChange={handleChange('twitter')}
+                       placeholder='example; Jones & Harii Int.'
+                       />
+                       <TextInput
+                       label='Telegram Handle'
+                       value={values.telegram}
+                       handleChange={handleChange('telegram')}
+                       placeholder='example; Jones & Harii Int.'
+                       />
+                       <SolidButton
+                       text="Join Waitlist & Airdrop"
+                       handleClick={handleSubmit}
+                       variant='solid'
+                       />
+                    </form>
+                )}
+                </Formik>
+         }
+       />
     </div>
   )
 }

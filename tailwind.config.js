@@ -15,7 +15,8 @@ module.exports = {
         larkenDemo: ["Larken Demo", "sans-serif"],
         sora: ["Sora", "san-serif"],
         detacher: ["Detacher", "sans-serif"],
-        biomeW04Regular: ["BiomeW04-Regular", "sans-serif"]
+        biomeW04Regular: ["BiomeW04-Regular", "sans-serif"],
+        inter: ["Inter", "sans-serif"]
 
       },
       cursor: {

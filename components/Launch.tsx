@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Airdrop1 from '../assets/airdrop1.png'
 import Airdrop2 from '../assets/airdrop2.png'
 import Presale1 from '../assets/presale1.png'
@@ -17,6 +17,10 @@ import Listing8 from '../assets/listing8.png'
 import Listing9 from '../assets/listing9.png'
 import RenderComponent from './RenderComponent'
 import LaunchCard, { LaunchCardProps } from './utils/LaunchCard'
+import CoinModal from './utils/CoinModal'
+import SolidButton from './utils/SolidButton'
+import { Formik } from 'formik'
+import TextInput from './utils/TextInput'
 
 
 const Launch = () => {
@@ -43,7 +47,7 @@ const Launch = () => {
         },
         {
             buttons: [
-                { text: "Public Sale", variant: 'solid', classnames: '' }
+                { text: "Public Sale", variant: 'solid', handleClick: () => setCexlisting(true) }
             ],
             imageCols: '3',
             images: [ Listing1, Listing2, Listing3, Listing4, Listing5, Listing7, Listing8, Listing9],
@@ -51,8 +55,10 @@ const Launch = () => {
             title: "CEX Listing"
         }
     ]
+    const [cexlisting, setCexlisting] = useState<boolean>(false)
 
   return (
+   <>
     <div className="md:h-[150vh] md:flex justify-center items-center">
         <RenderComponent 
         title='TBT launch process' 
@@ -66,6 +72,39 @@ const Launch = () => {
             </div>
         </RenderComponent>
     </div>
+    <CoinModal 
+    open={cexlisting}
+    onClose={() => setCexlisting(false)}
+    dialogText='Subscribe to get latest updates about TBT CEX listing.'
+    dialogTitle='Coming Soon...'
+    dialogChildren={
+        <Formik
+        initialValues={{ email: '' }}
+        onSubmit={({ email }) => {
+            console.log(email);
+            
+        }}
+        >
+            {({ 
+                values,
+                handleChange,
+                handleSubmit
+             }) => (
+            <form className="flex flex-col gap-5">
+                <TextInput 
+                name='email'
+                label='Enter your email'
+                value={values.email}
+                handleChange={handleChange('email')}
+                placeholder='sample@email.com'
+                 />
+                <SolidButton handleClick={handleSubmit} variant='solid' text='Submit' classnames='rounded-[8px] mb-3' />
+            </form>
+            )}
+        </Formik>
+    }
+    />
+   </>
   )
 }
 

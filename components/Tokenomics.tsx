@@ -4,6 +4,8 @@ import ContainerLayout from '../Layout/ContainerLayout'
 import Certik from '../assets/certik.png'
 import Image from 'next/image'
 import tokenImage from "../assets/png/tokens.png"
+import MTokenomics from '../assets/mobiletokenomics.png'
+import TokenomicsCard, { TokenomicsCardProps } from './utils/TokenomicsCard'
 const Tokenomics: FC = () => {
 
     const tokenomics: { text: string; color: string }[] = [
@@ -16,19 +18,61 @@ const Tokenomics: FC = () => {
         { text: 'Airdrops 2.5%', color: '#000CDF'  }
     ]
 
+    const tokenomicsList: TokenomicsCardProps[] = [
+        { 
+            title: "40% Burn Pool",
+            text: "Burn Pool represents 4 billion MTCs reserved for burning. These MTCs will be dynamically burned over two years." 
+        },
+        { 
+            title: "5% Strategic Sale Pool",
+            text: "Strategic Sales Pool represents 500 million MTCs reserved for sale.",
+            points: [
+                "✦   Seed Sale 1: 1% (250 days linear vesting)",
+                "✦   Seed Sale 2: 1% (250 days linear vesting)",
+                "✦   Private Sale 1: 1% (100% after 10 days cliff from TGE)",
+                "✦   Public Sale: 2% (100 days linear vesting)"
+            ] 
+        },
+        { 
+            title: "55% Others",
+            points: [
+                "✦ 19% Team Pool (24 months cliff than 1000 days linear vesting)",
+                "✦   10% Miner Pool (2000 days linear vesting)",
+                "✦   5% Liquidity Pool (Only for market making)",
+                "✦   5% Reward Pool (5000 days linear vesting)",
+                "✦   5% Staking Pool (1000 days linear vesting)",
+                "✦   8% Marketing Pool (6 months cliff/ 500 days linear vesting)",
+                "✦   2% MetaAirdrop Pool",
+                "✦   1% Charity Pool (1000 days linear vesting)"
+            ] 
+        }
+    ]
+    
   return (
-    <div className='z-50 relative  mt-24'>
+      <div className='z-50 relative mt-20  md:mt-24'>
         <ContainerLayout>
-        <div className=" md:mb-4 text-center font-detacher md:text-[40px] uppercase text-transparent bg-gradient-to-r from-[#FDCE7B] to-[#CD8D03] bg-clip-text">
+        <div className=" mb-4 text-[20px] text-center font-detacher md:text-[40px] uppercase text-transparent bg-gradient-to-r from-[#FDCE7B] to-[#CD8D03] bg-clip-text">
             Tokenomics
         </div>
-        <div className="font-sora md:mx-36 text-[#A8A8A8] md:text-[16px] text-center">
+        <div className="font-sora md:mx-36 px-6 md:px-0 text-[#A8A8A8] text-[14px] md:text-[16px] text-center">
             The total supply of Metatime Coin, which is offered to everyone with its unique tokenomics structure, has been limited to 10 billion MTC.
         </div>
-        <div className="md:mt-4 font-sora text-[#FECF81] md:text-[18px] uppercase font-semibold text-center">
+        <div className="md:mt-4 hidden md:block font-sora text-[#FECF81] md:text-[18px] uppercase font-semibold text-center">
             ONE TOKEN LIMITLESS POSSIBILITIES!
         </div>
-        <div className="flex items-center">
+        {/* Mobile */}
+        <div className='flex flex-col md:hidden'>
+               <Image alt='mobile tokenomics' src={MTokenomics} />
+               <div className="tokenomics flex flex-col gap-6">
+                 {
+                    tokenomicsList.map((item: TokenomicsCardProps, i: number) => (
+                        <TokenomicsCard  {...item}/>
+                    ))
+                 }
+               </div>
+            </div>
+        {/* Desktop */}
+        <div className="hidden md:flex items-center">
                   <div className='flex-1 w-7/12'>
                       <Image src={tokenImage} alt="token" />
             </div>
@@ -48,6 +92,7 @@ const Tokenomics: FC = () => {
         </div>
         </ContainerLayout>
     </div>
+    
   )
 }
 
