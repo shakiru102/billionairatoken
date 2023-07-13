@@ -33,7 +33,7 @@ const Launch = () => {
             ],
             imageCols: '2',
             images: [ Airdrop1, Airdrop2 ],
-            text: "Download metamask or your wallet of choice from the app store or google play store.",
+            text: "Download Metamask or TrustWallet from the AppStore or GooglePlay Store. Follow the steps to be eligible.",
             title: "Airdrop"
         },
         {
@@ -42,7 +42,7 @@ const Launch = () => {
             ],
             imageCols: '3',
             images: [ Presale1, Presale2, Presale3, Presale4, Presale5, Presale6],
-            text: "Download metamask or your wallet of choice from the app store or google play store.",
+            text: "Download Metamask or TrustWallet from the AppStore or GooglePlay Store. Follow the steps to be eligible.",
             title: "Presale"
         },
         {
@@ -51,7 +51,7 @@ const Launch = () => {
             ],
             imageCols: '3',
             images: [ Listing1, Listing2, Listing3, Listing4, Listing5, Listing7, Listing8, Listing9],
-            text: "Download metamask or your wallet of choice from the app store or google play store.",
+            text: "Download Metamask or TrustWallet from the AppStore or GooglePlay Store. Follow the steps to be eligible.",
             title: "CEX Listing"
         }
     ]

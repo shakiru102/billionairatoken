@@ -44,7 +44,7 @@ const OnBoard: FC<onBoardProps> = ({
         <span className='bg-gradient-to-r from-[#FDCE7B] to-[#CD8D03] bg-clip-text'> Billionaires </span>
         Token</div>
         <div className=' my-4 text-center text-[12px] mx-8 md:mx-0 md:text-[18px] bg-gradient-to-r from-[#FAFAFA] to-[#AAA5A5] bg-clip-text text-transparent font-sora'>
-        Pioneering a comprehensive digital currency ecosystem with real-world utilities!
+        Pioneering a comprehensive digital currency ecosystem with real-world assets!
         </div>
             <div className='flex gap-4 my-4'>
                 {
@@ -108,7 +108,7 @@ const OnBoard: FC<onBoardProps> = ({
                        placeholder='example; Jones & Harii Int.'
                        />
                        <SolidButton
-                       text="Join Waitlist & Airdrop"
+                       text="Join Airdrop"
                        handleClick={handleSubmit}
                        variant='solid'
                        />

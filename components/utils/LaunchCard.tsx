@@ -22,7 +22,7 @@ const LaunchCard: FC<LaunchCardProps> = ({
   return (
     <div className='flex flex-col gap-4'>
        <Paper className='bg-[#1A1613] rounded-[10px]'>
-          <div className='text-[#FECF81] md:24px text-center py-3 font-sora font-semibold'>
+          <div className='text-[#FECF81] text-[20px] md:text-[24px] text-center py-3 font-sora font-semibold'>
             { title }
             </div>
        </Paper>
