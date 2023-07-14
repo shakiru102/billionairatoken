@@ -16,6 +16,7 @@ import { Formik } from 'formik'
 import TextInput from '../components/utils/TextInput'
 import SolidButton from '../components/utils/SolidButton'
 import RoadMap from '../components/RoadMap'
+import SelectInput from '../components/utils/SelectInput'
 
 const Home: NextPage = () => {
 
@@ -47,7 +48,7 @@ const Home: NextPage = () => {
     <Footer />
     <CoinModal
     dialogTitle='Join Presale'
-    dialogText='Please enter the necessary information the input field below.'
+    dialogText='Kindly fill in the necessary information to participate in the presale'
     open={presaleModal}
     onClose={() => setPresaleModal(false)}
     dialogChildren={
@@ -69,7 +70,7 @@ const Home: NextPage = () => {
             <form className="flex flex-col gap-6">
                 <TextInput 
                 name='token'
-                label='SPT Token price'
+                label='TBT Token price'
                 value={values.token}
                 handleChange={handleChange('token')}
                 placeholder='0.08 per token'
@@ -86,12 +87,18 @@ const Home: NextPage = () => {
                   { text: '100%' },
                 ]}
                  />
-                 <TextInput 
+                 <SelectInput 
                 name='walletAddress'
-                label='BEP20 or ERC20 wallet address'
+                label='Select Your Wallet (ENS/ETH/BEP20/ARB)'
                 value={values.walletAddress}
                 handleChange={handleChange('walletAddress')}
-                placeholder='0x56378i6ygcbh64tgybf74tg7uf4'
+                placeholder='Enter your wallet address'
+                menuItems={[
+                  { label: 'ENS',  value: 'ENS' }, 
+                  { label: 'ETH Address',  value: 'ETH Address' }, 
+                  { label: 'BSC Address',  value: 'BSC Address' }, 
+                  { label: 'ARB Address',  value: 'ARB Address' }
+                 ]}
                  />
                  <TextInput 
                 name='registeredEmail'

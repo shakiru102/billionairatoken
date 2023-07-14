@@ -1,9 +1,11 @@
+import { StaticImageData } from "next/image";
 import { ReactNode } from "react";
 
 export interface NavlinksProps {
    text: string;
-   to: string;
+   to?: string;
    contained?: boolean;
+   handleClick?: () => void;
 }
 
 export interface SolidButtonProps {
@@ -36,4 +38,14 @@ export interface CoinModalProps {
     dialogTitle?: string;
     dialogText?: string;
     dialogChildren: ReactNode;
+}
+
+export interface EcosystemProps {
+    title: string;
+    header?: string;
+    content: string | ReactNode;
+    button?: SolidButtonProps;
+    image?: StaticImageData;
+    video?: ReactNode;
+    
 }

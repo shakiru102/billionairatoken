@@ -21,8 +21,15 @@ const NavBar: FC<NavBarProps> = ({
  const [drawer, setDrawer] = useState<boolean>(false)
     
     const navigations:NavlinksProps[] = [
-        { text: 'About us', to: '' },
-        { text: 'Ecosystem', to: '' },
+        { text: 'About us', handleClick: () => {
+          const element = document.getElementById('about');
+          element?.scrollIntoView({ behavior: 'smooth' })
+
+        } },
+        { text: 'Ecosystem', handleClick: () => {
+          const element = document.getElementById('ecosystem');
+          element?.scrollIntoView({ behavior: 'smooth' })
+        }  },
         { text: 'Whitepaper', to: '' },
         { text: 'Join Presale', to: '', contained: true }
     ]
@@ -55,6 +62,7 @@ const NavBar: FC<NavBarProps> = ({
                     className='capitalize cursor-fancy text-[#A8A8A8] font-sora text-[16px]'
                     key={index} 
                     disableElevation 
+                    onClick={item.handleClick}
                     variant={'text'} >
                         { item.text }
                     </Button>)
@@ -75,7 +83,7 @@ const NavBar: FC<NavBarProps> = ({
     </AppBar>
 
 <Drawer
-variant="persistent"
+variant="temporary"
 PaperProps={{
   className: 'bg-black overflow-hidden'
 }}
@@ -100,7 +108,10 @@ sx={{
    </ListItem>
     ) : (
       <ListItem key={index} >
-        <ListItemButton>
+        <ListItemButton onClick={() => {
+           setTimeout(() =>  item.handleClick && item.handleClick(), 100)
+           setDrawer(false)
+        }}>
           <ListItemText 
           primary={item.text}
           className='capitalize cursor-fancy text-[#A8A8A8] font-sora text-[16px]'

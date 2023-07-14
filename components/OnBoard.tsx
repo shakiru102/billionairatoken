@@ -38,9 +38,9 @@ const OnBoard: FC<onBoardProps> = ({
   return (
     <div className="bg-[url('../assets/tokenbg.png')] bg-no-repeat bg-cover">
        <Layout classNames='flex items-center justify-center flex-col h-[70vh] md:mt-8'>
-        <span className='hidden md:inline'><Image width={269} height={269} alt="logo" src={Logo} /></span>
+        <span className='hidden md:inline'><Image width={230} height={230} alt="logo" src={Logo} /></span>
         <span className='md:hidden mt-16'><Image width={123} height={123} alt="logo" src={Logo} /></span>
-        <div className='md:leading-[96px] text-center text-[36px] md:text-[90px] bg-gradient-to-r from-[#FAFAFA] to-[#AAA5A5] bg-clip-text text-transparent font-detacher'>The 
+        <div className='md:leading-[96px] text-center text-[36px] md:text-[75px] bg-gradient-to-r from-[#FAFAFA] to-[#AAA5A5] bg-clip-text text-transparent font-detacher'>The 
         <span className='bg-gradient-to-r from-[#FDCE7B] to-[#CD8D03] bg-clip-text'> Billionaires </span>
         Token</div>
         <div className=' my-4 text-center text-[12px] mx-8 md:mx-0 md:text-[18px] bg-gradient-to-r from-[#FAFAFA] to-[#AAA5A5] bg-clip-text text-transparent font-sora'>
@@ -59,11 +59,12 @@ const OnBoard: FC<onBoardProps> = ({
        <CoinModal
          open={airdrop}
          onClose={() => setAirdrop(false)}
-         dialogTitle='Join Airdrop'
-         dialogText='You have now successfully joined the waitlist, you will be noticed when TBT lunches. '
+         dialogTitle='Join Waitlist & Airdrop'
+         dialogText='Kindly fill in the form and join our community to follow the development progress. You will be notified when TBT launch.'
          dialogChildren={
             <Formik
             initialValues={{
+                wallet:'',
                 walletAddress: '',
                 email: '',
                 twitter: '',
@@ -77,11 +78,11 @@ const OnBoard: FC<onBoardProps> = ({
                     handleSubmit
                 }) => (
                     <form className="flex flex-col gap-6">
-                       <SelectInput
-                       label='Wallet Address'
-                       value={values.walletAddress}
+                        <SelectInput
+                       label='Choose Wallet'
+                       value={values.wallet}
                        placeholder='example; Jones & Harii Int.'
-                       handleChange={handleChange('walletAddress')}
+                       handleChange={handleChange('wallet')}
                        menuItems={[
                         { label: 'ENS',  value: 'ENS' }, 
                         { label: 'ETH Address',  value: 'ETH Address' }, 
@@ -90,25 +91,31 @@ const OnBoard: FC<onBoardProps> = ({
                        ]}
                        />
                        <TextInput
-                       label='email'
+                       label='Wallet Address'
+                       value={values.walletAddress}
+                       placeholder='Wallet Address'
+                       handleChange={handleChange('walletAddress')}
+                       />
+                       <TextInput
+                       label='Email *'
                        value={values.email}
                        handleChange={handleChange('email')}
-                       placeholder='example; Jones & Harii Int.'
+                       placeholder='Email Address'
                        />
                        <TextInput
-                       label='Twitter Handle'
+                       label='Twitter Handle +'
                        value={values.twitter}
                        handleChange={handleChange('twitter')}
-                       placeholder='example; Jones & Harii Int.'
+                       placeholder='Twitter username'
                        />
                        <TextInput
-                       label='Telegram Handle'
+                       label='Telegram Handle *'
                        value={values.telegram}
                        handleChange={handleChange('telegram')}
-                       placeholder='example; Jones & Harii Int.'
+                       placeholder='Telegram'
                        />
                        <SolidButton
-                       text="Join Airdrop"
+                       text="Submit"
                        handleClick={handleSubmit}
                        variant='solid'
                        />

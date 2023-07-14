@@ -1,13 +1,26 @@
 import React, { FC, useState } from 'react'
 import ContainerLayout from '../Layout/ContainerLayout'
 import OutlineButton from './utils/OutlineButton'
-import EcosystemCard, { EcosystemProps } from './utils/EcosystemCard'
+import EcosystemCard from './utils/EcosystemCard'
 import Image from 'next/image'
 import TopLeft from '../assets/topleft.png'
 import TopRight from '../assets/topright.png'
 import BottomLeft from '../assets/bottomleft.png'
 import BottomRight from '../assets/bottomright.png'
 import EastSharpIcon from '@mui/icons-material/EastSharp';
+import { EcosystemProps } from '../types'
+import BlowAi from '../assets/TBT Ecosystem Assets/BlowAI.svg'
+import BlowVerseMarketPlace from '../assets/TBT Ecosystem Assets/BlowMarketplace.svg'
+import BlowStaking from '../assets/TBT Ecosystem Assets/Blow dynamic staking.svg'
+import BlowBlackCard from '../assets/tbt-gif-small.gif'
+import BlowAvia from '../assets/TBT Ecosystem Assets/BlowAVIA.svg'
+import BlowWeb3 from '../assets/TBT Ecosystem Assets/Blow web3 phone.svg'
+import BlowBot from '../assets/TBT Ecosystem Assets/BlowBOT.svg'
+import BlowCali from '../assets/TBT Ecosystem Assets/BlowCALI.svg'
+import BlowLith  from '../assets/TBT Ecosystem Assets/BlowLITH.svg'
+import TbtFound from '../assets/TBT Ecosystem Assets/TBT found.svg'
+import { Accordion, AccordionDetails, AccordionSummary } from '@mui/material'
+import  ArrowForwardIosSharpIcon  from '@mui/icons-material/ArrowForwardIosSharp'
 
 
 const ActiveEcoImage = () => (
@@ -28,7 +41,8 @@ const Ecosystem: FC = () => {
             button: {
                 text: "LEARN MORE",
                 appendIcon: <EastSharpIcon className='text-[#CD8D03] text-[18px] relative left-2'/>
-            } 
+            } ,
+            image: BlowWeb3
         },
         { 
             title: "BlowVerse Marketplace",
@@ -36,7 +50,8 @@ const Ecosystem: FC = () => {
             button: {
                 text: "Explore",
                 appendIcon: <EastSharpIcon className='text-[#CD8D03] text-[18px] relative left-2'/>
-            } 
+            } ,
+            image: BlowVerseMarketPlace
         },
         { 
             title: "BlowPAY (BlackCard)",
@@ -45,7 +60,8 @@ const Ecosystem: FC = () => {
             button: {
                 text: "Accept payment now",
                 appendIcon: <EastSharpIcon className='text-[#CD8D03] text-[18px] relative left-2'/>
-            }  
+            },
+            image: BlowBlackCard
         },
         { 
             title: "BlowEARN (Staking)",
@@ -54,7 +70,8 @@ const Ecosystem: FC = () => {
             button: {
                 text: "Start Earning Now",
                 appendIcon: <EastSharpIcon className='text-[#CD8D03] text-[18px] relative left-2'/>
-            } 
+            },
+            image: BlowStaking 
         },
         { 
             title: "BlowNFT",
@@ -76,6 +93,7 @@ const Ecosystem: FC = () => {
                     (Learn more) about BlowAVIA and embark on a hassle-free journey!
                 </span>
             </span>,   
+            image: BlowAvia
         },
         { 
             title: "Blow AI",
@@ -83,7 +101,8 @@ const Ecosystem: FC = () => {
             button: {
                 text: "Explore",
                 appendIcon: <EastSharpIcon className='text-[#CD8D03] text-[18px] relative left-2'/>
-            } 
+            },
+            image: BlowAi 
         },
         { 
             title: "BlowBOT",
@@ -93,6 +112,7 @@ const Ecosystem: FC = () => {
                     Get started with BlowBOT and revolutionize your daily tasks.
                     </span>
                 </span>,  
+            image: BlowBot    
         },
         { 
             title: "BlowCALIFORNIUM",
@@ -103,6 +123,7 @@ const Ecosystem: FC = () => {
                         Explore BlowCALIFORNIUM Mineral and elevate your well-being now!
                         </span>
                     </span>, 
+            image: BlowCali        
         },
         { 
             title: "BlowLITHIUM",
@@ -112,6 +133,7 @@ const Ecosystem: FC = () => {
                          {' '} Upgrade your smart products with BlowLITHIUM and boost performance!
                         </span>
                     </span>, 
+            image: BlowLith        
         },
         { 
             title: "BlowEVC Station",
@@ -137,7 +159,8 @@ const Ecosystem: FC = () => {
             button: {
                 text: "Support the Foundation",
                 appendIcon: <EastSharpIcon className='text-[#CD8D03] text-[18px] relative left-2'/>
-            } 
+            },
+            image: TbtFound 
         },
     ]
 
@@ -145,24 +168,24 @@ const Ecosystem: FC = () => {
 
 
   return (
-    <div className='min-h-[130vh] '>
+    <div id='ecosystem' className='md:min-h-[130vh] '>
       <ContainerLayout>
             <div className="text-center">
                     <div className="inline-block my-4 font-detacher text-[20px] md:text-[40px] uppercase text-transparent bg-gradient-to-r from-[#FDCE7B] to-[#CD8D03] bg-clip-text">
                         Ecosystem Overview
                     </div>
                     <div className=" text-[12px] font-sora md:text-[18px] text-[#FECF81] mb-6">
-                    Many times people get confused. They sometimes think an economy is money. Money in real sense is database for exchange of goods and services. Money is simply a database and driven force of the economy. Money doesn’t have power in and of itself. The actual economy is goods and services with TBT leveraging the blockchain and other disruptive technologies.
+                    Why TBT Ecosystem: Decentralised system is the future, and so is the Real World Assets (RWAs) tokenisation. Whether you adopt it now or not. Value is value, Innovation is Innovation. TBT is positioned to build the first ever Real World Assets (RWAs) decentralised ecosystem, leveraging the Blockchain, Ai, Metaverse and other disruptive technologies.
                     </div>
                 </div>
             <div className="grid grid-rows-3 md:grid-rows-1 md:grid-cols-3 md:h-[782px]">
-                <ul className="border-t border-r row-span-2 md:row-span-1 md:col-span-1  border-b border-l border-[#FECF81] flex flex-col">
+                <ul className="border-t border-r row-span-3 md:row-span-1 md:col-span-1  border-b border-l border-[#FECF81] flex flex-col">
                     {
                         ecosystems.map((item:EcosystemProps, i: number) => {
                             const isLastItem = i === ecosystems.length -1 
                             if(isLastItem) {
                                 return (
-                                    <li key={i} style={{ background: item.title === ecosystem?.title ? '#1A1613' : 'transparent' }} onClick={() => setEcosystem(item)} className=" relative text-[#A8A8A8] font-sora text-[15px] md:text-[18px] flex-1 flex gap-2 pl-16 items-center">
+                                    <li key={i} style={{ background: item.title === ecosystem?.title ? '#1A1613' : 'transparent' }} onClick={() => setEcosystem(item)} className=" relative text-[#A8A8A8] font-sora text-[15px] md:text-[18px] flex-1 hidden md:flex gap-2 pl-16 items-center">
                                         { item.title === ecosystem?.title ? <ActiveEcoImage /> : null}
                                         <span className='inline-block w-[5px] h-[5px] bg-[#A8A8A8]' /> { item.title }
                                     </li>
@@ -170,50 +193,52 @@ const Ecosystem: FC = () => {
                             }
 
                             return (
-                                <li key={i} style={{ background: item.title === ecosystem?.title ? '#1A1613' : 'transparent' }} onClick={() => setEcosystem(item)} className=" relative text-[#A8A8A8] font-sora text-[15px] md:text-[18px] flex-1 flex border-b border-b-[#FECF81] gap-2 pl-16 items-center">
+                                <li key={i} style={{ background: item.title === ecosystem?.title ? '#1A1613' : 'transparent' }} onClick={() => setEcosystem(item)} className=" relative text-[#A8A8A8] font-sora text-[15px] md:text-[18px] flex-1 hidden md:flex border-b border-b-[#FECF81] gap-2 pl-16 items-center">
                                     { item.title === ecosystem?.title ? <ActiveEcoImage /> : null}
                                     <span className='inline-block w-[5px] h-[5px] bg-[#A8A8A8]' /> { item.title }
                                 </li>
                             )
                         })
                     }
+                    {
+                        ecosystems.map((item: EcosystemProps, i:number) => (
+                            <Accordion key={i} className='md:hidden bg-transparent border-b border-b-[#FECF81]'>
+                                <AccordionSummary 
+                                sx={{
+                                    '& .MuiAccordionSummary-expandIconWrapper.Mui-expanded': {
+                                        transform: 'rotate(90deg)',
+                                      }
+                                }}
+                                expandIcon={<ArrowForwardIosSharpIcon  className='text-[#A8A8A8] text-[18px]'/>}
+                                >
+                                    <div className='relative text-[#A8A8A8] font-sora text-[15px] md:text-[18px] flex-1 flex  gap-2 pl-4 items-center'>
+                                        <span className='inline-block w-[5px] h-[5px] bg-[#A8A8A8]' /> <span> { item.title }</span>
+                                    </div>
+                                </AccordionSummary>
+                                <AccordionDetails>
+                                <EcosystemCard
+                                    {...item}
+                                    />
+                                </AccordionDetails>
+                            </Accordion>
+                        ))
+                    }
                 </ul>
-                <div className=" grid grid-rows-4 bg-[url('../assets/tokenbg.png')] bg-no-repeat bg-cover bg-center order-first md:order-last md:col-span-2">
-                    <div className=" row-span-4 md:row-span-3 border-t border-l md:border-l-0 border-r border-[#FECF81]">
-                        <EcosystemCard 
-                        {...ecosystem}
-                        />
+                <div className=" hidden md:grid grid-rows-5 bg-[url('../assets/tokenbg.png')] bg-no-repeat bg-cover bg-center order-first md:order-last md:col-span-2">
+                    <div className=" row-span-5 md:row-span-3 border-t border-l md:border-l-0 border-r border-[#FECF81]">
+                      { ecosystem.image && 
+                       <div className='text-center mt-8'>
+                        <Image alt={ecosystem.title} height={400} src={ecosystem.image} />
+                      </div> }
                     </div>
-                    <div className="bg-[#00000080] hidden border-t border-r border-b border-[#FECF81] pl-8 md:flex flex-col justify-center">
-                        <div>
-                        <div className="bg-gradient-to-r inline-block from-[#FDCE7B] to-[#CD8D03] bg-clip-text font-detacher text-[24px] text-transparent">
-                            Swaps
-                        </div>
-                        </div>
-                        <div className="md:text-[18px] text-[#A8A8A8] font-sora my-4">
-                            Quickly and easily exchange one token for another.
-                        </div>
-                        <div>
-                        <OutlineButton text='Coming soon' />
-                        </div>
+                    <div className="bg-[#00000080] md:row-span-2 hidden border-t border-r border-b border-[#FECF81] md:py-8 md:flex flex-col justify-center">
+                       <EcosystemCard
+                       {...ecosystem}
+                       />
                     </div>
 
                     
                 </div>
-                {/* mobile */}
-                <div className="bg-[#00000080] py-10 md:py-0 md:hidden border-t border-l md:border-l-0 border-r border-b border-[#FECF81] pl-4 md:pl-8 flex flex-col justify-center">
-                        <div>
-                        <div className="bg-gradient-to-r inline-block from-[#FDCE7B] to-[#CD8D03] bg-clip-text font-detacher text-[20px] md:text-[24px] text-transparent">
-                            Swaps
-                        </div>
-                        </div>
-                        <div className="text-[14px] md:text-[18px] text-[#A8A8A8] font-sora my-3 md:my-4">
-                            Quickly and easily exchange one token for another.
-                        </div>
-                        <div>
-                        <OutlineButton text='Coming soon' />
-                        </div>
-                    </div>
             </div>
       </ContainerLayout>
     </div>

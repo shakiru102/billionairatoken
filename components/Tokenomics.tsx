@@ -49,7 +49,7 @@ const Tokenomics: FC = () => {
     ]
     
   return (
-      <div className='z-50 relative mt-20  md:mt-24'>
+      <div className=' relative mt-20  md:mt-24'>
         <ContainerLayout>
         <div className=" mb-4 text-[20px] text-center font-detacher md:text-[40px] uppercase text-transparent bg-gradient-to-r from-[#FDCE7B] to-[#CD8D03] bg-clip-text">
             Tokenomics
@@ -57,11 +57,11 @@ const Tokenomics: FC = () => {
         <div className="font-sora md:mx-36 px-6 md:px-0 text-[#A8A8A8] text-[14px] md:text-[16px] text-center">
             The total supply of Metatime Coin, which is offered to everyone with its unique tokenomics structure, has been limited to 10 billion MTC.
         </div>
-        <div className="md:mt-4 hidden md:block font-sora text-[#FECF81] md:text-[18px] uppercase font-semibold text-center">
-            ONE TOKEN LIMITLESS POSSIBILITIES!
+        <div className="md:mt-4 hidden md:block font-sora text-[#FECF81] md:text-[18px] capitalize font-semibold text-center">
+            One Token, Limitless Possibilities!
         </div>
         {/* Mobile */}
-        <div className='flex flex-col md:hidden'>
+        <div className='flex flex-col md:hidden z-50'>
                <Image alt='mobile tokenomics' src={MTokenomics} />
                <div className="tokenomics flex flex-col gap-6">
                  {

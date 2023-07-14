@@ -38,7 +38,7 @@ const FAQ: FC = () => {
         <ContainerLayout>
         <Paper className='bg-[#1A1A1A] md:mt-28 px-8 py-16 rounded-[20px]'>
              <div className="text-center font-detacher text-[20px] md:text-[32px] text-[#FECF81] py-4">
-                Frequently Asked Questions
+                FAQ
              </div>
             {
                 faqs.map((faq:FAQProps, i: number) => (

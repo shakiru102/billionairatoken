@@ -5,7 +5,7 @@ import Image from 'next/image'
 import ContainerLayout from '../Layout/ContainerLayout'
 const About: FC = () => {
   return (
-     <div className="md:min-h-screen bg-black">
+     <div id='about' className="md:min-h-screen bg-black">
         <ContainerLayout>
            
            <div className=' w-full flex lg:flex-row flex-col justify-between pt-[40px] md:py-[80px]'>
