@@ -95,7 +95,6 @@ sx={{
 }}
 >
 <Toolbar />
-<Box sx={{ overflow: 'auto' }}>
   <List>
     {navigations.map((item, index) => item.contained ? (
      <ListItem key={index} >
@@ -120,7 +119,6 @@ sx={{
       </ListItem>
     ))}
   </List>
-</Box>
 <div className="absolute blur-[250.11935424804688px] bg-[rgba(216,156,55,0.7)] h-[457px] w-[457px] rounded-[457px] -bottom-20 -right-20"></div>
 </Drawer>
     </>
