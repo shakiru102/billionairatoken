@@ -11,16 +11,21 @@ import Footer from '../components/Footer'
 import Ecosystem from '../components/Ecosystem'
 import NavBar from '../components/NavBar'
 import CoinModal from '../components/utils/CoinModal'
-import { useState } from 'react'
+import { Suspense, useState } from 'react'
 import { Formik } from 'formik'
 import TextInput from '../components/utils/TextInput'
 import SolidButton from '../components/utils/SolidButton'
 import RoadMap from '../components/RoadMap'
 import SelectInput from '../components/utils/SelectInput'
+import { Canvas } from '@react-three/fiber'
+import { OrbitControls } from '@react-three/drei'
+import { ChessBoard } from '../models/ChessBoard'
+import * as THREE from 'three'
 
 const Home: NextPage = () => {
 
   const [presaleModal, setPresaleModal] = useState<boolean>(false)
+  
 
 
   return (
@@ -42,7 +47,19 @@ const Home: NextPage = () => {
     title='The team'  
     subtitle='The Community constitutes the governing team of the project. No centralise authorities over the project. Built for the game-changers only!'
     >
-      <Image alt='chess' src={Chess} />
+      {/* <Image alt='chess' src={Chess} /> */}
+      <Suspense fallback={<div className='text-white text-center'>Loading please wait...</div>}>
+      <Canvas
+      id='webgl'
+      shadows
+      >
+        <ChessBoard scale={35}  />
+            <ambientLight intensity={0.1} />
+            {/* <spotLight intensity={10} castShadow position={[0,20,0]} angle={0.523} decay={2} penumbra={2} distance={0} color={new THREE.Color('#FECF81')} /> */}
+            <directionalLight intensity={15} castShadow color={new THREE.Color('#FECF81')} position={[3,1, 0]} />
+        <OrbitControls enableZoom={false}/>
+      </Canvas>
+      </Suspense>
     </RenderComponent>
     <FAQ />
     <Footer />

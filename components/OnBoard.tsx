@@ -103,7 +103,7 @@ const OnBoard: FC<onBoardProps> = ({
                        placeholder='Email Address'
                        />
                        <TextInput
-                       label='Twitter Handle +'
+                       label='Twitter Handle *'
                        value={values.twitter}
                        handleChange={handleChange('twitter')}
                        placeholder='Twitter username'

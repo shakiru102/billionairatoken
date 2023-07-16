@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+#webgl{
+  height: 70vh !important;
+}
+
 @font-face {
   font-family: "Detacher";
   src: url(../assets/fonts/detacher/Detacher-Regular.otf);
