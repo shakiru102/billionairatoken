@@ -30,8 +30,8 @@ const NavBar: FC<NavBarProps> = ({
           const element = document.getElementById('ecosystem');
           element?.scrollIntoView({ behavior: 'smooth' })
         }  },
-        { text: 'Whitepaper', to: '' },
-        { text: 'Join Presale', to: '', contained: true }
+        { text: 'Whitepaper', to: 'https://acrobat.adobe.com/link/review?uri=urn:aaid:scds:US:696772c6-01f7-42db-8ce5-372df6864801' },
+        { text: 'Join Presale', contained: true }
     ]
 
   return (
@@ -61,6 +61,7 @@ const NavBar: FC<NavBarProps> = ({
                   <Button 
                     className='capitalize cursor-fancy text-[#A8A8A8] font-sora text-[16px]'
                     key={index} 
+                    href={item.to}
                     disableElevation 
                     onClick={item.handleClick}
                     variant={'text'} >

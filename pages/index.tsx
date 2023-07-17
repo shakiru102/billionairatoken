@@ -47,16 +47,19 @@ const Home: NextPage = () => {
     title='The team'  
     subtitle='The Community constitutes the governing team of the project. No centralise authorities over the project. Built for the game-changers only!'
     >
-      {/* <Image alt='chess' src={Chess} /> */}
-      <Suspense fallback={<div className='text-white text-center'>Loading please wait...</div>}>
+      
+      <Suspense fallback={<Image alt='chess' src={Chess} />}>
       <Canvas
       id='webgl'
       shadows
+      camera={{
+        position: [0,Math.PI / 2, 5,]
+      }}
       >
         <ChessBoard scale={35}  />
-            <ambientLight intensity={0.1} />
-            {/* <spotLight intensity={10} castShadow position={[0,20,0]} angle={0.523} decay={2} penumbra={2} distance={0} color={new THREE.Color('#FECF81')} /> */}
-            <directionalLight intensity={15} castShadow color={new THREE.Color('#FECF81')} position={[3,1, 0]} />
+            <ambientLight intensity={0.5} color={new THREE.Color('#FECF81')}/>
+            <spotLight intensity={10} castShadow position={[-10,20,0]} angle={0.523} decay={2} penumbra={2} distance={0} color={new THREE.Color('#FECF81')} />
+            {/* <directionalLight intensity={15} castShadow color={new THREE.Color('#FECF81')} position={[3,1, 0]} /> */}
         <OrbitControls enableZoom={false}/>
       </Canvas>
       </Suspense>

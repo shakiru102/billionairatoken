@@ -8,10 +8,11 @@ Title: Chess Set
 */
 
 import * as THREE from 'three'
-import React, { useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 import { RootState, useFrame } from '@react-three/fiber'
+import { gsap } from 'gsap'
 // import Chess from '/public/chess_set/scene.gltf'
 
 type GLTFResult = GLTF & {
@@ -59,20 +60,38 @@ type GLTFResult = GLTF & {
 
 export function ChessBoard(props: JSX.IntrinsicElements['group']) {
   const { nodes, materials } = useGLTF('/chess/scene.gltf') as GLTFResult
+
   const chess = useRef<THREE.Group>(null)
+  const blackPawn1 = useRef<THREE.Group>(null)
+
   useFrame((state) => {
     const elapsedTime = state.clock.getElapsedTime()
     if(chess.current) {
       state.camera.lookAt(chess.current.position)
       chess.current.rotation.y =  elapsedTime *  0.05 
     }
+    
   })
 
+  useEffect(() => {
+    const tl = gsap.timeline()
+    if(blackPawn1.current) {
+      // tl.to(blackPawn1.current?.position, { y: 4, repeat: 5, yoyo: true })
+    }
+  },[blackPawn1.current])
+
+
   return (
-    <group {...props} castShadow receiveShadow dispose={null} rotation={[Math.PI / 10, 65 , 0]} ref={chess}>
+    <group {...props}  
+    castShadow 
+    receiveShadow 
+    dispose={null} 
+    rotation={[0, 0 , 0]} 
+    ref={chess}
+    >
       <group rotation={[Math.PI / 2, 0, 0]}>
         <group rotation={[-Math.PI, 0, 0]} scale={0.01}>
-          <group position={[6.534, 4.699, 2.918]}>
+          <group ref={blackPawn1} position={[6.534, 4.699, 2.918]}>
             <mesh castShadow receiveShadow geometry={nodes.Pawn_08_Player_02_0.geometry} material={materials.Player_02} position={[-6.364, 0, 0]} />
           </group>
           <group position={[4.695, 4.699, 2.918]}>
