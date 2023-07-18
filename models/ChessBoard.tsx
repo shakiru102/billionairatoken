@@ -73,12 +73,7 @@ export function ChessBoard(props: JSX.IntrinsicElements['group']) {
     
   })
 
-  useEffect(() => {
-    const tl = gsap.timeline()
-    if(blackPawn1.current) {
-      // tl.to(blackPawn1.current?.position, { y: 4, repeat: 5, yoyo: true })
-    }
-  },[blackPawn1.current])
+
 
 
   return (
