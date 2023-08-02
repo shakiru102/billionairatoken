@@ -21,7 +21,7 @@ const FooterInputCard: FC<FooterInputCardProps> = ({
 }) => {
   return (
     <div className={ position === 'right' ? 'text-center md:text-right' : 'text-center md:text-left'}>
-      <div className="md:text-[24px] font-detacher text-[#FECF81]">{ title }</div>
+      <div className="md:text-[24px] font-detacher text-[#FFF]">{ title }</div>
       <div className="text-[16px] mt-1 mb-8 font-sora text-[#A8A8A8]">{ content }</div>
       {
         footerChildren ? 

@@ -18,7 +18,7 @@ const FaqExpansion: FC<FAQProps> = ({
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
-          <Typography className='text-[#FECF81] text-[12px] md:text-[18px] font-sora font-semibold'>{title}</Typography>
+          <Typography className='text-transparent bg-gradient-to-b from-[#FAFAFA] to-[#aaa5a503] bg-clip-text text-[12px] md:text-[18px] font-sora font-semibold'>{title}</Typography>
         </AccordionSummary>
         <AccordionDetails>
           {

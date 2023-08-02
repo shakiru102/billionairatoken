@@ -7,7 +7,7 @@ const FAQ: FC = () => {
 
     const faqs: FAQProps[] = [
         { 
-            title: "Why $TBT and the Ecosystem?",
+            title: "Why $Blow and the Ecosystem?",
             texts: [
                 `According to Elon Musk: "People get confused. They sometimes think an economy is money. Money is a database for exchange of goods & services. Money is a database. Money doesn't have power in & of itself. The actual economy is goods & services. And that’s what we are building.`,
 
@@ -17,11 +17,11 @@ const FAQ: FC = () => {
             ]
          },
          {
-            title: "How to buy The Billionaires Token",
+            title: "How to buy The BlowX Token",
             texts: ["TBT token is a utility token deeply embedded into the Sportrex ecosystem, designed to provide a series of perks and benefits to holders as well as to enhance the user experience across the Sportrex platform. SPT is an ERC-20 and BSC blockchain token fully audited by two (2) reputable audit firms."]
          },
          {
-            title: "Where to buy The Billionaires Token",
+            title: "Where to buy The BlowX Token",
             texts: ["Join our waitlist and we'll notify you when the public sale starts on May 15, 2023. We expect a lot of interest, which is why you will receive a KYC link ahead of time so you can get set up for the sale early."]
          },
          {
@@ -37,7 +37,7 @@ const FAQ: FC = () => {
     <div className="md:min-h-[80vh]">
         <ContainerLayout>
         <Paper className='bg-[#1A1A1A] md:mt-28 px-8 py-16 rounded-[20px]'>
-             <div className="text-center font-detacher text-[20px] md:text-[32px] text-[#FECF81] py-4">
+             <div className="text-center font-detacher text-[20px] md:text-[32px] text-transparent bg-gradient-to-b from-[#FAFAFA] to-[#aaa5a503] bg-clip-text py-4">
                 FAQ
              </div>
             {

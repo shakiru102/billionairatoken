@@ -19,7 +19,7 @@ const RenderComponent: FC<RenderComponentProps> = ({
     <div className='md:min-h-screen pt-16 my-8 md:my-0'>
       <ContainerLayout>
         <div className="text-center md:mb-16">
-        <div className=" inline-block mb-4 font-detacher text-[20px] md:text-[40px] uppercase text-transparent bg-gradient-to-r from-[#FDCE7B] to-[#CD8D03] bg-clip-text">
+        <div className=" inline-block mb-4 font-detacher text-[20px] md:text-[40px] uppercase text-transparent bg-gradient-to-b from-[#FAFAFA] to-[#aaa5a503] bg-clip-text">
             { title }
         </div>
        { subtitle && <div className="font-sora md:mx-36 text-[#A8A8A8] text-[14px] my-2 md:text-[16px] text-center">{ subtitle }</div>}

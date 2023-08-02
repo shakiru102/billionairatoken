@@ -21,16 +21,16 @@ const LaunchCard: FC<LaunchCardProps> = ({
 }) => {
   return (
     <div className='flex flex-col gap-4'>
-       <Paper className='bg-[#1A1613] rounded-[10px]'>
-          <div className='text-[#FECF81] text-[20px] md:text-[24px] text-center py-3 font-sora font-semibold'>
+       <Paper className='bg-[#0F0F0F] rounded-[10px]'>
+          <div className='text-[#FFF] text-[20px] md:text-[24px] text-center py-3 font-sora font-semibold'>
             { title }
             </div>
        </Paper>
-       <Paper className='bg-[#1A1613] rounded-[10px] px-4 pt-10 pb-16 '>
+       <Paper className='bg-[#0F0F0F] rounded-[10px] px-4 pt-10 pb-16 '>
           <div className={ imageCols == '3' ? 'grid grid-cols-3 gap-4' : 'grid grid-cols-2 gap-4'}>
             {
                images.map((item: StaticImageData, i: number) => (
-                <div key={i} className='rounded-[10px] h-[86px] bg-[#2A231E] flex justify-center items-center'>
+                <div key={i} className='rounded-[10px] h-[86px] bg-[#272727] flex justify-center items-center'>
                     <Image alt='launch image' src={item}/>
                 </div>
                ))

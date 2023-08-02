@@ -13,8 +13,8 @@ const SolidButton: FC<SolidButtonProps> = ({
   const createColor = (mainColor: any) => augmentColor({ color: { main: mainColor } });
   const theme = createTheme({
     palette: {
-       solid: createColor('#FECF81'),
-       textinput: createColor('#FECF81'),
+       solid: createColor('#FFFFFF'),
+       textinput: createColor('#FFFFFF'),
        transparent: createColor('#FECF810F')
     } as any,
   });
@@ -28,10 +28,10 @@ const SolidButton: FC<SolidButtonProps> = ({
     color={variant}
     className={
       variant === 'transparent' ? 
-      "text-[#FECF81] cursor-fancy font-sora font-semibold bg-[#FECF810F] capitalize md:text-[16px] " + classnames :
+      "text-[#FFFFFF] cursor-fancy font-sora font-semibold bg-[#ffffff0b] capitalize md:text-[16px] " + classnames :
       variant === 'textinput' ?  
-      'text-black cursor-fancy font-inter  bg-[#FECF81] capitalize md:text-[16px]' :
-      "text-black cursor-fancy font-sora rounded-[8px] font-semibold bg-[#FECF81] capitalize md:text-[16px] " + classnames
+      'text-black cursor-fancy font-inter  bg-[#FFFFFF] capitalize md:text-[16px]' :
+      "text-black cursor-fancy font-sora rounded-[8px] font-semibold bg-[#FFFFFF] capitalize md:text-[16px] " + classnames
     }
     >
         { text }

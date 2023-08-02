@@ -24,7 +24,7 @@ const OutlineButton: FC<SolidButtonProps> = ({
     variant={'outlined'}
     // @ts-ignore
     color={'solid'}
-    className={ "text-[#FECF81] cursor-fancy font-sora font-semibold bg-[#FECF810F] normal-case border-[#FECF81] rounded-[8px] md:text-[16px]" }
+    className={ "text-[#FFF] cursor-fancy font-sora font-semibold bg-[#000000b6] normal-case border-[#FFF] rounded-[8px] md:text-[16px]" }
     >
         { text }
     </Button>

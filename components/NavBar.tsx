@@ -44,8 +44,7 @@ const NavBar: FC<NavBarProps> = ({
 
       <Toolbar className='justify-between'>
       <div className='flex items-center gap-1'>
-        <Image width={37} height={37} alt='logo' src={Logo} />
-        <div className='text-[#FAD17F] font-larkenDemo '>The Billionaires Token</div>
+        <Image height={32} alt='logo' className='contain' src={Logo} />
       </div>
       <div className="hidden md:flex">
         {
@@ -55,7 +54,7 @@ const NavBar: FC<NavBarProps> = ({
                     key={index} 
                     {...item}
                     handleClick={openPresaleModal}
-                    variant='transparent'/>
+                    variant='solid'/>
                 ) : 
                 (
                   <Button 
@@ -70,7 +69,7 @@ const NavBar: FC<NavBarProps> = ({
                 )
         }
         <div className='flex gap-3 items-center ml-2 border-l pl-2 border-[#242424]'>
-            <Image alt='language' src={LanguageIcon} />
+            <Image alt='language' className='contain' src={LanguageIcon} />
             <span className='text-[#A8A8A8]'>ENG</span>
             <Image alt='icon' src={ChevronIcon} />
         </div>

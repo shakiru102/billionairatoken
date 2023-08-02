@@ -61,7 +61,7 @@ const Launch = () => {
    <>
     <div className="md:h-[150vh] md:flex justify-center items-center">
         <RenderComponent 
-        title='TBT launch process' 
+        title='BlowX Launch Process' 
         >
         <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
                 {

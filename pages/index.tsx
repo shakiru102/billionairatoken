@@ -33,12 +33,14 @@ const Home: NextPage = () => {
    <NavBar openPresaleModal={() => setPresaleModal(prev => !prev)} />
     <OnBoard openPresaleModal={() => setPresaleModal(prev => !prev)}/>
     <About />
-    <div className="bg-[url('../assets/partnerbg.png')] bg-no-repeat bg-cover relative md:h-[250vh] md:flex flex-col justify-between">
+    {/* <div className="bg-[url('../assets/partnerbg.png')] bg-no-repeat bg-cover relative md:h-[250vh] md:flex flex-col justify-between">
       <div className="absolute z-0 blur-[250.11935424804688px] bg-[rgba(216,156,55,0.28)] md:h-[524px] md:w-[524px] md:rounded-[524px] top-0 left-0"></div>
       <div className="absolute z-0 blur-[250.11935424804688px] bg-[rgba(216,156,55,0.28)] md:h-[524px] md:w-[524px] md:rounded-[524px] bottom-0 right-0"></div>
     <RenderComponent title='Featured On' />
       <Tokenomics />
-    </div>
+    </div> */}
+    <RenderComponent title='Featured On' />
+      <Tokenomics />
       <Launch />
       <Ecosystem />
       <RoadMap />
@@ -58,7 +60,9 @@ const Home: NextPage = () => {
       >
         <ChessBoard scale={35}  />
             <ambientLight intensity={0.5} color={new THREE.Color('#FECF81')}/>
-            <spotLight intensity={10} castShadow position={[-10,20,0]} angle={0.523} decay={2} penumbra={2} distance={0} color={new THREE.Color('#FECF81')} />
+            <spotLight intensity={10} castShadow position={[-10,20,0]} angle={0.523} decay={2} penumbra={2} distance={0} 
+            // color={new THREE.Color('#FECF81')}
+             />
             {/* <directionalLight intensity={15} castShadow color={new THREE.Color('#FECF81')} position={[3,1, 0]} /> */}
         <OrbitControls enableZoom={false}/>
       </Canvas>

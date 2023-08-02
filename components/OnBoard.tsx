@@ -9,6 +9,7 @@ import CoinModal from './utils/CoinModal'
 import { Formik } from 'formik'
 import SelectInput from './utils/SelectInput'
 import TextInput from './utils/TextInput'
+import ContainerLayout from '../Layout/ContainerLayout'
 
 interface onBoardProps {
     openPresaleModal: () => void;
@@ -36,15 +37,14 @@ const OnBoard: FC<onBoardProps> = ({
     
 
   return (
-    <div className="bg-[url('../assets/tokenbg.png')] bg-no-repeat bg-cover">
-       <Layout classNames='flex items-center justify-center flex-col h-[70vh] md:mt-8'>
-        <span className='hidden md:inline'><Image width={230} height={230} alt="logo" src={Logo} /></span>
-        <span className='md:hidden mt-16'><Image width={123} height={123} alt="logo" src={Logo} /></span>
-        <div className='md:leading-[96px] text-center text-[36px] md:text-[75px] bg-gradient-to-r from-[#FAFAFA] to-[#AAA5A5] bg-clip-text text-transparent font-detacher'>The 
-        <span className='bg-gradient-to-r from-[#FDCE7B] to-[#CD8D03] bg-clip-text'> Billionaires </span>
-        Token</div>
-        <div className=' my-4 text-center text-[12px] mx-8 md:mx-0 md:text-[18px] bg-gradient-to-r from-[#FAFAFA] to-[#AAA5A5] bg-clip-text text-transparent font-sora'>
-        Pioneering a comprehensive digital currency ecosystem with real-world assets!
+    <div className=" min-h-screen flex items-center">
+       <ContainerLayout>
+        <div className="lg:w-[50%]">
+        <div className='md:leading-[96px] text-[36px] md:text-[75px] bg-gradient-to-b from-[#FAFAFA] to-[#AAA5A5] bg-clip-text text-transparent font-detacher'>
+        Evolving Beyond the Norm
+        </div>
+        <div className=' my-4 lg:pr-8 text-[12px] mx-8 md:mx-0 md:text-[18px] bg-gradient-to-r from-[#FAFAFA] to-[#AAA5A5] bg-clip-text text-transparent font-sora'>
+        Building the largest global real world assets tokenised ecosystem, leveraging Blockchain, Web3, Ai and the Metaverse.
         </div>
             <div className='flex gap-4 my-4'>
                 {
@@ -53,8 +53,11 @@ const OnBoard: FC<onBoardProps> = ({
                     ))
                 }
             </div>
-           <MediaIcons />
-       </Layout>
+           <div>
+            <MediaIcons />
+           </div>
+        </div>
+       </ContainerLayout>
 
        <CoinModal
          open={airdrop}

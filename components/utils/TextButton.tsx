@@ -22,7 +22,7 @@ const TextButton: FC<SolidButtonProps> = ({
     onClick={handleClick}
     disableElevation 
     variant={'text'}
-    className={"bg-gradient-to-r cursor-fancy from-[#FDCE7B] to-[#CD8D03] bg-clip-text font-biomeW04Regular text-transparent md:text-[16px]" }
+    className={"bg-gradient-to-b cursor-fancy from-[#FAFAFA] to-[#aaa5a503] bg-clip-text font-biomeW04Regular text-transparent md:text-[16px]" }
     >
         <span>{ text }</span>
         { appendIcon }

@@ -1,12 +1,19 @@
-import React from 'react'
+import React, { FC } from 'react'
 import Twitter from '../../assets/twitter.png'
 import Telegram from '../../assets/telegram.png'
 import Instagram from '../../assets/instagram.png'
 import SocialIcon from '../../assets/socialicon.png'
+import Github from '../../assets/github.png'
 import Image, { StaticImageData } from 'next/image'
 import Link from 'next/link'
 
-const  MediaIcons = () => {
+interface MediaIconsProps {
+  position?: 'left' | 'right' | 'center';
+}
+
+const  MediaIcons: FC<MediaIconsProps> = ({
+  position
+}) => {
 
     const socialHandles: {image: StaticImageData, handle: string, link: string}[] = [ 
         { 
@@ -24,6 +31,11 @@ const  MediaIcons = () => {
           handle: "social icon",
           link: 'https://coinmarketcap.com/community/post/328731400' 
       },
+      { 
+        image: Github, 
+        handle: "github",
+        link: 'https://coinmarketcap.com/community/post/328731400' 
+      },
         { 
           image: Instagram, 
           handle: "instagram",
@@ -32,7 +44,9 @@ const  MediaIcons = () => {
     ] 
 
   return (
-    <div className='flex gap-6 mt-4 items-center justify-center'>
+    <div className={`flex gap-6 mt-4 items-center
+     ${ position === 'center' ? 'justify-center' :
+     position === 'right' ? 'justify-end' : 'justify-start' }`}>
     {
         socialHandles.map((item, index: number) => (
             <a href={item.link} className='cursor-fancy' key={index} target='_/'>
