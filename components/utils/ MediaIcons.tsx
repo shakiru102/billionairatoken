@@ -19,27 +19,27 @@ const  MediaIcons: FC<MediaIconsProps> = ({
         { 
           image: Twitter, 
           handle: "twitter" ,
-          link: "https://twitter.com/tbtofficial_eth?s=21&t=WsOunCWsNhdoyCG_aroRbQ"
+          link: "https://twitter.com/blowx_official?s=21&t=WsOunCWsNhdoyCG_aroRbQ"
       },
         { 
           image: Telegram, 
           handle: "telegram",
-          link: 'https://t.me/thebillionairestoken' 
+          link: 'https://t.me/BlowX_Official' 
       },
         { 
           image: SocialIcon, 
           handle: "social icon",
-          link: 'https://coinmarketcap.com/community/post/328731400' 
+          link: 'https://medium.com/@BlowX_Official' 
       },
       { 
         image: Github, 
         handle: "github",
-        link: 'https://coinmarketcap.com/community/post/328731400' 
+        link: 'https://github.com/BlowX-Official' 
       },
         { 
           image: Instagram, 
           handle: "instagram",
-          link: 'https://instagram.com/thebillionairestoken?igshid=OGQ5ZDc2ODk2ZA==' 
+          link: 'https://instagram.com/blowx_official?igshid=OGQ5ZDc2ODk2ZA==' 
       }
     ] 
 
