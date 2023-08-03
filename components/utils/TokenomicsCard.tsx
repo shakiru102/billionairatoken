@@ -15,10 +15,10 @@ const TokenomicsCard: FC<TokenomicsCardProps> = ({
     points
 }) => {
   return (
-    <Paper className='p-[16px] rounded-[6px] bg-[#1A1613]'>
+    <Paper className='p-[16px] rounded-[6px] bg-[#0F0F0F]'>
         <div className="flex items-center gap-2">
-            <Image alt='point' src={PointImage} />
-            <span className='font-sora text-[#FECF81] text-[14px]'>{title}</span>
+            <div className='inline-block w-[8px] h-[8px] rounded-full bg-[#FFF]'  />
+            <span className='font-sora text-[#FFF] text-[14px]'>{title}</span>
         </div>
         <div className="text-[#A8A8A8] font-sora text-[12px]">
            { text && <div>{text}</div> }

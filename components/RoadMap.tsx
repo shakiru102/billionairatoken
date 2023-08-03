@@ -1,50 +1,102 @@
 import React, { FC } from 'react'
 import ContainerLayout from '../Layout/ContainerLayout'
 import Image from 'next/image'
-import Timeline from '../assets/timeline.png'
+// import TimelineImage from '../assets/timeline.png'
 import RenderComponent from './RenderComponent'
 import RoadMapCard, { RoadMapProps } from './utils/RoadMapCard'
+import Timeline from '@mui/lab/Timeline';
+import TimelineItem from '@mui/lab/TimelineItem';
+import TimelineSeparator from '@mui/lab/TimelineSeparator';
+import TimelineConnector from '@mui/lab/TimelineConnector';
+import TimelineContent from '@mui/lab/TimelineContent';
+import TimelineDot from '@mui/lab/TimelineDot';
 
 const RoadMap: FC = () => {
 
     const roadMapList: RoadMapProps[] = [
         {
-            title: "Roadmap stages",
+            title: "Q4 2022",
             position: "left",
             list: [
-                "Phase 1: Meme",
-                "Phase 2: Vibe and HODL",
-                "Phase 3: Meme Takeover"
+                "Ideation and research",
+                "Team building"
             ]
         },
         {
-            title: "Phase 1",
+            title: "Q1 2023",
             position: "right",
             list: [
-                "Launch",
-                "CoinGecko/Coinmarketcap Listings",
-                "1,000+ Holders",
-                "Get $PEPE Trending on twitter with our memetic power"
+                "White-paper development",
+                "Tokenomics development"
             ]
         },
         {
-            title: "Phase 2",
+            title: "Q2 2023",
             position: "left",
             list: [
-                " Community Partnerships Pepe Times digital newsletter",
-                "Formation of token gated discord group, Pepe Palace, for holders, more details tba",
-                "CEX Listings 10,000+holders"
+                "Web development",
+                "Community building",
+                "Influencer marketing",
+                "Brand Ambassadorship"
             ]
         },
         {
-            title: "Phase 3",
+            title: "Q3 2023",
             position: "right",
             list: [
-                "Pepe merch",
-                "Pepe Academy",
-                "Pepe Tools",
-                "T1 Exchange Listings 100,000+ holders",
-                "Meme Takeover"
+                "Airdrop Phase 1 Snapshot",
+                "Blow Private sale",
+                "Blow Pre-sale",
+                "Airdrop Phase 1 Released",
+                "Public launch"
+            ]
+        },
+        {
+            title: "Q4 2023",
+            position: "left",
+            list: [
+                "BlowEARN (Dynamic Staking) is announced and launched.",
+                "Blow.ai Web3 Mobile: The beta version of the Blow.ai Web3 Mobile is launched.",
+                "Blow.ai Web3 Mobile: The official version of the Blow.ai Web3 Mobile is released.",
+                "Airdrop phase ll released"
+            ]
+        },
+        {
+            title: "Q1 2024",
+            position: "right",
+            list: [
+                "BlowCHAIN is announced",
+                "BlowVerse Marketplace Development begins.",
+                "BLOW COIN tokenomics/utilities are finalized."
+            ]
+        },
+        {
+            title: "Q2 2024",
+            position: "left",
+            list: [
+                "BlowCHAIN is launched.",
+                "BLOW COIN Private sale begins",
+                "BLOW COIN Pre sale begins",
+                "BlowVerse Marketplace announcement",
+                "Airdrop phase lll released"
+            ]
+        },
+        {
+            title: "Q3 2024",
+            position: "right",
+            list: [
+                "BlowCHAIN: The second DApp for the BlowCHAIN platform is released.",
+                "BlowVerse Marketplace launched",
+                "BlowVerse Marketplace: New products and services are added to the marketplace.",
+                "BLOW COIN is integrated with other blockchain-based platforms."
+            ]
+        },
+        {
+            title: "Q4 2024",
+            position: "left",
+            list: [
+                "BlowCHAIN: New features and capabilities are added to the BlowCHAIN platform.",
+                "BlowVerse Marketplace: New marketing campaigns are launched to promote the marketplace. Onboarding of developers to use the BlowCHAIN continues"
             ]
         },
     ]
@@ -54,10 +106,27 @@ const RoadMap: FC = () => {
     <>
         <div className='hidden md:block'>
             <ContainerLayout>
-                    <Image alt='time line'  src={Timeline}/>
+                    <div className="text-center mb-4 font-detacher text-[20px] md:text-[40px] uppercase text-transparent bg-gradient-to-b from-[#FAFAFA] to-[#aaa5a503] bg-clip-text">
+                        Roadmap
+                    </div>
+                    <Timeline position='alternate'>
+                       {
+                        roadMapList.map((item: RoadMapProps, i: number) => (
+                            <TimelineItem key={i}>
+                                <TimelineSeparator>
+                                    <TimelineDot variant='outlined'/>
+                                    <TimelineConnector />
+                                </TimelineSeparator>
+                                <TimelineContent>
+                                <RoadMapCard  {...item}/>
+                                </TimelineContent>
+                            </TimelineItem>
+                        ))
+                       }
+                    </Timeline>
             </ContainerLayout>
         </div>
-        <div className="bg-[url('../assets/roadmapbg.png')] md:hidden bg-no-repeat bg-cover" >
+        <div className="md:hidden bg-no-repeat bg-cover" >
             <RenderComponent title='Roadmap'>
                 <div className='flex  flex-col gap-6'>
                 {

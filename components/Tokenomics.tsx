@@ -4,7 +4,7 @@ import ContainerLayout from '../Layout/ContainerLayout'
 import Certik from '../assets/certik.png'
 import Image from 'next/image'
 import tokenImage from "../assets/png/tokens.png"
-import MTokenomics from '../assets/mobiletokenomics.png'
+import MTokenomics from '../assets/mtokenomics.png'
 import TokenomicsCard, { TokenomicsCardProps } from './utils/TokenomicsCard'
 const Tokenomics: FC = () => {
 
@@ -61,8 +61,7 @@ const Tokenomics: FC = () => {
             One Token, Limitless Possibilities!
         </div>
         {/* Mobile */}
-        <div className='flex flex-col md:hidden z-50'>
-               <Image alt='mobile tokenomics' src={MTokenomics} />
+        <div className='flex flex-col mt-8  md:hidden z-50'>
                <div className="tokenomics flex flex-col gap-6">
                  {
                     tokenomicsList.map((item: TokenomicsCardProps, i: number) => (
@@ -74,7 +73,7 @@ const Tokenomics: FC = () => {
         {/* Desktop */}
         <div className="hidden md:flex items-center">
                   <div className='flex-1 w-7/12'>
-                      <Image src={tokenImage} alt="token" />
+                      <Image src={tokenImage} alt="token"  />
             </div>
             <div className=' w-5/12'>
                 <Paper elevation={0} className='md:h-[410px] bg-[#1A1613] flex flex-col justify-around md:p-10 md:mt-28 mb-8'>

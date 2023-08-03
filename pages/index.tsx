@@ -49,8 +49,8 @@ const Home: NextPage = () => {
     title='The team'  
     subtitle='The Community constitutes the governing team of the project. No centralise authorities over the project. Built for the game-changers only!'
     >
-      
-      <Suspense fallback={<Image alt='chess' src={Chess} />}>
+      <Image alt='chess' src={Chess} />
+      {/* <Suspense fallback={<Image alt='chess' src={Chess} />}>
       <Canvas
       id='webgl'
       shadows
@@ -64,9 +64,9 @@ const Home: NextPage = () => {
             // color={new THREE.Color('#FECF81')}
              />
             {/* <directionalLight intensity={15} castShadow color={new THREE.Color('#FECF81')} position={[3,1, 0]} /> */}
-        <OrbitControls enableZoom={false}/>
-      </Canvas>
-      </Suspense>
+        {/* <OrbitControls enableZoom={false}/> */}
+      {/* </Canvas> */}
+      {/* </Suspense> */} 
     </RenderComponent>
     <FAQ />
     <Footer />

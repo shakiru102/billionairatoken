@@ -20,7 +20,7 @@ module.exports = {
 
       },
       cursor: {
-        'fancy': 'url(../assets/cursorclick.svg), pointer',
+        // 'fancy': 'url(../assets/cursorclick.svg), pointer',
       }
 
     },
