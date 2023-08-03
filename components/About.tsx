@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 import Layout from './Layout'
-import AboutLogo from '../assets/aboutlogo.png'
+import AboutLogo from '../assets/tokenlogo.png'
 import Image from 'next/image'
 import ContainerLayout from '../Layout/ContainerLayout'
 const About: FC = () => {

@@ -5,6 +5,7 @@ import Certik from '../assets/certik.png'
 import Image from 'next/image'
 import tokenImage from "../assets/png/tokens.png"
 import MTokenomics from '../assets/mtokenomics.png'
+import TokenPlacholder from '../assets/tokenomicsplaceholder.png'
 import TokenomicsCard, { TokenomicsCardProps } from './utils/TokenomicsCard'
 const Tokenomics: FC = () => {
 
@@ -71,23 +72,8 @@ const Tokenomics: FC = () => {
                </div>
             </div>
         {/* Desktop */}
-        <div className="hidden md:flex items-center">
-                  <div className='flex-1 w-7/12'>
-                      <Image src={tokenImage} alt="token"  />
-            </div>
-            <div className=' w-5/12'>
-                <Paper elevation={0} className='md:h-[410px] bg-[#1A1613] flex flex-col justify-around md:p-10 md:mt-28 mb-8'>
-                   {
-                    tokenomics.map((item, i) => (
-                        <div key={i} className='flex items-center gap-6 text-white font-sora text-[14px]'>
-                          <div style={{ background: item.color }} className='h-[11.7px] w-[11.7px] rounded-full'></div>
-                          <div className="">{ item.text }</div>
-                        </div>
-                    ))
-                   }
-                </Paper>
-                <Image alt="certik" src={Certik} />
-            </div>
+        <div className="hidden md:flex items-center justify-center mt-10">
+            <Image  alt='placeholder' className='' src={TokenPlacholder}/>
         </div>
         </ContainerLayout>
     </div>
