@@ -56,10 +56,11 @@ const AboutModel = () => {
         if(spotLight.current) {
            spotLight.current.position.x = Math.cos(time) * 4.5
            spotLight.current.position.y = Math.sin(time) * 4.5
+           spotLight.current.position.z = Math.sin(time) * 4.5
         }
         if(box.current) {
             // box.current.rotation.x = time * 0.01
-            box.current.rotation.y = time * 0.1
+            box.current.rotation.y = time * 0.2
         }
     })
 
@@ -96,7 +97,7 @@ const AboutModel = () => {
     //   @ts-ignore
     ref={spotLight}
       intensity={1}
-      angle={Math.PI / 4}
+      angle={Math.PI / 3}
       decay={1}
       distance={0}
       position={[-4.5, 4, 4.5]}
