@@ -1,17 +1,14 @@
 import { RootState, useFrame, useLoader, useThree } from '@react-three/fiber'
-import React, { useMemo, useRef } from 'react'
+import React, { useEffect, useMemo, useRef } from 'react'
 import * as THREE from 'three'
 
-const Particles = () => {
-    const { scene } = useThree()
-    const count: number = 1000
+const count: number = 1000
     const geometry = new THREE.BufferGeometry()
     geometry.setAttribute('position', new THREE.BufferAttribute(new Float32Array(6 * count), 3))
     geometry.setAttribute('velocity', new THREE.BufferAttribute(new Float32Array(2 * count), 1))
     let positionGeom = geometry.getAttribute('position')
     let position = positionGeom.array
     let velocity = geometry.getAttribute('velocity').array
-    const particles = useRef<THREE.Points>()
 
         for (let i = 0; i < count ; i++) {
            let x = Math.random() * 20 - 10
@@ -31,9 +28,16 @@ const Particles = () => {
         
         let mat = new THREE.LineBasicMaterial({ color: new THREE.Color('white') })
         let lines = new THREE.LineSegments(geometry, mat)
-        console.log(position);
-        
-       scene.add(lines)
+
+const Particles = () => {
+    const { scene } = useThree()
+    const particles = useRef<THREE.Points>()
+    
+        useEffect(() => {
+            scene.add(lines)
+        },[])
+             
+       
     const particleMap = useLoader(THREE.TextureLoader, './particles/star_04.png')
 
     useFrame((state: RootState) => {
