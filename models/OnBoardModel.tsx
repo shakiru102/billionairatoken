@@ -9,7 +9,7 @@ const OnBoardModel: FC<{ children: ReactNode }> = ({
   return (
     <>
       <Particles />
-      <BlowXModel />
+      {/* <BlowXModel /> */}
       <OrbitControls 
       enableZoom={false} 
       minAzimuthAngle={ - Math.PI * 0.1 } 

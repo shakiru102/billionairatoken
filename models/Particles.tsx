@@ -53,8 +53,8 @@ const Particles = () => {
         }
 
         for (let i = 0; i < count ; i++) {
-            velocity[2 * i] += 0.05
-            velocity[2 * i + 1] += 0.045
+            velocity[2 * i] += 0.03
+            velocity[2 * i + 1] += 0.025
 
             //  Line start point
         //    position[6 * i] = x
