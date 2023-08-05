@@ -38,7 +38,7 @@ const NavBar: FC<NavBarProps> = ({
     <>
       <AppBar 
     elevation={0}
-      className='bg-black'
+      className='bg-transparent '
       sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}
       >
 

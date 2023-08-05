@@ -21,6 +21,7 @@ import { Canvas } from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei'
 import { ChessBoard } from '../models/ChessBoard'
 import * as THREE from 'three'
+import OnBoardModel from '../models/OnBoardModel'
 
 const Home: NextPage = () => {
 
@@ -30,8 +31,15 @@ const Home: NextPage = () => {
 
   return (
    <>
+   <div className='relative'>
    <NavBar openPresaleModal={() => setPresaleModal(prev => !prev)} />
-    <OnBoard openPresaleModal={() => setPresaleModal(prev => !prev)}/>
+   <Canvas id='webgl'>
+      <OnBoardModel >
+        
+      </OnBoardModel>
+   </Canvas>
+   <OnBoard openPresaleModal={() => setPresaleModal(prev => !prev)}/>
+   </div>
     <About />
     {/* <div className="bg-[url('../assets/partnerbg.png')] bg-no-repeat bg-cover relative md:h-[250vh] md:flex flex-col justify-between">
       <div className="absolute z-0 blur-[250.11935424804688px] bg-[rgba(216,156,55,0.28)] md:h-[524px] md:w-[524px] md:rounded-[524px] top-0 left-0"></div>

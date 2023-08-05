@@ -3,7 +3,9 @@
 @tailwind utilities;
 
 #webgl{
-  height: 70vh !important;
+  height: 100vh !important;
+  z-index: 0;
+  position: absolute !important;
 }
 
 @font-face {
