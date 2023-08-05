@@ -89,7 +89,7 @@ const AboutModel = () => {
       </group>
       </Float>
       <mesh receiveShadow rotation={[Math.PI * 0.5, 0, 0]} scale={10}>
-        <planeGeometry   args={[4, 3]}/>
+        <planeGeometry   args={[10, 10]}/>
         <meshStandardMaterial side={THREE.DoubleSide}  />
       </mesh>
       <spotLight
