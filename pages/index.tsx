@@ -114,7 +114,7 @@ const Home: NextPage = () => {
       <div className="lg:hidden pt-20">
       {
             ['section-1', 'section-2'].map((item, i: number) => (
-              <Accordion elevation={0} className='rounded-none bg-[#000]'>
+              <Accordion key={i} elevation={0} className='rounded-none bg-[#000]'>
                 <AccordionSummary
                   expandIcon={<ExpandMoreIcon style={{ color: 'white' }}/>}
                   aria-controls="panel1a-content"
