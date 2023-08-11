@@ -34,7 +34,10 @@ const LaunchCard: FC<LaunchCardProps> = ({
                 key={i} 
                 className='rounded-[10px] relative group h-[86px] bg-[#272727] flex flex-col justify-center items-center transition hover:[transform:rotateY(180deg)]  ease-in-out delay-150  duration-300'>
                     <div className=' transition ease-in-out delay-150  duration-300 group-hover:hidden group-hover:opacity-0'><Image alt='launch image' src={item.image}/></div>
-                    <div className='font-sora hidden group-hover:block  opacity-0 group-hover:opacity-100 text-[14px] text-center transition ease-in-out delay-150  duration-300 group-hover:block group-hover:[transform:rotateY(-180deg)] text-white font-bold'>{item.name}</div>
+                    <div className='font-sora hidden opacity-0 group-hover:opacity-100 text-[14px] text-center transition ease-in-out delay-150  duration-300 group-hover:block group-hover:[transform:rotateY(-180deg)] text-white '>
+                      <div className='font-bold'>{item.name}</div>
+                      <div className='text-[12px]'>31/03/2023</div>
+                    </div>
                 </div>
                ))
             }

@@ -37,11 +37,11 @@ const Home: NextPage = () => {
    <>
    <div className='relative'>
    <NavBar openPresaleModal={() => setPresaleModal(prev => !prev)} />
-   {/* <Canvas id='webgl'>
+   <Canvas id='webgl'>
       <OnBoardModel >
         
       </OnBoardModel>
-   </Canvas> */}
+   </Canvas>
    <OnBoard openPresaleModal={() => setPresaleModal(prev => !prev)}/>
    </div>
     <About />
