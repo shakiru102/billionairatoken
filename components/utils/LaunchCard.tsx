@@ -7,7 +7,7 @@ import { SolidButtonProps } from '../../types'
 export interface LaunchCardProps {
     title: "Airdrop" | "Presale" | "CEX Listing";
     imageCols: '2' | '3';
-    images: StaticImageData[];
+    images: {image: StaticImageData, name: string}[];
     text: string;
     buttons: SolidButtonProps[]
 }
@@ -26,12 +26,15 @@ const LaunchCard: FC<LaunchCardProps> = ({
             { title }
             </div>
        </Paper>
-       <Paper className='bg-[#0F0F0F] rounded-[10px] px-4 pt-10 pb-16 '>
+       <Paper className='bg-[#0F0F0F] rounded-[10px] px-4 pt-10 pb-16  '>
           <div className={ imageCols == '3' ? 'grid grid-cols-3 gap-4' : 'grid grid-cols-2 gap-4'}>
             {
-               images.map((item: StaticImageData, i: number) => (
-                <div key={i} className='rounded-[10px] h-[86px] bg-[#272727] flex justify-center items-center'>
-                    <Image alt='launch image' src={item}/>
+               images.map((item, i: number) => (
+                <div 
+                key={i} 
+                className='rounded-[10px] relative group h-[86px] bg-[#272727] flex flex-col justify-center items-center transition hover:[transform:rotateY(180deg)]  ease-in-out delay-150  duration-300'>
+                    <div className=' transition ease-in-out delay-150  duration-300 group-hover:hidden group-hover:opacity-0'><Image alt='launch image' src={item.image}/></div>
+                    <div className='font-sora hidden group-hover:block  opacity-0 group-hover:opacity-100 text-[14px] text-center transition ease-in-out delay-150  duration-300 group-hover:block group-hover:[transform:rotateY(-180deg)] text-white font-bold'>{item.name}</div>
                 </div>
                ))
             }

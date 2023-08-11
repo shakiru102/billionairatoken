@@ -22,11 +22,23 @@ import { OrbitControls } from '@react-three/drei'
 import { ChessBoard } from '../models/ChessBoard'
 import * as THREE from 'three'
 import OnBoardModel from '../models/OnBoardModel'
+import UtilButton from '../components/utils/UtilButton'
+import UseCustomHook from '../hooks/UseCustomHook'
+import { useActiveMenu, useActiveMenuContext } from 'react-active-menu'
+import { Accordion, AccordionDetails, AccordionSummary, Typography } from '@mui/material'
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 const Home: NextPage = () => {
 
   const [presaleModal, setPresaleModal] = useState<boolean>(false)
-  
+  const { problemDetails, activeId } = UseCustomHook(['section-1', 'section-2'], 300)
+  const { registerContainer, registerSection, registerTrigger } = 
+  // @ts-ignore
+  useActiveMenuContext({
+    smooth: true,
+    offset: 60,
+    activeClassName: 'bg-white text-[#2C2C2B] hover:bg-white'
+  })
 
 
   return (
@@ -41,13 +53,121 @@ const Home: NextPage = () => {
    <OnBoard openPresaleModal={() => setPresaleModal(prev => !prev)}/>
    </div>
     <About />
-    {/* <div className="bg-[url('../assets/partnerbg.png')] bg-no-repeat bg-cover relative md:h-[250vh] md:flex flex-col justify-between">
-      <div className="absolute z-0 blur-[250.11935424804688px] bg-[rgba(216,156,55,0.28)] md:h-[524px] md:w-[524px] md:rounded-[524px] top-0 left-0"></div>
-      <div className="absolute z-0 blur-[250.11935424804688px] bg-[rgba(216,156,55,0.28)] md:h-[524px] md:w-[524px] md:rounded-[524px] bottom-0 right-0"></div>
     <RenderComponent title='Featured On' />
-      <Tokenomics />
-    </div> */}
-    <RenderComponent title='Featured On' />
+      <div 
+      className="w-[100%] hidden relative box-border pt-28 lg:flex scroll-smooth"
+      >
+        <div className="sidemenu hidden lg:flex flex-col justify-around  flex-1 h-screen sticky top-0 w-[50%]">
+          <div className='flex flex-col justify-center items-center gap-4'>
+          {
+            ['section-1', 'section-2'].map((item, i: number) => (
+              <UtilButton 
+              href={`#${item}`}
+              className={activeId === item ? 'bg-white text-[#2C2C2B] hover:bg-white' : 'text-white'}
+              key={i}
+              >{ i == 0 ? 'The Problem We Are Solving' : 'The Solution We Are Providing'}</UtilButton>
+            ))
+          }
+          </div>
+          <div className="flex flex-col justify-center items-center">
+            <div className=" w-[50%] inline-block mb-4 font-sora text-[20px] md:text-[32px] text-transparent bg-gradient-to-b from-[#FAFAFA] to-[#aaa5a503] bg-clip-text">
+                What about Tokenized Real World Assets?
+            </div>
+            <div className='font-sora w-[50%] text-[20px] text-white'>
+            With the continued failure of centralized exchanges, crypto is seeing a return to first principles: new and seasoned investors alike are embracing the trustless, non-custodial, decentralized nature of on-chain finance.
+            </div>
+          </div>
+        </div>
+        <div className="flex-1 ">
+          <div 
+          className="flex flex-col justify-evenly h-screen mb-28"
+          id='section-1'
+          >
+            {
+              problemDetails.problems.map((item , i: number) => (
+                <div key={i} className='p-[28px] w-[75%] bg-white font-sora'>
+                  <div className='font-bold mb-4 text-[20px]'>{item.title}</div>
+                  <div>{item.text}</div>
+                </div>
+              ))
+            }
+          </div>
+          <div
+           className="flex flex-col justify-evenly h-screen"
+          id='section-2'
+           >
+            <div>
+              <div className="font-sora font-bold text-white text-[32px]">The Solution</div>
+              <div className="font-sora text-white text-[24px]">Enter Ostium</div>
+            </div>
+            {
+              problemDetails.solution.map((item , i: number) => (
+                <div key={i} className='p-[28px] w-[75%] bg-white font-sora'>
+                  <div className='font-bold mb-4 '>{item.title}</div>
+                  <div>{item.text}</div>
+                </div>
+              ))
+            }
+          </div>
+        </div>
+      </div>
+      <div className="lg:hidden pt-20">
+      {
+            ['section-1', 'section-2'].map((item, i: number) => (
+              <Accordion elevation={0} className='rounded-none bg-[#000]'>
+                <AccordionSummary
+                  expandIcon={<ExpandMoreIcon style={{ color: 'white' }}/>}
+                  aria-controls="panel1a-content"
+                  id="panel1a-header"
+                >
+                  <Typography className='font-sora block capitalize font-bold  rounded-none text-white'>{ i == 0 ? 'The Problem We Are Solving' : 'The Solution We Are Providing'}</Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                {
+                      // @ts-ignore
+                 activeId === 'section-1' ? 
+                 <Typography>
+                  {
+                    problemDetails.problems.map((item: any , i: number) => (
+                      <div key={i} className='p-[28px] mb-4 bg-white font-sora'>
+                        <div className='font-bold mb-4 text-[20px]'>{item.title}</div>
+                        <div>{item.text}</div>
+                      </div>
+                    ))
+                  }
+                 </Typography> : 
+                 <Typography>
+                 { item === 'section-2' && 
+                  <div className='mb-4'>
+                      <div className="font-sora font-bold text-white text-[32px]">The Solution</div>
+                      <div className="font-sora text-white text-[24px]">Enter Ostium</div>
+                    </div>
+                  }
+                  {
+                     problemDetails.solution.map((item: any , i: number) => (
+                      <div key={i} className='p-[28px] bg-white font-sora'>
+                        <div className='font-bold mb-4 text-[20px]'>{item.title}</div>
+                        <div>{item.text}</div>
+                      </div>
+                    ))
+                  }
+                 </Typography>
+                }
+                </AccordionDetails>
+          </Accordion>
+
+            
+            ))
+          }
+          <div className="flex flex-col px-4 mt-10">
+            <div className=" inline-block mb-4 font-sora text-[24px] text-transparent bg-gradient-to-b from-[#FAFAFA] to-[#aaa5a503] bg-clip-text">
+                What about Tokenized Real World Assets?
+            </div>
+            <div className='font-sora  text-[16px] text-white'>
+            With the continued failure of centralized exchanges, crypto is seeing a return to first principles: new and seasoned investors alike are embracing the trustless, non-custodial, decentralized nature of on-chain finance.
+            </div>
+          </div>{} 
+      </div>
       <Tokenomics />
       <Launch />
       <Ecosystem />

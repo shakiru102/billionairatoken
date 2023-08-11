@@ -21,7 +21,7 @@ const Footer: FC = () => {
 
   return (
     <div>
-        <div className="md:h-[477px] bg-[url('../assets/footerbg.png')] py-16">
+        <div className="md:h-[477px] py-16">
            <ContainerLayout>
            <div className="grid grid-rows-2 md:grid-rows-1 md:grid-cols-2 gap-20 md:gap-36">
 

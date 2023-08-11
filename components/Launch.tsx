@@ -32,7 +32,13 @@ const Launch = () => {
                 { text: "Join Airdrop", variant: 'solid', classnames: '' }
             ],
             imageCols: '2',
-            images: [ Airdrop1, Airdrop2 ],
+            images: [ {
+                image: Airdrop1,
+                name: "TrustPad"
+            }, {
+                image: Airdrop2,
+                name: "AirLyft"
+            } ],
             text: "Download Metamask or TrustWallet from the AppStore or GooglePlay Store. Follow the steps to be eligible.",
             title: "Airdrop"
         },
@@ -41,7 +47,31 @@ const Launch = () => {
                 { text: "Buy $TBT Presale", variant: 'solid', classnames: '' }
             ],
             imageCols: '3',
-            images: [ Presale1, Presale2, Presale3, Presale4, Presale5, Presale6],
+            images: [ 
+                {
+                    image: Presale1,
+                    name: "PinkSale"
+                },
+                 {
+                    image: Presale2,
+                    name: "GemPad"
+                 },
+                  {
+                    image: Presale3,
+                    name: "Camelot"
+                  }, 
+                  {
+                    image: Presale4,
+                    name: "Uniswap"
+                  }, 
+                  {
+                    image: Presale5,
+                    name: "PancakeSwap"
+                  },
+                   {
+                    image: Presale6,
+                    name: "SyncSwap"
+                  }],
             text: "Download Metamask or TrustWallet from the AppStore or GooglePlay Store. Follow the steps to be eligible.",
             title: "Presale"
         },
@@ -50,7 +80,39 @@ const Launch = () => {
                 { text: "Public Sale", variant: 'solid', handleClick: () => setCexlisting(true) }
             ],
             imageCols: '3',
-            images: [ Listing1, Listing2, Listing3, Listing4, Listing5, Listing7, Listing8, Listing9],
+            images: [
+                {
+                    image:  Listing1,
+                    name: "MEXC Global"
+                }, 
+                {
+                    image: Listing2,
+                    name: "Gate.io"
+                }, 
+                {
+                    image: Listing3,
+                    name: "Houbi"
+                }, 
+                {
+                    image: Listing4,
+                    name: "kuCoin"
+                }, 
+                {
+                    image: Listing5,
+                    name: "OKX"
+                }, 
+                {
+                    image: Listing7,
+                    name: "BitMart"
+                }, 
+                {
+                    image: Listing8,
+                    name: "CoinStore"
+                }, 
+            {
+                image: Listing9,
+                name: "ByBit"
+            }],
             text: "Download Metamask or TrustWallet from the AppStore or GooglePlay Store. Follow the steps to be eligible.",
             title: "CEX Listing"
         }
