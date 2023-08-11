@@ -24,7 +24,6 @@ import * as THREE from 'three'
 import OnBoardModel from '../models/OnBoardModel'
 import UtilButton from '../components/utils/UtilButton'
 import UseCustomHook from '../hooks/UseCustomHook'
-import { useActiveMenu, useActiveMenuContext } from 'react-active-menu'
 import { Accordion, AccordionDetails, AccordionSummary, Typography } from '@mui/material'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
@@ -32,24 +31,17 @@ const Home: NextPage = () => {
 
   const [presaleModal, setPresaleModal] = useState<boolean>(false)
   const { problemDetails, activeId } = UseCustomHook(['section-1', 'section-2'], 300)
-  const { registerContainer, registerSection, registerTrigger } = 
-  // @ts-ignore
-  useActiveMenuContext({
-    smooth: true,
-    offset: 60,
-    activeClassName: 'bg-white text-[#2C2C2B] hover:bg-white'
-  })
 
 
   return (
    <>
    <div className='relative'>
    <NavBar openPresaleModal={() => setPresaleModal(prev => !prev)} />
-   <Canvas id='webgl'>
+   {/* <Canvas id='webgl'>
       <OnBoardModel >
         
       </OnBoardModel>
-   </Canvas>
+   </Canvas> */}
    <OnBoard openPresaleModal={() => setPresaleModal(prev => !prev)}/>
    </div>
     <About />
@@ -222,7 +214,7 @@ const Home: NextPage = () => {
             <form className="flex flex-col gap-6">
                 <TextInput 
                 name='token'
-                label='TBT Token price'
+                label='Blowx Token price'
                 value={values.token}
                 handleChange={handleChange('token')}
                 placeholder='0.08 per token'
@@ -260,7 +252,7 @@ const Home: NextPage = () => {
                 inputAdorments={[
                   { text: 'Get Code' }
                 ]}
-                placeholder='gamersmerge@tbt.eth'
+                placeholder='gamersmerge@blowx.ai'
                  />
                   <TextInput 
                 name='verifyEmail'
@@ -270,7 +262,7 @@ const Home: NextPage = () => {
                 inputAdorments={[
                   { text: 'Verify' }
                 ]}
-                placeholder='gamersmerge@tbt.eth'
+                placeholder='Enter 6 digit code'
                  />
                 <SolidButton handleClick={handleSubmit} variant='solid' text='Submit' classnames='rounded-[8px] mb-3' />
             </form>

@@ -104,7 +104,7 @@ const RoadMap: FC = () => {
     
   return (
     <>
-        <div className='hidden pt-28  md:block mt'>
+        <div className='hidden pt-20  md:block mt'>
             <ContainerLayout>
                     <div className="text-center mb-4 font-detacher text-[20px] md:text-[40px] uppercase text-transparent bg-gradient-to-b from-[#FAFAFA] to-[#aaa5a503] bg-clip-text">
                         Roadmap

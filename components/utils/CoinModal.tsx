@@ -1,7 +1,7 @@
 import { Dialog, Paper } from '@mui/material'
 import Image from 'next/image'
 import React, { FC } from 'react'
-import Logo from '../../assets/tokenlogo.png'
+import Logo from '../../assets/blowlogo.png'
 import MediaIcons from './ MediaIcons'
 import SolidButton from './SolidButton'
 import { CoinModalProps } from '../../types'
@@ -22,9 +22,9 @@ const CoinModal: FC<CoinModalProps> = ({
         <Paper {...props} className='md:w-[482px] text-left bg-[#1A1A1A] mx-auto my-16 rounded-[20px] p-8' />
     )}
     >
-      {/* <div className="text-center mb-4">
-            <Image alt='logo' src={Logo} width={148} height={148} />
-        </div> */}
+      <div className="text-center mb-4">
+            <Image alt='logo' src={Logo} width={120} height={100} />
+        </div>
         <div className="font-detacher text-white text-[24px] text-center">
             { dialogTitle }
         </div>
@@ -32,7 +32,7 @@ const CoinModal: FC<CoinModalProps> = ({
             { dialogText }
         </div>
         { dialogChildren }
-        <MediaIcons />
+        <MediaIcons position='center'/>
       </Dialog>
   )
 }

@@ -71,7 +71,7 @@ const AboutModel = () => {
       floatIntensity={1}
       >
         {/* @ts-ignore */}
-      <group castShadow ref={box} position={[3, 0,0]} rotation={[0, 0, 0]}>
+      <group scale={1.3} castShadow ref={box} position={[3, 0,0]} rotation={[0, 0, 0]}>
         {/* @ts-ignore */}
         <RoundedBox castShadow scale={2} args={[1, 1, 1]} position={[0,2,0]} radius={0.2}>
         <meshStandardMaterial 
