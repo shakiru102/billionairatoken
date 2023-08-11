@@ -37,13 +37,13 @@ const OnBoard: FC<onBoardProps> = ({
     
 
   return (
-    <div className=" min-h-screen flex items-center">
+    <div className="min-h-screen md:min-h-full lg:min-h-screen flex items-center">
        <ContainerLayout>
         <div className="lg:w-[50%]">
         <div className='md:leading-[96px] text-[36px] md:text-[75px] bg-gradient-to-b from-[#FAFAFA] to-[#AAA5A5] bg-clip-text text-transparent font-detacher'>
         Evolving Beyond the Norm
         </div>
-        <div className=' my-4 lg:pr-8 text-[12px] mx-8 md:mx-0 md:text-[18px] bg-gradient-to-r from-[#FAFAFA] to-[#AAA5A5] bg-clip-text text-transparent font-sora'>
+        <div className=' my-4 lg:pr-8 text-[12px]  md:text-[18px] bg-gradient-to-r from-[#FAFAFA] to-[#AAA5A5] bg-clip-text text-transparent font-sora'>
         Building the largest global real world assets tokenised ecosystem, leveraging Blockchain, Web3, Ai and the Metaverse.
         </div>
             <div className='flex gap-4 my-4'>

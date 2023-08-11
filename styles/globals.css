@@ -21,6 +21,7 @@
 @media screen and (max-width: 820px) {
    #webgl-about {
     display: none !important;
+    height: 0px !important;
    }
 }
 

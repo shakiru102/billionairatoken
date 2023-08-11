@@ -44,12 +44,9 @@ const Particles = () => {
         const elapsedTime = state.clock.getElapsedTime()
         // console.log(state.mouse.y);
         
-        if(particles.current) {
+        if(particles.current && screen.width > 768) {
             particles.current.rotation.y = state.mouse.x * 0.1
             particles.current.rotation.x = -state.mouse.y * 0.1
-
-        
-            
         }
 
         for (let i = 0; i < count ; i++) {

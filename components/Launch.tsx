@@ -121,11 +121,11 @@ const Launch = () => {
 
   return (
    <>
-    <div className="md:h-[150vh] md:flex justify-center items-center">
+    <div className="lg:h-[150vh] md:flex justify-center items-center">
         <RenderComponent 
         title='BlowX Launch Process' 
         >
-        <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
+        <div className='grid grid-cols-1 lg:grid-cols-3 gap-4'>
                 {
                     launch.map((item: LaunchCardProps, i: number) => (
                         <LaunchCard key={i} {...item}/>

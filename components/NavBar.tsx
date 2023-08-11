@@ -46,7 +46,7 @@ const NavBar: FC<NavBarProps> = ({
       <div className='flex items-center gap-1'>
         <Image height={32} alt='logo' className='contain' src={Logo} />
       </div>
-      <div className="hidden md:flex">
+      <div className="hidden lg:flex">
         {
           navigations.map((item: NavlinksProps, index: number )=> item.contained ? 
                 (
@@ -74,7 +74,7 @@ const NavBar: FC<NavBarProps> = ({
             <Image alt='icon' src={ChevronIcon} />
         </div>
       </div>
-      <div className="md:hidden">
+      <div className="lg:hidden">
           {
             drawer ? <CloseSharpIcon onClick={() => setDrawer(prev => !prev)} className='text-white text-[24px] '/> : <MenuIcon onClick={() => setDrawer(prev => !prev)} className=' text-[24px] text-white'/>
           }

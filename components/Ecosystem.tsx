@@ -178,14 +178,14 @@ const Ecosystem: FC = () => {
                     Why TBT Ecosystem: Decentralised system is the future, and so is the Real World Assets (RWAs) tokenisation. Whether you adopt it now or not. Value is value, Innovation is Innovation. TBT is positioned to build the first ever Real World Assets (RWAs) decentralised ecosystem, leveraging the Blockchain, Ai, Metaverse and other disruptive technologies.
                     </div>
                 </div>
-            <div className="grid grid-rows-3 md:grid-rows-1 md:grid-cols-3 md:h-[782px]">
-                <ul className="border-t border-r row-span-3 md:row-span-1 md:col-span-1  border-b border-l border-[#CCC] flex flex-col">
+            <div className="grid grid-rows-3 lg:grid-rows-1 lg:grid-cols-3 lg:h-[782px]">
+                <ul className="border-t border-r row-span-3 lg:row-span-1 lg:col-span-1  border-b border-l border-[#CCC] flex flex-col">
                     {
                         ecosystems.map((item:EcosystemProps, i: number) => {
                             const isLastItem = i === ecosystems.length -1 
                             if(isLastItem) {
                                 return (
-                                    <li key={i} style={{ background: item.title === ecosystem?.title ? '#1A1613' : 'transparent' }} onClick={() => setEcosystem(item)} className=" relative text-[#A8A8A8] font-sora text-[15px] md:text-[18px] flex-1 hidden md:flex gap-2 pl-16 items-center">
+                                    <li key={i} style={{ background: item.title === ecosystem?.title ? '#1A1613' : 'transparent' }} onClick={() => setEcosystem(item)} className=" relative text-[#A8A8A8] font-sora text-[15px] md:text-[18px] flex-1 hidden lg:flex gap-2 pl-16 items-center">
                                         { item.title === ecosystem?.title ? <ActiveEcoImage /> : null}
                                         <span className='inline-block w-[5px] h-[5px] bg-[#A8A8A8]' /> { item.title }
                                     </li>
@@ -193,7 +193,7 @@ const Ecosystem: FC = () => {
                             }
 
                             return (
-                                <li key={i} style={{ background: item.title === ecosystem?.title ? '#1A1613' : 'transparent' }} onClick={() => setEcosystem(item)} className=" relative text-[#A8A8A8] font-sora text-[15px] md:text-[18px] flex-1 hidden md:flex border-b border-b-[#CCC] gap-2 pl-16 items-center">
+                                <li key={i} style={{ background: item.title === ecosystem?.title ? '#1A1613' : 'transparent' }} onClick={() => setEcosystem(item)} className=" relative text-[#A8A8A8] font-sora text-[15px] md:text-[18px] flex-1 hidden lg:flex border-b border-b-[#CCC] gap-2 pl-16 items-center">
                                     { item.title === ecosystem?.title ? <ActiveEcoImage /> : null}
                                     <span className='inline-block w-[5px] h-[5px] bg-[#A8A8A8]' /> { item.title }
                                 </li>
@@ -202,7 +202,7 @@ const Ecosystem: FC = () => {
                     }
                     {
                         ecosystems.map((item: EcosystemProps, i:number) => (
-                            <Accordion key={i} className='md:hidden bg-transparent border-b border-b-[#CCC]'>
+                            <Accordion key={i} className='lg:hidden bg-transparent border-b border-b-[#CCC]'>
                                 <AccordionSummary 
                                 sx={{
                                     '& .MuiAccordionSummary-expandIconWrapper.Mui-expanded': {
@@ -224,14 +224,14 @@ const Ecosystem: FC = () => {
                         ))
                     }
                 </ul>
-                <div className=" hidden md:grid grid-rows-5 bg-[url('../assets/tokenbg.png')] bg-no-repeat bg-cover bg-center order-first md:order-last md:col-span-2">
-                    <div className=" row-span-5 md:row-span-3 border-t border-l md:border-l-0 border-r border-[#CCC]">
+                <div className=" hidden lg:grid grid-rows-5 bg-[url('../assets/tokenbg.png')] bg-no-repeat bg-cover bg-center order-first lg:order-last lg:col-span-2">
+                    <div className=" row-span-5 lg:row-span-3 border-t border-l lg:border-l-0 border-r border-[#CCC]">
                       { ecosystem.image && 
                        <div className='text-center mt-8'>
                         <Image alt={ecosystem.title} height={400} src={ecosystem.image} />
                       </div> }
                     </div>
-                    <div className="bg-[#00000080] md:row-span-2 hidden border-t border-r border-b border-[#CCC] md:py-8 md:flex flex-col justify-center">
+                    <div className="bg-[#00000080] lg:row-span-2 hidden border-t border-r border-b border-[#CCC] lg:py-8 lg:flex flex-col justify-center">
                        <EcosystemCard
                        {...ecosystem}
                        />
