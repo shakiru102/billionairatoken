@@ -21,6 +21,15 @@ module.exports = {
       },
       cursor: {
         // 'fancy': 'url(../assets/cursorclick.svg), pointer',
+      },
+      animation: {
+        'flip': 'flip 5s linear infinite',
+      },
+      keyframes: {
+        flip: {
+          '0%, 100%': { transform: 'rotateY(0deg)' },
+          '50%': { transform: 'rotateY(180deg)' },
+        }
       }
 
     },

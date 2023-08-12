@@ -38,6 +38,15 @@ const Particles = () => {
         },[])
              
        
+        useEffect(() => {
+          if(screen.width <= 768) {
+            if(particles.current) {
+                particles.current.rotation.y = - Math.PI  / 3
+                particles.current.rotation.z = Math.PI  / 4
+            }
+          }
+        },[screen.width])
+
     const particleMap = useLoader(THREE.TextureLoader, './particles/star_04.png')
 
     useFrame((state: RootState) => {

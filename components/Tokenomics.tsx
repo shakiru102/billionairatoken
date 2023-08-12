@@ -1,53 +1,25 @@
 import React, { FC } from 'react'
-import { Paper } from '@mui/material'
+import { CircularProgress, Paper } from '@mui/material'
 import ContainerLayout from '../Layout/ContainerLayout'
 import Certik from '../assets/certik.png'
 import Image from 'next/image'
 import tokenImage from "../assets/png/tokens.png"
 import MTokenomics from '../assets/mtokenomics.png'
-import TokenPlacholder from '../assets/tokenomicsplaceholder.png'
+import TokenPlacholder from '../assets/mtokenomics.png'
 import TokenomicsCard, { TokenomicsCardProps } from './utils/TokenomicsCard'
 const Tokenomics: FC = () => {
 
-    const tokenomics: { text: string; color: string }[] = [
-        { text: 'Team and Advisors 10%', color: '#FFED0A'  },
-        { text: 'Marketing 10%', color: '#FF3C2A'  },
-        { text: 'Ecosystem/Develop.... 50%', color: '#2AD084'  },
-        { text: 'Private Sale 5%', color: '#FF8ACB'  },
-        { text: 'Public Sale 5%', color: '#15C7FF'  },
-        { text: 'TGE 7.5%', color: '#FF692A'  },
-        { text: 'Airdrops 2.5%', color: '#000CDF'  }
+    const tokenomics: { percent: number; text: string; color: string }[] = [
+        { percent: 10, text: 'Team and Advisors', color: '#FFED0A'  },
+        { percent: 50, text: 'Ecosystem/Development', color: '#2AD084'  },
+        { percent: 5, text: 'Private Sale', color: '#FF8ACB'  },
+        { percent: 2.5, text: 'Airdrops', color: '#000CDF'  },
+        { percent: 10, text: 'Marketing', color: '#FF3C2A'  },
+        { percent: 5, text: 'Public Sale', color: '#15C7FF'  },
+        { percent: 7.5, text: 'TGE', color: '#FF692A'  }
     ]
 
-    const tokenomicsList: TokenomicsCardProps[] = [
-        { 
-            title: "40% Burn Pool",
-            text: "Burn Pool represents 4 billion MTCs reserved for burning. These MTCs will be dynamically burned over two years." 
-        },
-        { 
-            title: "5% Strategic Sale Pool",
-            text: "Strategic Sales Pool represents 500 million MTCs reserved for sale.",
-            points: [
-                "✦   Seed Sale 1: 1% (250 days linear vesting)",
-                "✦   Seed Sale 2: 1% (250 days linear vesting)",
-                "✦   Private Sale 1: 1% (100% after 10 days cliff from TGE)",
-                "✦   Public Sale: 2% (100 days linear vesting)"
-            ] 
-        },
-        { 
-            title: "55% Others",
-            points: [
-                "✦ 19% Team Pool (24 months cliff than 1000 days linear vesting)",
-                "✦   10% Miner Pool (2000 days linear vesting)",
-                "✦   5% Liquidity Pool (Only for market making)",
-                "✦   5% Reward Pool (5000 days linear vesting)",
-                "✦   5% Staking Pool (1000 days linear vesting)",
-                "✦   8% Marketing Pool (6 months cliff/ 500 days linear vesting)",
-                "✦   2% MetaAirdrop Pool",
-                "✦   1% Charity Pool (1000 days linear vesting)"
-            ] 
-        }
-    ]
+   
     
   return (
       <div className=' relative mt-20  md:mt-24'>
@@ -61,20 +33,43 @@ const Tokenomics: FC = () => {
         <div className="md:mt-4 hidden md:block font-sora text-[#C0C0C0] md:text-[18px] capitalize font-semibold text-center">
             One Token, Limitless Possibilities!
         </div>
-        {/* Mobile */}
-        <div className='flex flex-col mt-8  md:hidden z-50'>
-               <div className="tokenomics flex flex-col gap-6">
-                 {
-                    tokenomicsList.map((item: TokenomicsCardProps, i: number) => (
-                        <TokenomicsCard key={i}  {...item}/>
-                    ))
-                 }
-               </div>
-            </div>
         {/* Desktop */}
-        <div className="hidden md:flex items-center justify-center mt-10">
-            <Image  alt='placeholder' className='' src={TokenPlacholder}/>
+        <div className="flex flex-col py-10 lg:px-10 md:flex-row  justify-evenly mt-10 border rounded-[20px] border-[#242424]">
+            <div className='flex-1 my-10 flex justify-center'><Image  alt='placeholder' className='' src={TokenPlacholder}/></div>
+            <div className="flex-1 flex py-10 lg:py-0 flex-col border-b-[#242424] border-t-[#242424] lg:border-r-[#242424]  lg:border-l-[#242424] border-t border-b lg:border-l lg:border-r justify-center gap-4 lg:gap-8">
+               {
+                tokenomics.slice(0, 4).map((item, i:number) => (
+                    <div className='flex ml-5 lg:ml-10 items-center gap-4' key={i} style={{ color: item.color }}>
+                       <div className='relative'>
+                       <CircularProgress className=' text-[#363B41] absolute left-0 top-0' size={40} variant='determinate' color='inherit' value={100}/>
+                       <CircularProgress className='z-50' size={40} variant='determinate' color='inherit' value={item.percent}/>
+                       </div>
+                       <div>
+                        <div className='text-[20px]'>{item.percent}%</div>
+                        <div>{item.text}</div>
+                       </div>
+                    </div>
+                )) 
+               }
+            </div>
+            <div className="flex-1 pt-10 lg:pt-0 flex flex-col justify-center gap-4 lg:gap-8">
+            {
+                tokenomics.slice(4, 7).map((item, i:number) => (
+                    <div className='flex ml-5 lg:ml-10 items-center gap-4' key={i} style={{ color: item.color }}>
+                        <div className='relative'>
+                       <CircularProgress className=' text-[#363B41] absolute left-0 top-0' size={40} variant='determinate' color='inherit' value={100}/>
+                       <CircularProgress className='z-50' size={40} variant='determinate' color='inherit' value={item.percent}/>
+                       </div>
+                       <div>
+                        <div className='text-[20px]'>{item.percent}%</div>
+                        <div>{item.text}</div>
+                       </div>
+                    </div>
+                )) 
+               }
+            </div>
         </div>
+
         </ContainerLayout>
     </div>
     

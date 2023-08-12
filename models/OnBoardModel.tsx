@@ -12,14 +12,15 @@ const OnBoardModel: FC<{ children: ReactNode }> = ({
     <>
       <Particles />
       {/* <BlowXModel /> */}
-      <OrbitControls 
-      enableZoom={false} 
-      enableRotate={screen.width <= 768 ? false : true }
-      minAzimuthAngle={ - Math.PI * 0.1 } 
-      maxAzimuthAngle={ Math.PI * 0.1 }
-      minPolarAngle={ Math.PI * 0.4 }
-      maxPolarAngle={ Math.PI  * 0.6}
-       />
+     {
+      screen.width > 768 && <OrbitControls 
+          enableZoom={false} 
+          minAzimuthAngle={ - Math.PI * 0.1 } 
+          maxAzimuthAngle={ Math.PI * 0.1 }
+          minPolarAngle={ Math.PI * 0.4 }
+          maxPolarAngle={ Math.PI  * 0.6}
+          /> 
+      }
     </>
   )
 }

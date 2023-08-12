@@ -76,13 +76,20 @@ const AboutModel = () => {
         <RoundedBox castShadow scale={2} args={[1, 1, 1]} position={[0,2,0]} radius={0.2}>
         <meshStandardMaterial 
         color={new THREE.Color('black')} 
+        metalness={0.5}
+        roughness={0.2}
         />
       </RoundedBox>
       {
         planeData.map((item, i: number) => (
             <mesh  castShadow scale={1.3} key={i} position={item.position} rotation={item.rotation}>
-                <planeGeometry   args={[1, 1]}/>
-                <meshStandardMaterial map={blowxMap} side={THREE.DoubleSide} transparent  />
+                <planeGeometry   args={[0.9, 0.9]}/>
+                <meshStandardMaterial 
+                metalness={0.5}
+                roughness={0.2}
+                map={blowxMap}
+                side={THREE.DoubleSide} 
+                transparent  />
             </mesh>
         ))
       }

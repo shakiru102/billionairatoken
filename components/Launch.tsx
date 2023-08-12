@@ -12,6 +12,7 @@ import Listing2 from '../assets/listing2.png'
 import Listing3 from '../assets/listing3.png'
 import Listing4 from '../assets/listing4.png'
 import Listing5 from '../assets/listing5.png'
+import Listing6 from '../assets/listing6.png'
 import Listing7 from '../assets/listing7.png'
 import Listing8 from '../assets/listing8.png'
 import Listing9 from '../assets/listing9.png'
@@ -100,6 +101,10 @@ const Launch = () => {
                 {
                     image: Listing5,
                     name: "OKX"
+                }, 
+                {
+                    image: Listing6,
+                    name: "BitGet"
                 }, 
                 {
                     image: Listing7,

@@ -121,9 +121,10 @@ const Home: NextPage = () => {
                  <Typography>
                   {
                     problemDetails.problems.map((item: any , i: number) => (
-                      <div key={i} className='p-[28px] mb-4 bg-white font-sora'>
+                      <div key={i} className='p-[28px] relative mb-4 bg-white font-sora'>
                         <div className='font-bold mb-4 text-[20px]'>{item.title}</div>
                         <div>{item.text}</div>
+                        <div className='absolute bottom-0 left-0 w-full  h-[10px] bg-black' />
                       </div>
                     ))
                   }
@@ -137,9 +138,10 @@ const Home: NextPage = () => {
                   }
                   {
                      problemDetails.solution.map((item: any , i: number) => (
-                      <div key={i} className='p-[28px] bg-white font-sora'>
+                      <div key={i} className='p-[28px] relative bg-white font-sora'>
                         <div className='font-bold mb-4 text-[20px]'>{item.title}</div>
                         <div>{item.text}</div>
+                        <div className='absolute bottom-0 left-0 w-full  h-[10px] bg-black' />
                       </div>
                     ))
                   }

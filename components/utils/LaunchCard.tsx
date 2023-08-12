@@ -27,14 +27,16 @@ const LaunchCard: FC<LaunchCardProps> = ({
             </div>
        </Paper>
        <Paper className='bg-[#0F0F0F] rounded-[10px] px-4 pt-10 pb-16  '>
-          <div className={ imageCols == '3' ? 'grid grid-cols-3 gap-4' : 'grid grid-cols-2 gap-4'}>
+          <div style={{perspective: "1000px"}} className={ imageCols == '3' ? 'grid grid-cols-3 gap-4' : 'grid grid-cols-2 gap-4'}>
             {
                images.map((item, i: number) => (
                 <div 
                 key={i} 
-                className='rounded-[10px] relative group h-[86px] bg-[#272727] flex flex-col justify-center items-center transition hover:[transform:rotateY(180deg)]  ease-in-out delay-150  duration-300'>
-                    <div className=' transition ease-in-out delay-150  duration-300 group-hover:hidden group-hover:opacity-0'><Image alt='launch image' src={item.image}/></div>
-                    <div className='font-sora hidden opacity-0 group-hover:opacity-100 text-[14px] text-center transition ease-in-out delay-150  duration-300 group-hover:block group-hover:[transform:rotateY(-180deg)] text-white '>
+                style={{ transformStyle: 'preserve-3d', animationDelay: '3s' }}
+                className=' animate-flip  rounded-[10px] relative  h-[86px] bg-[#272727] flex flex-col justify-center items-center  '>
+                    <div style={{ backfaceVisibility: 'hidden' }} className='absolute'><Image alt='launch image' src={item.image}/></div>
+
+                    <div style={{ backfaceVisibility: 'hidden' }} className='font-sora  absolute text-[14px] text-center [transform:rotateY(180deg)]   text-white '>
                       <div className='font-bold'>{item.name}</div>
                       <div className='text-[12px]'>31/03/2023</div>
                     </div>

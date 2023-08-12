@@ -33,7 +33,7 @@ const About: FC = () => {
              <div className="font-detacher text-[20px] text-center lg:text-left md:text-[32px] text-transparent bg-gradient-to-b from-[#FAFAFA] to-[#aaa5a503] bg-clip-text">
                 About BlowX
             </div>
-             <div className='text-[11px] md:text-[18px] text-center lg:text-left  text-[#A8A8A8] mt-4 font-biomeW04Regular'>
+             <div className='text-[14px] md:text-[18px] text-center lg:text-left  text-[#A8A8A8] mt-4 font-biomeW04Regular'>
              At the New Frontier Empire we are a highly experienced community of cryptocurrency pioneers, united by a shared culture and vision. Our aim is to revolutionise the web3  landscape and the global economy by introducing real-world utilities through our native token, Blow. Built on a multi chain network, BlowX powers transactions and activities within the Billionaires ecosystem, enabling seamless and efficient interactions.
                </div>
                  </div>

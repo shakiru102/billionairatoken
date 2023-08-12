@@ -174,7 +174,7 @@ const Ecosystem: FC = () => {
                     <div className="inline-block my-4 font-detacher text-[20px] md:text-[40px] uppercase text-transparent bg-gradient-to-b from-[#FAFAFA] to-[#aaa5a503] bg-clip-text">
                         Ecosystem Overview
                     </div>
-                    <div className=" text-[12px] font-sora md:text-[18px] text-transparent bg-gradient-to-b from-[#AAA5A5] to-[#aaa5a503] bg-clip-text mb-6">
+                    <div className=" text-[12px] font-sora md:text-[18px] text-transparent bg-gradient-to-b from-[#AAA5A5] to-[#aaa5a576] bg-clip-text mb-8">
                     Why TBT Ecosystem: Decentralised system is the future, and so is the Real World Assets (RWAs) tokenisation. Whether you adopt it now or not. Value is value, Innovation is Innovation. TBT is positioned to build the first ever Real World Assets (RWAs) decentralised ecosystem, leveraging the Blockchain, Ai, Metaverse and other disruptive technologies.
                     </div>
                 </div>
