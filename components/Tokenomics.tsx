@@ -22,7 +22,7 @@ const Tokenomics: FC = () => {
    
     
   return (
-      <div className=' relative mt-20  md:mt-24'>
+      <div className=' relative mt-20  '>
         <ContainerLayout>
         <div className=" mb-4 text-[20px] text-center font-detacher md:text-[40px] uppercase text-transparent bg-gradient-to-b from-[#FAFAFA] to-[#aaa5a503] bg-clip-text">
             Tokenomics
@@ -34,7 +34,7 @@ const Tokenomics: FC = () => {
             One Token, Limitless Possibilities!
         </div>
         {/* Desktop */}
-        <div className="flex flex-col py-10 lg:px-10 md:flex-row  justify-evenly mt-10 border rounded-[20px] border-[#242424]">
+        <div className="flex flex-col py-10 lg:py-0 lg:px-10 md:flex-row  justify-evenly mt-10 border rounded-[20px] border-[#242424]">
             <div className='flex-1 my-10 flex justify-center'><Image  alt='placeholder' className='' src={TokenPlacholder}/></div>
             <div className="flex-1 flex py-10 lg:py-0 flex-col border-b-[#242424] border-t-[#242424] lg:border-r-[#242424]  lg:border-l-[#242424] border-t border-b lg:border-l lg:border-r justify-center gap-4 lg:gap-8">
                {

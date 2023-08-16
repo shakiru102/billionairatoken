@@ -38,7 +38,7 @@ const NavBar: FC<NavBarProps> = ({
     <>
       <AppBar 
     elevation={0}
-      className='bg-transparent '
+      className='bg-transparent backdrop-blur-lg pt-2'
       sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}
       >
 
@@ -46,7 +46,7 @@ const NavBar: FC<NavBarProps> = ({
       <div className='flex items-center gap-1'>
         <Image height={32} alt='logo' className='contain' src={Logo} />
       </div>
-      <div className="hidden lg:flex">
+      <div className="hidden lg:flex gap-4">
         {
           navigations.map((item: NavlinksProps, index: number )=> item.contained ? 
                 (

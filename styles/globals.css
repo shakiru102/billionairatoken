@@ -7,13 +7,13 @@
 }
 
 #webgl{
-  height: 100vh !important;
+  height: 80vh !important;
   z-index: 0;
   position: absolute !important;
 }
 
 #webgl-about{
-  height: 100vh !important;
+  height: 80vh !important;
   z-index: 0;
   position: absolute !important;
 }
@@ -23,6 +23,13 @@
     display: none !important;
     height: 0px !important;
    }
+}
+@media screen and (max-width: 1440px) {
+  #webgl-about, #webgl {
+    height: 100vh !important;
+  z-index: 0;
+  position: absolute !important;
+  }
 }
 
 @font-face {

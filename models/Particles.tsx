@@ -45,6 +45,15 @@ const Particles = () => {
                 particles.current.rotation.z = Math.PI  / 4
             }
           }
+          if(screen.width > 768) {
+            if(particles.current) {
+                // particles.current.rotation.z = Math.PI / 4
+                
+                particles.current.position.x = 2.5
+                particles.current.position.y = -0.2
+                // particles.current.position.z = -3
+            }
+          }
         },[screen.width])
 
     const particleMap = useLoader(THREE.TextureLoader, './particles/star_04.png')
@@ -54,8 +63,9 @@ const Particles = () => {
         // console.log(state.mouse.y);
         
         if(particles.current && screen.width > 768) {
-            particles.current.rotation.y = state.mouse.x * 0.1
+            particles.current.rotation.y = (state.mouse.x * 0.1) - Math.PI / 6.5
             particles.current.rotation.x = -state.mouse.y * 0.1
+            // particles.current.rotation.y = -Math.PI / 6
         }
 
         for (let i = 0; i < count ; i++) {

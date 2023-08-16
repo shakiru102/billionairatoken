@@ -168,7 +168,7 @@ const Ecosystem: FC = () => {
 
 
   return (
-    <div id='ecosystem' className='md:min-h-[130vh] '>
+    <div id='ecosystem' className='lg:my-8'>
       <ContainerLayout>
             <div className="text-center">
                     <div className="inline-block my-4 font-detacher text-[20px] md:text-[40px] uppercase text-transparent bg-gradient-to-b from-[#FAFAFA] to-[#aaa5a503] bg-clip-text">

@@ -34,7 +34,7 @@ const FAQ: FC = () => {
          } 
     ]
   return (
-    <div className="md:min-h-[80vh]">
+    <div className="">
         <ContainerLayout>
         <Paper className='bg-[#1A1A1A] md:mt-28 px-8 py-16 rounded-[20px]'>
              <div className="text-center font-detacher text-[20px] md:text-[32px] text-transparent bg-gradient-to-b from-[#FAFAFA] to-[#aaa5a503] bg-clip-text py-4">

@@ -126,7 +126,7 @@ const Launch = () => {
 
   return (
    <>
-    <div className="lg:h-[150vh] md:flex justify-center items-center">
+    <div className="my-16 md:flex justify-center items-center">
         <RenderComponent 
         title='BlowX Launch Process' 
         >

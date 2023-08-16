@@ -41,10 +41,12 @@ const OnBoard: FC<onBoardProps> = ({
        <ContainerLayout>
         <div className="lg:w-[50%]">
         <div className='md:leading-[96px] text-[36px] md:text-[75px] bg-gradient-to-b from-[#FAFAFA] to-[#AAA5A5] bg-clip-text text-transparent font-detacher'>
-        Evolving Beyond the Norm
+        Evolution of Digital Assets
         </div>
-        <div className=' my-4 lg:pr-8 text-[12px]  md:text-[18px] bg-gradient-to-r from-[#FAFAFA] to-[#AAA5A5] bg-clip-text text-transparent font-sora'>
-        Building the largest global real world assets tokenised ecosystem, leveraging Blockchain, Web3, Ai and the Metaverse.
+        <div className='bg-[#08080897] my-2 pt-2 lg:pt-0 lg:bg-transparent relative'>
+            <div className=' lg:pr-8 text-[12px]  md:text-[18px] bg-gradient-to-r from-[#FAFAFA] to-[#AAA5A5] bg-clip-text text-transparent font-sora'>
+           From buildings to bonds, we are redefining the concept  of ownership. Leading charge in Real-World Digital Assets ecosystem, leveraging Blockchain, Web3, AI and the Metaverse.
+            </div>
         </div>
             <div className='flex gap-4 my-4'>
                 {

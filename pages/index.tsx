@@ -17,7 +17,7 @@ import TextInput from '../components/utils/TextInput'
 import SolidButton from '../components/utils/SolidButton'
 import RoadMap from '../components/RoadMap'
 import SelectInput from '../components/utils/SelectInput'
-import { Canvas } from '@react-three/fiber'
+import { Canvas, RootState } from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei'
 import { ChessBoard } from '../models/ChessBoard'
 import * as THREE from 'three'
@@ -30,14 +30,23 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 const Home: NextPage = () => {
 
   const [presaleModal, setPresaleModal] = useState<boolean>(false)
+  const [expanded, setExpanded] = useState<string | false>('panel1');
   const { problemDetails, activeId } = UseCustomHook(['section-1', 'section-2'], 300)
+  const handleChange =
+    (panel: string) => (event: React.SyntheticEvent, newExpanded: boolean) => {
+      setExpanded(newExpanded ? panel : false);
+    };
 
 
   return (
    <>
    <div className='relative'>
    <NavBar openPresaleModal={() => setPresaleModal(prev => !prev)} />
-   <Canvas id='webgl'>
+   <Canvas id='webgl'
+   onCreated={(state: RootState) => {
+    // if(screen.width >= 768) state.camera.position.x = 2
+   }}
+   >
       <OnBoardModel >
         
       </OnBoardModel>
@@ -47,7 +56,7 @@ const Home: NextPage = () => {
     <About />
     <RenderComponent title='Featured On' />
       <div 
-      className="w-[100%] hidden relative box-border pt-28 lg:flex scroll-smooth"
+      className="w-[100%] hidden relative box-border pt-28 2xl:px-96  lg:flex scroll-smooth"
       >
         <div className="sidemenu hidden lg:flex flex-col justify-around  flex-1 h-screen sticky top-0 w-[50%]">
           <div className='flex flex-col justify-center items-center gap-4'>
@@ -72,7 +81,7 @@ const Home: NextPage = () => {
         </div>
         <div className="flex-1 ">
           <div 
-          className="flex flex-col justify-evenly h-screen mb-28"
+          className="flex flex-col justify-evenly 2xl:h-[80vh] 2xl:justify-center 2xl:gap-8 h-screen mb-28"
           id='section-1'
           >
             {
@@ -85,8 +94,9 @@ const Home: NextPage = () => {
             }
           </div>
           <div
-           className="flex flex-col justify-evenly h-screen"
+           className="flex flex-col justify-evenly h-screen 2xl:h-[80vh] 2xl:justify-start 2xl:gap-8"
           id='section-2'
+
            >
             <div>
               <div className="font-sora font-bold text-white text-[32px]">The Solution</div>
@@ -105,8 +115,8 @@ const Home: NextPage = () => {
       </div>
       <div className="lg:hidden pt-20">
       {
-            ['section-1', 'section-2'].map((item, i: number) => (
-              <Accordion key={i} elevation={0} className='rounded-none bg-[#000]'>
+            ['panel1', 'panel2'].map((item, i: number) => (
+              <Accordion key={i} expanded={expanded === item} onChange={handleChange(item)} elevation={0} className='rounded-none bg-[#000]'>
                 <AccordionSummary
                   expandIcon={<ExpandMoreIcon style={{ color: 'white' }}/>}
                   aria-controls="panel1a-content"
