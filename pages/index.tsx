@@ -56,7 +56,7 @@ const Home: NextPage = () => {
     <About />
     <RenderComponent title='Featured On' />
       <div 
-      className="w-[100%] hidden relative box-border pt-28 2xl:px-96  lg:flex scroll-smooth"
+      className="w-[100%] hidden relative box-border py-28 3xl:px-96 lg:mb-36  lg:flex scroll-smooth"
       >
         <div className="sidemenu hidden lg:flex flex-col justify-around  flex-1 h-screen sticky top-0 w-[50%]">
           <div className='flex flex-col justify-center items-center gap-4'>
@@ -64,7 +64,7 @@ const Home: NextPage = () => {
             ['section-1', 'section-2'].map((item, i: number) => (
               <UtilButton 
               href={`#${item}`}
-              className={activeId === item ? 'bg-white text-[#2C2C2B] hover:bg-white' : 'text-white'}
+              className={activeId === item ? 'bg-white text-[#2C2C2B] hover:bg-white text-[20px]' : 'text-white text-[20px]'}
               key={i}
               >{ i == 0 ? 'The Problem We Are Solving' : 'The Solution We Are Providing'}</UtilButton>
             ))
