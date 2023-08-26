@@ -60,9 +60,10 @@ const NavBar: FC<NavBarProps> = ({
                   <Button 
                     className='capitalize cursor-fancy text-[#A8A8A8] font-sora text-[16px]'
                     key={index} 
-                    href={item.to}
+                    href={item.to ? item.to : ''}
                     disableElevation 
-                    onClick={item.handleClick}
+                    target='_blank'
+                    onClick={() => item.handleClick && item.handleClick()}
                     variant={'text'} >
                         { item.text }
                     </Button>)
@@ -108,9 +109,14 @@ sx={{
     ) : (
       <ListItem key={index} >
         <ListItemButton onClick={() => {
-           setTimeout(() =>  item.handleClick && item.handleClick(), 100)
+           if(!item.to) {
+            setTimeout(() =>  item.handleClick && item.handleClick(), 100)
            setDrawer(false)
-        }}>
+           }
+        }}
+        href={item.to ? item.to : ''}
+        target='_blank'
+        >
           <ListItemText 
           primary={item.text}
           className='capitalize cursor-fancy text-[#A8A8A8] font-sora text-[16px]'
