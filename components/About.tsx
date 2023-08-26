@@ -8,7 +8,7 @@ import AboutModel from '../models/AboutModel'
 import { OrbitControls } from '@react-three/drei'
 const About: FC = () => {
   return (
-     <div id='about' className="md:min-h-screen relative">
+     <div id='about' className="md:h-screen 3xl:h-[80vh] relative">
       <Canvas
               id='webgl-about'
               camera={{
@@ -23,10 +23,10 @@ const About: FC = () => {
         <ContainerLayout>
            
 
-           <div className='  w-full flex lg:flex-row flex-col justify-end pt-[40px] md:h-screen md:py-[80px]'>
+           <div className='  w-full flex lg:flex-row flex-col justify-end pt-[40px] md:h-screen lg:pt-0'>
               {/* <div className="lg:flex-1" /> */}
               <div className=' w-full lg:w-5/12 flex items-center  '>
-                 <div className="flex flex-col mt-10 md:mt-16 lg:p-5 lg:backdrop-blur-3xl lg:bg-[#040404c1]">
+                 <div className="flex flex-col mt-10 lg:mt-0 lg:p-5 rounded-[10px] lg:bg-black">
                     
              <div className="font-detacher text-[20px] text-center lg:text-left md:text-[32px] text-transparent bg-gradient-to-b from-[#FAFAFA] to-[#aaa5a503] bg-clip-text">
                 About BlowX

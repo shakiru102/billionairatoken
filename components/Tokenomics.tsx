@@ -75,9 +75,9 @@ const Tokenomics: FC = () => {
    
     
   return (
-      <div className=' relative mt-20  '>
+      <div className=''>
         <ContainerLayout>
-        <div className=" mb-4 text-[20px] text-center font-detacher md:text-[40px] uppercase text-transparent bg-gradient-to-b from-[#FAFAFA] to-[#aaa5a503] bg-clip-text">
+        <div className=" mb-4 mt-8 text-[20px] text-center font-detacher md:text-[40px] uppercase text-transparent bg-gradient-to-b from-[#FAFAFA] to-[#aaa5a503] bg-clip-text">
             Tokenomics
         </div>
         <div className="font-sora md:mx-36 px-6 md:px-0 text-[#A8A8A8] text-[14px] md:text-[16px] text-center">
