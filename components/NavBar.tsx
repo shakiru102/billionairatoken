@@ -32,6 +32,7 @@ const NavBar: FC<NavBarProps> = ({
         }  },
         { 
           text: 'Whitepaper', 
+          handleClick: () => null
           // to: 'https://acrobat.adobe.com/link/review?uri=urn:aaid:scds:US:696772c6-01f7-42db-8ce5-372df6864801'
          },
         { text: 'Join Presale', contained: true }
