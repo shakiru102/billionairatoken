@@ -46,7 +46,7 @@ const NavBar: FC<NavBarProps> = ({
       <div className='flex items-center gap-1'>
         <Image height={32} alt='logo' className='contain' src={Logo} />
       </div>
-      <div className="hidden lg:flex gap-4">
+      <div className="hidden lg:flex gap-8">
         {
           navigations.map((item: NavlinksProps, index: number )=> item.contained ? 
                 (

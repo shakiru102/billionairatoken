@@ -18,9 +18,9 @@ const CoinModal: FC<CoinModalProps> = ({
     open={open}
     onClose={onClose}
     scroll='body'
-    PaperComponent={props => (
-        <Paper {...props} className='md:w-[482px] text-left bg-[#1A1A1A] mx-auto my-16 rounded-[20px] p-8' />
-    )}
+    PaperProps={{
+      className: "md:w-[482px] text-left bg-[#1A1A1A] mx-auto my-16 rounded-[20px] p-8"
+    }}
     >
       <div className="text-center mb-4">
             <Image alt='logo' src={Logo} width={120} height={100} />
