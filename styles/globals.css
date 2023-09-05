@@ -80,3 +80,9 @@
   font-weight: 400;
   font-display: swap;
 }
+@font-face {
+  font-family: "BiomeW04-Regular";
+  src: url(../assets/fonts/Biome-W04-Bold.ttf);
+  font-weight: 900;
+  font-display: swap;
+}

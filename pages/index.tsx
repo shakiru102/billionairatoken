@@ -26,6 +26,7 @@ import UtilButton from '../components/utils/UtilButton'
 import UseCustomHook from '../hooks/UseCustomHook'
 import { Accordion, AccordionDetails, AccordionSummary, Typography } from '@mui/material'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import TokenInfo from '../components/TokenInfo'
 
 const Home: NextPage = () => {
 
@@ -40,7 +41,8 @@ const Home: NextPage = () => {
 
   return (
    <>
-   <div className='relative'>
+   <TokenInfo />
+   <div className='relative overflow-hidden'>
    <NavBar openPresaleModal={() => setPresaleModal(prev => !prev)} />
    <Canvas id='webgl'
    onCreated={(state: RootState) => {

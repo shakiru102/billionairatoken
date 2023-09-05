@@ -10,38 +10,39 @@ import Link from 'next/link'
 interface MediaIconsProps {
   position?: 'left' | 'right' | 'center';
 }
+export const socialHandles: {image: StaticImageData, handle: string, link: string}[] = [ 
+          { 
+            image: Twitter, 
+            handle: "twitter" ,
+            link: "https://twitter.com/blowx_official?s=21&t=WsOunCWsNhdoyCG_aroRbQ"
+        },
+          { 
+            image: Telegram, 
+            handle: "telegram",
+            link: 'https://t.me/BlowX_Official' 
+        },
+          { 
+            image: SocialIcon, 
+            handle: "social icon",
+            link: 'https://medium.com/@BlowX_Official' 
+        },
+        { 
+          image: Github, 
+          handle: "github",
+          link: 'https://github.com/BlowX-Official' 
+        },
+          { 
+            image: Instagram, 
+            handle: "instagram",
+            link: 'https://instagram.com/blowx_official?igshid=OGQ5ZDc2ODk2ZA==' 
+        }
+        ] 
 
 const  MediaIcons: FC<MediaIconsProps> = ({
   position
 }) => {
 
-    const socialHandles: {image: StaticImageData, handle: string, link: string}[] = [ 
-        { 
-          image: Twitter, 
-          handle: "twitter" ,
-          link: "https://twitter.com/blowx_official?s=21&t=WsOunCWsNhdoyCG_aroRbQ"
-      },
-        { 
-          image: Telegram, 
-          handle: "telegram",
-          link: 'https://t.me/BlowX_Official' 
-      },
-        { 
-          image: SocialIcon, 
-          handle: "social icon",
-          link: 'https://medium.com/@BlowX_Official' 
-      },
-      { 
-        image: Github, 
-        handle: "github",
-        link: 'https://github.com/BlowX-Official' 
-      },
-        { 
-          image: Instagram, 
-          handle: "instagram",
-          link: 'https://instagram.com/blowx_official?igshid=OGQ5ZDc2ODk2ZA==' 
-      }
-    ] 
+    
 
   return (
     <div className={`flex gap-8 mt-4 items-center

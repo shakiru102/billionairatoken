@@ -39,7 +39,7 @@ const OnBoard: FC<onBoardProps> = ({
   return (
     <div className="min-h-screen md:min-h-full lg:min-h-screen flex items-center">
        <ContainerLayout>
-        <div className="lg:w-[50%]">
+        <div className="lg:w-[40%]">
         <div className='md:leading-[96px] text-[36px] md:text-[75px] bg-gradient-to-b from-[#FAFAFA] to-[#AAA5A5] bg-clip-text text-transparent font-detacher'>
         Evolution of Digital Assets
         </div>

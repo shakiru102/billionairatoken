@@ -145,7 +145,7 @@ const Ecosystem: FC = () => {
             } 
         },
         { 
-            title: "The BillionairesDAO",
+            title: "The BlowDAO",
             header: "The Billionaires DAO",
             content: "Join a decentralised autonomous organization built on blockchain technology. The Billionaires DAO empowers token holders to participate in governance, access investment opportunities, and earn rewards. Be part of a transparent and community-driven ecosystem that shapes the future of decentralized governance and investments.",
             button: {
@@ -154,7 +154,7 @@ const Ecosystem: FC = () => {
             } 
         },
         { 
-            title: "TBT Foundation",
+            title: "Blow Foundation",
             content: "The TBT Foundation is dedicated to nurturing talent, providing scholarships, and supporting educational initiatives globally. It offers programs for skill-building, entrepreneurship support, cultural exchange, environmental sustainability, and global outreach. Join us in making a lasting impact and empowering the next generation across the globe.",
             button: {
                 text: "Support the Foundation",

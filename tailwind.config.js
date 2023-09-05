@@ -23,7 +23,7 @@ module.exports = {
         // 'fancy': 'url(../assets/cursorclick.svg), pointer',
       },
       animation: {
-        'flip': 'flip 5s linear infinite',
+        'flip': 'flip 15s linear infinite',
       },
       keyframes: {
         flip: {

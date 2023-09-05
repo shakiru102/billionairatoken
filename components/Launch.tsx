@@ -22,6 +22,8 @@ import CoinModal from './utils/CoinModal'
 import SolidButton from './utils/SolidButton'
 import { Formik } from 'formik'
 import TextInput from './utils/TextInput'
+import UtilModal from './utils/UtilModal'
+import SocialCapsule from './utils/SocialCapsule'
 
 
 const Launch = () => {
@@ -29,7 +31,7 @@ const Launch = () => {
     const launch: LaunchCardProps[] = [
         {
             buttons: [
-                { text: "Join community", variant: 'transparent', classnames: '' },
+                { text: "Join community", variant: 'transparent', handleClick: () => setCommunity(true), classnames: '' },
                 { text: "Join Airdrop", variant: 'solid', classnames: '' }
             ],
             imageCols: '2',
@@ -45,7 +47,8 @@ const Launch = () => {
         },
         {
             buttons: [
-                { text: "Buy $TBT Presale", variant: 'solid', classnames: '' }
+                { text: "Join community", variant: 'transparent', handleClick: () => setCommunity(true), classnames: '' },
+                { text: "Buy Blow Presale", variant: 'solid', classnames: '' }
             ],
             imageCols: '3',
             images: [ 
@@ -123,6 +126,7 @@ const Launch = () => {
         }
     ]
     const [cexlisting, setCexlisting] = useState<boolean>(false)
+    const [community, setCommunity] = useState<boolean>(false)
 
   return (
    <>
@@ -170,6 +174,14 @@ const Launch = () => {
             )}
         </Formik>
     }
+    />
+
+    <UtilModal
+     open={community}
+     onClose={() => setCommunity(prev => !prev)}
+     title='Join Our Community'
+     subtitle='Connect with us to get latest update'
+     content={<SocialCapsule />}
     />
    </>
   )

@@ -31,10 +31,10 @@ const Footer: FC = () => {
                 ))
             }
            </div>
-           <div className="mt-16 pb-16 border-b border-b-[#4B4B4B]" />
+           <div className="mt-16 pb-16  border-b border-b-[#4B4B4B]" />
            </ContainerLayout>
         </div>
-        <div className='  md:p-16'>
+        <div className='  md:px-16'>
         <ContainerLayout>
             <div className="text-[12px] text-[#DDD] font-sora font-100">
                 <div className='text-[12px] md:text-[14px]'>
