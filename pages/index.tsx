@@ -278,7 +278,7 @@ const Home: NextPage = () => {
                  />
                 <TextInput 
                 name='token'
-                label='Amount You Pay In USDT'
+                label={`Amount You Pay In ${values.walletAddress || 'USDT'}`}
                 textInputType='presale'
                 value={values.amount}
                 handleChange={handleChange('amount')}
@@ -286,7 +286,7 @@ const Home: NextPage = () => {
                  />
                  <TextInput 
                 name='blowToken'
-                label='Amount you receive inB\ BlowX'
+                label='Amount you receive in BlowX'
                 textInputType='presale'
                 value={values.token}
                 handleChange={handleChange('token')}
@@ -301,7 +301,7 @@ const Home: NextPage = () => {
                 handleChange={handleChange('registeredEmail')}
                 placeholder='gamersmerge@blowx.ai'
                  />
-                <SolidButton handleClick={() => open()} variant='solid' text={ isConnected ? 'BUY' : 'CONNECT'} classnames='rounded-none mb-3' />
+                <SolidButton handleClick={() => open()} variant='solid' text={ isConnected ? 'BUY' : 'CONNECT'} classnames='rounded-none mb-3 py-3' />
             </form>
             )}
         </Formik>

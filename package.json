@@ -21,11 +21,13 @@
     "@web3modal/react": "^2.7.1",
     "formik": "^2.4.2",
     "gsap": "^3.12.2",
+    "lottie-react": "^2.4.0",
     "next": "^12.3.4",
     "react": "18.2.0",
     "react-active-menu": "^0.0.14",
     "react-dom": "18.2.0",
     "react-player": "^2.12.0",
+    "tailwindcss-animation-delay": "^1.0.7",
     "three": "^0.154.0",
     "viem": "^1.10.7",
     "wagmi": "^1.4.1"

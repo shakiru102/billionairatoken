@@ -33,7 +33,7 @@ const LaunchCard: FC<LaunchCardProps> = ({
                 <div 
                 key={i} 
                 style={{ transformStyle: 'preserve-3d', animationDelay: '3s' }}
-                className=' animate-flip  rounded-[10px] relative  h-[86px] bg-[#272727] flex flex-col justify-center items-center  '>
+                className='animate-flip animation-delay-[30s] rounded-[10px] relative  h-[86px] bg-[#272727] flex flex-col justify-center items-center  '>
                     <div style={{ backfaceVisibility: 'hidden' }} className='absolute'><Image alt='launch image' src={item.image}/></div>
 
                     <div style={{ backfaceVisibility: 'hidden' }} className='font-sora  absolute text-[14px] text-center [transform:rotateY(180deg)]   text-white '>

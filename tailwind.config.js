@@ -10,6 +10,7 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    
     extend: {
       fontFamily: {
         larkenDemo: ["Larken Demo", "sans-serif"],
@@ -23,7 +24,7 @@ module.exports = {
         // 'fancy': 'url(../assets/cursorclick.svg), pointer',
       },
       animation: {
-        'flip': 'flip 15s linear infinite',
+        'flip': 'flip 10s linear infinite',
       },
       keyframes: {
         flip: {
@@ -34,6 +35,8 @@ module.exports = {
 
     },
   },
-  plugins: [],
+  plugins: [
+    require("tailwindcss-animation-delay")
+  ],
 }
 

@@ -10,6 +10,8 @@ import { Formik } from 'formik'
 import SelectInput from './utils/SelectInput'
 import TextInput from './utils/TextInput'
 import ContainerLayout from '../Layout/ContainerLayout'
+import LottieFile from '../assets/scrolldown.json'
+import Lottie from "lottie-react";
 
 interface onBoardProps {
     openPresaleModal: () => void;
@@ -37,7 +39,7 @@ const OnBoard: FC<onBoardProps> = ({
     
 
   return (
-    <div className="min-h-screen md:min-h-full lg:min-h-screen flex items-center">
+    <div className="min-h-screen md:min-h-full lg:min-h-screen flex pt-36 md:pt-0 md:items-center">
        <ContainerLayout>
         <div className="lg:w-[40%]">
         <div className='md:leading-[96px] text-[36px] md:text-[75px] bg-gradient-to-b from-[#FAFAFA] to-[#AAA5A5] bg-clip-text text-transparent font-detacher'>
@@ -60,7 +62,7 @@ const OnBoard: FC<onBoardProps> = ({
            </div>
         </div>
        </ContainerLayout>
-
+       <div className='absolute bottom-0 pb-8 w-full flex justify-center items-center'><Lottie className='w-[150px]' autoPlay animationData={LottieFile} loop={true} /></div>
        <CoinModal
          open={airdrop}
          onClose={() => setAirdrop(false)}
