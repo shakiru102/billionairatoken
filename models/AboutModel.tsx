@@ -27,25 +27,25 @@ const AboutModel = () => {
         },
         {
             // @ts-ignore
-            position: [-1.0005,2,0],
+            position: [-1.00005,2,0],
             // @ts-ignore
             rotation: [0, -Math.PI / 2, 0]
         },
         {
             // @ts-ignore
-            position: [1.0005,2,0],
+            position: [1.00005,2,0],
             // @ts-ignore
             rotation: [0, Math.PI / 2, 0]
         },
         {
             // @ts-ignore
-            position: [0,3.0005,0],
+            position: [0,3.00005,0],
             // @ts-ignore
             rotation: [Math.PI * 0.5, 0, 0]
         },
         {
             // @ts-ignore
-            position: [0,1.0005,0],
+            position: [0,1.00005,0],
             // @ts-ignore
             rotation: [Math.PI * 0.5, 0, 0]
         }
@@ -71,7 +71,7 @@ const AboutModel = () => {
       floatIntensity={1}
       >
         {/* @ts-ignore */}
-      <group scale={1.3} castShadow ref={box} position={[3, 0,0]} rotation={[0, 0, 0]}>
+      <group scale={1.5} castShadow ref={box} position={[3, 0,0]} rotation={[0, 0, 0]}>
         {/* @ts-ignore */}
         <RoundedBox castShadow scale={2} args={[1, 1, 1]} position={[0,2,0]} radius={0.2}>
         <meshStandardMaterial 
@@ -82,7 +82,7 @@ const AboutModel = () => {
       </RoundedBox>
       {
         planeData.map((item, i: number) => (
-            <mesh  castShadow scale={1.3} key={i} position={item.position} rotation={item.rotation}>
+            <mesh  castShadow scale={1.5} key={i} position={item.position} rotation={item.rotation}>
                 <planeGeometry   args={[0.9, 0.9]}/>
                 <meshStandardMaterial 
                 metalness={0.6}

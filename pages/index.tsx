@@ -27,16 +27,23 @@ import UseCustomHook from '../hooks/UseCustomHook'
 import { Accordion, AccordionDetails, AccordionSummary, Typography } from '@mui/material'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import TokenInfo from '../components/TokenInfo'
+import UtilModal from '../components/utils/UtilModal'
+import USDT from '../assets/usdt.png'
+import ARB from '../assets/arb.png'
+import BNB from '../assets/bnb.png'
+import ETH from '../assets/eth.png'
 
 const Home: NextPage = () => {
 
   const [presaleModal, setPresaleModal] = useState<boolean>(false)
+  const [buyBlowModal, setBuyBlowModal] = useState<boolean>(false)
   const [expanded, setExpanded] = useState<string | false>('panel1');
-  const { problemDetails, activeId } = UseCustomHook(['section-1', 'section-2'], 300)
+  const { problemDetails, activeId, buyBlowDetails } = UseCustomHook(['section-1', 'section-2'], 300)
   const handleChange =
     (panel: string) => (event: React.SyntheticEvent, newExpanded: boolean) => {
       setExpanded(newExpanded ? panel : false);
     };
+    
 
 
   return (
@@ -204,21 +211,32 @@ const Home: NextPage = () => {
     </RenderComponent>
     <FAQ />
     <Footer />
-    <CoinModal
-    dialogTitle='Join Presale'
-    dialogText='Kindly fill in the necessary information to participate in the presale'
+    <UtilModal
+    title='Join Presale'
+    subtitle={
+      <div>
+        <p>Listing Price = $0.080</p>
+        <p>1$BLOW = $0.040</p>
+      </div>
+    }
+    type='presale'
     open={presaleModal}
     onClose={() => setPresaleModal(false)}
-    dialogChildren={
-      <Formik
+    content={
+      <div className='border-t border-t-[#2b2b2d] pt-20'>
+        <Formik
         initialValues={{ 
           token: '',
+          blowToken: '',
           amount: '',
           walletAddress: '',
           registeredEmail: '',
           verifyEmail: ''
         }}
-        onSubmit={() => {}}
+        onSubmit={(e) => {
+          console.log(e);
+          
+        }}
         >
             {({ 
                 values,
@@ -226,62 +244,95 @@ const Home: NextPage = () => {
                 handleSubmit
              }) => (
             <form className="flex flex-col gap-6">
-                <TextInput 
-                name='token'
-                label='Blowx Token price'
-                value={values.token}
-                handleChange={handleChange('token')}
-                placeholder='0.08 per token'
-                 />
-                <TextInput 
-                name='token'
-                label='Amount'
-                value={values.amount}
-                handleChange={handleChange('amount')}
-                inputAdorments={[
-                  { text: '25%' },
-                  { text: '50%' },
-                  { text: '75%' },
-                  { text: '100%' },
-                ]}
-                 />
                  <SelectInput 
                 name='walletAddress'
-                label='Select Your Wallet (ENS/ETH/BEP20/ARB)'
+                textInputType='presale'
+                label='Select Payment Token/Assets'
                 value={values.walletAddress}
                 handleChange={handleChange('walletAddress')}
                 placeholder='Enter your wallet address'
                 menuItems={[
-                  { label: 'ENS',  value: 'ENS' }, 
-                  { label: 'ETH Address',  value: 'ETH Address' }, 
-                  { label: 'BSC Address',  value: 'BSC Address' }, 
-                  { label: 'ARB Address',  value: 'ARB Address' }
+                  { icon: USDT, label: 'USDT',  value: 'TRC-20' }, 
+                  { icon: ETH, label: 'ETH',  value: 'ERC20' }, 
+                  { icon: BNB, label: 'BNB',  value: 'BEP20' }, 
+                  { icon: ARB, label: 'ARB',  value: 'Arbitrum' }
                  ]}
                  />
+                <TextInput 
+                name='token'
+                label='Amount You Pay In USDT'
+                textInputType='presale'
+                value={values.amount}
+                handleChange={handleChange('amount')}
+                placeholder='500 USDT'
+                 />
                  <TextInput 
+                name='blowToken'
+                label='Amount you receive inB\ BlowX'
+                textInputType='presale'
+                value={values.token}
+                handleChange={handleChange('token')}
+                placeholder='0.08 per token'
+                 />
+                
+                 <TextInput 
+                 textInputType='presale'
                 name='registeredEmail'
-                label='Enter registered email address'
+                label='Enter  Email Address'
                 value={values.registeredEmail}
                 handleChange={handleChange('registeredEmail')}
-                inputAdorments={[
-                  { text: 'Get Code' }
-                ]}
                 placeholder='gamersmerge@blowx.ai'
                  />
-                  <TextInput 
-                name='verifyEmail'
-                label='Verify email'
-                value={values.verifyEmail}
-                handleChange={handleChange('verifyEmail')}
-                inputAdorments={[
-                  { text: 'Verify' }
-                ]}
-                placeholder='Enter 6 digit code'
-                 />
-                <SolidButton handleClick={handleSubmit} variant='solid' text='Submit' classnames='rounded-[8px] mb-3' />
+                <SolidButton handleClick={handleSubmit} variant='solid' text='CONNECT' classnames='rounded-none mb-3' />
             </form>
             )}
         </Formik>
+        <div className='flex cursor-pointer text-[#FFF] mt-4 justify-between font-biomeW04Regular text-[14px] underline'>
+          <span onClick={() => setBuyBlowModal(true)}>How to buy?</span>
+          <span>Refferal link</span>
+        </div>
+      </div>
+    }
+    />
+
+    <UtilModal
+    title='How to buy $BLOW Token'
+    subtitle="Connect with us to get latest update"
+    open={buyBlowModal}
+    onClose={() => setBuyBlowModal(false)}
+    content={
+      <div>
+        {
+          buyBlowDetails.map((item, i: number) => (
+            <Accordion key={i}  elevation={0} className='rounded-none bg-[#2C2C2B] mt-4'>
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon style={{ color: 'white' }}/>}
+                aria-controls="panel1a-content"
+                id="panel1a-header"
+              >
+                <Typography className='font-sora block capitalize font-bold  rounded-none text-white'>{ item.header }</Typography>
+              </AccordionSummary>
+              <AccordionDetails className='bg-white'>
+               <Typography>
+               <div className=' font-sora text-black font-bold mb-4 text-[20px]'>{item.title}</div>
+                {
+                  item.content.map((text: any , i: number) => (
+                    <div key={i} className=' text-black text-[14px] relative mb-4 bg-white font-sora'>
+                      <div>{text}</div>
+                    </div>
+                  ))
+                }
+                <div className='font-sora font-bold text-[14px]'>
+                        <a href={item.readMore} target='_blank'>Read More...</a>
+                      </div>
+               </Typography> 
+              </AccordionDetails>
+        </Accordion>
+        ))}
+        <div className="text-white font-sora text-center text-[20px] font-bold mt-10">
+          <a href="https://medium.com/@BlowX_Official/from-novice-to-crypto-pro-a-guide-on-how-to-buy-blow-tokens-d389ea1d6bec" target='_blank'>Read More...</a>
+        </div>
+      </div>
     }
     />
    </>

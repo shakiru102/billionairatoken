@@ -5,7 +5,7 @@ import PasteIcon from '../assets/pasteicon.png'
 
 const TokenInfo = () => {
 
-    const [active, setActive] = useState<boolean>(true)
+    const [active, setActive] = useState<boolean>(false)
     
   return (
     <div className={`bg-white transition-all duration-300 ease-linear hidden md:block h-[276px] w-[628px] overflow-hidden  z-50 fixed bottom-52 rounded-tl-[20px] rounded-bl-[20px] ${ active ? "right-0" : "-right-[40.2%]" }`}>

@@ -9,19 +9,20 @@ const TextInput: FC<TextinputProps> = ({
   handleChange,
   inputAdorments,
   placeholder,
-  name
+  name,
+  textInputType
 }) => {
   return (
     <div>
         <InputLabel
-        className='font-sora mb-1 text-[#A8A8A8] text-[14px]'
+        className={`font-sora mb-1 ${ textInputType !== 'presale' ? 'text-[#A8A8A8] text-[14px]' : 'text-[#FFF] text-[16px]' }`}
         >
           { label }
         </InputLabel>
         <Input
         disableUnderline
         onChange={handleChange}
-       className='bg-[#1F1F1F] rounded-[14px] text-[#D9D9D9] border border-[#4B4B4B] font-sora p-3 w-[100%]'
+       className={`bg-[#1F1F1F] ${ textInputType !== 'presale' ? 'rounded-[14px] text-[#D9D9D9] border border-[#4B4B4B] font-sora font-normal' : 'rounded-[10px] text-[#FFF] border-none font-biomeW04Regular' }  p-3 w-[100%]`}
        placeholder={placeholder}
        value={value}
        fullWidth

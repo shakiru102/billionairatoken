@@ -27,8 +27,9 @@ export interface TextinputProps {
     menuItems?: {
         label: string;
         value: string;
+        icon: StaticImageData
     }[]
-        
+    textInputType?: 'presale' | 'other'   
     
 }
 

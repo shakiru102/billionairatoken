@@ -38,6 +38,28 @@ const isBetween = (value: number, floor: number, ceil: number) =>
             ]
     }
 
+    const buyBlowDetails = [
+      {
+        header: "Buy With Crypto",
+        title: "How to buy $BLOW token with card?",
+        content: [
+          "To buy either ETH/BNB/ARB/USDT using your card, bank transfer, or other methods, such as Apple Pay, you will be directed to our partner, Pyypl. Once there, you can complete your purchase directly in the widget.",
+          "Select your preferred currency, enter the amount you wish to pay, and choose your payment method. The widget will display the estimated ETH/BNB/ARB/USDT you will receive, the rate, and the total fees to carry out the transaction. After selecting your payment method and amount, click the 'Buy Now' button."
+        ],
+        readMore: "https://medium.com/@BlowX_Official/the-definitive-guide-how-to-safely-purchase-blow-tokens-with-crypto-3387e28e798"
+      },
+      {
+        header: "Buy With Card",
+        title: "How to buy $BLOW token with crypto?",
+        content: [
+          "1. Firstly, make sure you have one of the supported wallets ready either TrustWallet, or Metamask.",
+          `2. Click on the "Buy $BLOW" button to enable BlowX chosen network extension to connect with your wallet. Once connected, you can buy $BLOW tokens using a selection of currencies from the listed network chain such as ETH, BNB, ARB or USDT.`,
+          `3. Choose the amount of $BLOW tokens you wish to buy or the amount of your assets you wish to spend and click "Buy now". We recommend having at least $10 equivalent of the network currency to cover gas fees.`
+        ],
+        readMore: "https://medium.com/@BlowX_Official/how-to-easily-buy-blow-tokens-with-your-card-189c90b5c996"
+      }
+    ]
+
     const [activeId, setActiveId] = useState("");
       
         useLayoutEffect(() => {
@@ -74,7 +96,8 @@ const isBetween = (value: number, floor: number, ceil: number) =>
 
   return  {
     problemDetails,
-    activeId
+    activeId,
+    buyBlowDetails
   }
 }
 
