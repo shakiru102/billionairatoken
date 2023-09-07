@@ -247,7 +247,7 @@ const Home: NextPage = () => {
           token: '',
           blowToken: '',
           amount: '',
-          walletAddress: '',
+          walletAddress: 'ETH',
           registeredEmail: '',
           verifyEmail: ''
         }}
@@ -270,10 +270,10 @@ const Home: NextPage = () => {
                 handleChange={handleChange('walletAddress')}
                 placeholder='Enter your wallet address'
                 menuItems={[
-                  { icon: USDT, label: 'USDT',  value: 'TRC-20' }, 
-                  { icon: ETH, label: 'ETH',  value: 'ERC20' }, 
-                  { icon: BNB, label: 'BNB',  value: 'BEP20' }, 
-                  { icon: ARB, label: 'ARB',  value: 'Arbitrum' }
+                  { icon: USDT, value: 'USDT',  label: 'TRC-20' }, 
+                  { icon: ETH, value: 'ETH',  label: 'ERC20' }, 
+                  { icon: BNB, value: 'BNB',  label: 'BEP20' }, 
+                  { icon: ARB, value: 'ARB',  label: 'Arbitrum' }
                  ]}
                  />
                 <TextInput 
@@ -301,7 +301,7 @@ const Home: NextPage = () => {
                 handleChange={handleChange('registeredEmail')}
                 placeholder='gamersmerge@blowx.ai'
                  />
-                <SolidButton handleClick={() => open()} variant='solid' text={ isConnected ? 'BUY' : 'CONNECT'} classnames='rounded-none mb-3 py-3' />
+                <SolidButton handleClick={() => open()} variant='solid' text={ isConnected ? 'BUY' : 'CONNECT'} classnames='rounded-[10px] mb-3 py-3' />
             </form>
             )}
         </Formik>

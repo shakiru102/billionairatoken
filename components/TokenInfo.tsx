@@ -8,7 +8,7 @@ const TokenInfo = () => {
     const [active, setActive] = useState<boolean>(false)
     
   return (
-    <div className={`bg-white transition-all duration-300 ease-linear hidden md:block h-[276px] w-[628px] overflow-hidden  z-50 fixed bottom-52 rounded-tl-[20px] rounded-bl-[20px] ${ active ? "right-0" : "-right-[40.2%]" }`}>
+    <div className={`bg-white transition-all duration-300 ease-linear  h-[276px] w-full md:w-[628px] overflow-hidden  z-[100] fixed bottom-52 rounded-tl-[20px] rounded-bl-[20px] ${ active ? "right-0" : " -right-[90%] md:-right-[578px]" }`}>
       <div className="flex ">
       
         <div 
@@ -16,21 +16,21 @@ const TokenInfo = () => {
         onClick={() => setActive(prev => !prev)}
         
         >
-            <span className=' text-[20px] font-biomeW04Regular [ font-bold'>Token Info</span>
+            <span className=' text-[20px] font-biomeW04Regular font-bold'>Token Info</span>
             <span className={`transition-all duration-300 ease-linear inline-block ${active ? '[transform:rotate(-90deg)]' : '[transform:rotate(90deg)]'}`}><ArrowDropDownIcon fontSize={'large'}  /></span>
         </div>
         <div className='flex-1 text-black font-biomeW04Regular font-bold'>
-          <div className='ml-10 flex flex-col justify-around py-5 h-full'>
-            <p className='text-[20px]'>Token info</p>
+          <div className='ml-5 md:ml-10 flex flex-col justify-around py-5 h-full'>
+            <p className=' text-[18px] md:text-[20px]'>Token info</p>
             
             <p className='text-[#AAA]'>
               Name
-              <p className='text-black text-[18px]'>Blow</p>
+              <p className='text-black text-[11px] md:text-[18px]'>Blow</p>
             </p>
             <p className='text-[#AAA]'>
               Smartcontract address
-              <p className='text-black text-[18px] flex gap-3 items-center'>
-              0x435252521848591ae0e6a5trb12536328f61a80e
+              <p className='text-black text-[11px] md:text-[18px] flex gap-3 items-center'>
+              0x435252521848591ae0e6a<br className='md:hidden'/>5trb12536328f61a80e
               <span>
                 <Image src={PasteIcon} alt='icon' />
               </span>
@@ -38,7 +38,7 @@ const TokenInfo = () => {
             </p>
             <p className='text-[#AAA]'>
               Decimals
-              <p className='text-black text-[18px]'>18</p>
+              <p className='text-black text-[11px] md:text-[18px]'>18</p>
             </p>
           </div>
         </div>

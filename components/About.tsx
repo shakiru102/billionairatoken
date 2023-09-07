@@ -25,7 +25,25 @@ const About: FC = () => {
 
            <div className='  w-full flex lg:flex-row flex-col justify-end pt-[40px] md:h-screen lg:pt-0'>
               {/* <div className="lg:flex-1" /> */}
-              <div className=' w-full lg:w-5/12 flex items-center  '>
+              <div className='md:hidden'>
+                <Canvas
+                  // id='webgl-about'
+                  style={{
+                    height: "50vh"
+                  }}
+                  camera={{
+                  position: [0, 2, -5]
+                  }}
+                  shadows
+                  >
+                <group scale={1.5} position={[-5,0,0]}>
+                  <AboutModel />
+                </group>
+               <OrbitControls  enablePan={false} enableZoom={false}/>
+              </Canvas>
+                </div>
+              <div className=' w-full lg:w-5/12 flex flex-col md:flex-row items-center  '>
+                
                  <div className="flex flex-col mt-10 lg:mt-0 lg:p-5 rounded-[10px] lg:bg-black">
                     
              <div className="font-detacher text-[20px] text-center lg:text-left md:text-[32px] text-transparent bg-gradient-to-b from-[#FAFAFA] to-[#aaa5a503] bg-clip-text">

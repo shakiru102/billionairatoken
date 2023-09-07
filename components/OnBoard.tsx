@@ -57,12 +57,12 @@ const OnBoard: FC<onBoardProps> = ({
                     ))
                 }
             </div>
-           <div>
+           <div className='mt-10 md:mt-14'>
             <MediaIcons />
            </div>
         </div>
        </ContainerLayout>
-       <div className='absolute bottom-0 pb-8 w-full flex justify-center items-center'><Lottie className='w-[150px]' autoPlay animationData={LottieFile} loop={true} /></div>
+       <div className='absolute bottom-32 md:bottom-0 pb-8 w-full flex justify-center items-center'><Lottie className='w-[150px]' autoPlay animationData={LottieFile} loop={true} /></div>
        <CoinModal
          open={airdrop}
          onClose={() => setAirdrop(false)}

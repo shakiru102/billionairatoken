@@ -47,12 +47,12 @@ const SelectInput: FC<TextinputProps> = ({
        >
             {
                 menuItems?.map((item, i: number) => textInputType == 'presale' ? (
-                    <MenuItem key={i} onClick={(e) => console.log(e.target)}  value={item.label} className='cursor-fancy font-biomeW04Regular text-[14px] text-[#D9D9D9]'>
+                    <MenuItem key={i} onClick={(e) => console.log(e.target)}  value={item.value} className='cursor-fancy font-biomeW04Regular text-[14px] text-[#D9D9D9]'>
                       <div className='flex gap-4 items-center'>
                     { item.icon &&  <Image src={item.icon} alt={item.value} /> }
                       <div>
-                        <p>{item.label}</p>
-                        <p className='text-[10px]'>{item.value}</p>
+                        <p>{item.value}</p>
+                        <p className='text-[10px]'>{item.label}</p>
                       </div>
                       </div>
                     </MenuItem>
