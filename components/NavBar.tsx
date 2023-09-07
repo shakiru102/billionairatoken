@@ -8,6 +8,7 @@ import ChevronIcon from '../assets/chevron.svg'
 import SolidButton from './utils/SolidButton'
 import CloseSharpIcon from '@mui/icons-material/CloseSharp';
 import MenuIcon from '@mui/icons-material/Menu';
+import { useAccount } from 'wagmi'
 
  interface NavBarProps {
   openPresaleModal: () => void;
@@ -37,6 +38,8 @@ const NavBar: FC<NavBarProps> = ({
          },
         { text: 'Join Presale', contained: true }
     ]
+
+    const { address } = useAccount()
 
   return (
     <>

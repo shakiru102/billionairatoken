@@ -32,6 +32,20 @@ import USDT from '../assets/usdt.png'
 import ARB from '../assets/arb.png'
 import BNB from '../assets/bnb.png'
 import ETH from '../assets/eth.png'
+import { EthereumClient, w3mConnectors, w3mProvider } from '@web3modal/ethereum'
+import { configureChains, createConfig, useAccount } from 'wagmi'
+import { arbitrum, mainnet, polygon, bsc  } from 'wagmi/chains'
+import { Web3Modal, useWeb3Modal } from '@web3modal/react'
+
+const chains = [arbitrum, mainnet, polygon, bsc]
+const projectId = 'f411cba3405901415bd5eddbedde4889'
+
+const { publicClient } = configureChains(chains, [w3mProvider({ projectId })])
+const wagmiConfig = createConfig({
+  autoConnect: true,
+  connectors: w3mConnectors({ projectId, chains }),
+  publicClient
+})
 
 const Home: NextPage = () => {
 
@@ -44,7 +58,11 @@ const Home: NextPage = () => {
       setExpanded(newExpanded ? panel : false);
     };
     
+    const ethereumClient = new EthereumClient(wagmiConfig, chains)
+    const { open, close } = useWeb3Modal()
+    const { isConnected } = useAccount()
 
+  
 
   return (
    <>
@@ -283,10 +301,11 @@ const Home: NextPage = () => {
                 handleChange={handleChange('registeredEmail')}
                 placeholder='gamersmerge@blowx.ai'
                  />
-                <SolidButton handleClick={handleSubmit} variant='solid' text='CONNECT' classnames='rounded-none mb-3' />
+                <SolidButton handleClick={() => open()} variant='solid' text={ isConnected ? 'BUY' : 'CONNECT'} classnames='rounded-none mb-3' />
             </form>
             )}
         </Formik>
+<Web3Modal projectId={projectId} ethereumClient={ethereumClient} />
         <div className='flex cursor-pointer text-[#FFF] mt-4 justify-between font-biomeW04Regular text-[14px] underline'>
           <span onClick={() => setBuyBlowModal(true)}>How to buy?</span>
           <span>Refferal link</span>

@@ -37,7 +37,7 @@ const SelectInput: FC<TextinputProps> = ({
             PaperProps: {
                 className: textInputType !== 'presale' ? 
                 "bg-[#1F1F1F] cursor-fancy rounded-[8px]" :
-                " border-[0.3px] border-[rgba(51,51,255,0.30)] bg-gradient-to-br rounded-[20px] from-[#1F1F1F] to-[#000] p-4"
+                " border-[0.3px] border-[rgba(51,51,255,0.30)] bg-gradient-to-br rounded-[20px] from-[#1F1F1F] to-[#000]"
             }
           }}
 
