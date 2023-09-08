@@ -62,7 +62,7 @@ const OnBoard: FC<onBoardProps> = ({
            </div>
         </div>
        </ContainerLayout>
-       <div className='absolute bottom-32 md:bottom-0 pb-8 w-full flex justify-center items-center'><Lottie className='w-[150px]' autoPlay animationData={LottieFile} loop={true} /></div>
+       <div className='absolute bottom-32 md:bottom-0 pb-8 w-full flex justify-center items-center'><Lottie className=' w-[70px] md:w-[150px]' autoPlay animationData={LottieFile} loop={true} /></div>
        <CoinModal
          open={airdrop}
          onClose={() => setAirdrop(false)}

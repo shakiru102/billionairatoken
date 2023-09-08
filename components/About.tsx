@@ -39,7 +39,6 @@ const About: FC = () => {
                 <group scale={1.5} position={[-5,0,0]}>
                   <AboutModel />
                 </group>
-               <OrbitControls  enablePan={false} enableZoom={false}/>
               </Canvas>
                 </div>
               <div className=' w-full lg:w-5/12 flex flex-col md:flex-row items-center  '>
