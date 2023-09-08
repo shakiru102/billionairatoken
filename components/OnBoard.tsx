@@ -46,7 +46,8 @@ const OnBoard: FC<onBoardProps> = ({
         Evolution of Digital Assets
         </div>
         <div className='bg-[#08080897] my-2 pt-2 lg:pt-0 lg:bg-transparent relative'>
-            <div className=' lg:pr-8 text-[12px]  md:text-[18px] bg-gradient-to-r from-[#FAFAFA] to-[#AAA5A5] bg-clip-text text-transparent font-sora'>
+        {/* bg-gradient-to-r from-[#FAFAFA] to-[#AAA5A5] bg-clip-text text-transparent */}
+            <div className=' lg:pr-8 text-[12px]  md:text-[18px] text-white font-sora'>
            From buildings to bonds, we are redefining the concept  of ownership. Leading charge in Real-World Digital Assets ecosystem, leveraging Blockchain, Web3, AI and the Metaverse.
             </div>
         </div>
@@ -62,7 +63,7 @@ const OnBoard: FC<onBoardProps> = ({
            </div>
         </div>
        </ContainerLayout>
-       <div className='absolute bottom-32 md:bottom-0 pb-8 w-full flex justify-center items-center'><Lottie className=' w-[70px] md:w-[150px]' autoPlay animationData={LottieFile} loop={true} /></div>
+       <div className='absolute bottom-32 md:bottom-0 pb-8 w-full flex justify-center items-center'><Lottie className=' w-[90px] md:w-[150px]' autoPlay animationData={LottieFile} loop={true} /></div>
        <CoinModal
          open={airdrop}
          onClose={() => setAirdrop(false)}
