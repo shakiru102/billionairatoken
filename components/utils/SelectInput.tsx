@@ -31,7 +31,7 @@ const SelectInput: FC<TextinputProps> = ({
         <Input
         disableUnderline
         
-        className={`bg-[#1F1F1F]  ${ textInputType !== 'presale' ? 'rounded-[14px] text-[#D9D9D9] border border-[#4B4B4B] font-sora font-normal' : 'rounded-[10px] text-[#FFF] border-none font-biomeW04Regular' }  p-3 w-[100%]`}
+        className={`bg-[#1F1F1F]   ${ textInputType !== 'presale' ? 'rounded-[14px] text-[#D9D9D9] border border-[#4B4B4B] font-sora font-normal' : 'h-[55px] rounded-[10px] text-[#FFF] border-none font-biomeW04Regular' }  p-3 w-[100%]`}
           />}
           MenuProps={{
             PaperProps: {
@@ -49,10 +49,10 @@ const SelectInput: FC<TextinputProps> = ({
                 menuItems?.map((item, i: number) => textInputType == 'presale' ? (
                     <MenuItem key={i} onClick={(e) => console.log(e.target)}  value={item.value} className='cursor-fancy font-biomeW04Regular text-[14px] text-[#D9D9D9]'>
                       <div className='flex gap-4 items-center'>
-                    { item.icon &&  <Image src={item.icon} alt={item.value} /> }
+                    { item.icon &&  <Image  src={item.icon} alt={item.value} /> }
                       <div>
-                        <p>{item.value}</p>
-                        <p className='text-[10px]'>{item.label}</p>
+                        <div className='text-[12px] md:-[16px]'>{item.value}</div>
+                        <div className='text-[8px] md:text-[10px]'>{item.label}</div>
                       </div>
                       </div>
                     </MenuItem>

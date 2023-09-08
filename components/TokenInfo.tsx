@@ -8,11 +8,11 @@ const TokenInfo = () => {
     const [active, setActive] = useState<boolean>(false)
     
   return (
-    <div className={`bg-white transition-all duration-300 ease-linear  h-[276px] w-full md:w-[628px] overflow-hidden  z-[100] fixed bottom-52 rounded-tl-[20px] rounded-bl-[20px] ${ active ? "right-0" : " -right-[90%] md:-right-[578px]" }`}>
+    <div className={`bg-white transition-all duration-300 ease-linear h-[240px] md:h-[276px] w-full md:w-[628px] overflow-hidden  z-[100] fixed bottom-52 rounded-tl-[20px] rounded-bl-[20px] ${ active ? "right-0" : " -right-[90%] md:-right-[578px]" }`}>
       <div className="flex ">
       
         <div 
-        className={`transition-all cursor-pointer duration-300 ease-linear ${active ? "bg-[#2C2C2B] text-white" : "bg-white text-black" } flex justify-center gap-3 items-center h-[276px] text-center [writing-mode:vertical-rl] w-[50px]`}
+        className={`transition-all cursor-pointer duration-300 ease-linear ${active ? "bg-[#2C2C2B] text-white" : "bg-white text-black" } flex justify-center gap-3 items-center h-[240px] md:h-[276px] text-center [writing-mode:vertical-rl] w-[50px]`}
         onClick={() => setActive(prev => !prev)}
         
         >

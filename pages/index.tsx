@@ -149,7 +149,7 @@ const Home: NextPage = () => {
                   aria-controls="panel1a-content"
                   id="panel1a-header"
                 >
-                  <Typography className='font-sora block capitalize font-bold  rounded-none text-white'>{ i == 0 ? 'The Problem We Are Solving' : 'The Solution We Are Providing'}</Typography>
+                  <Typography className='font-sora block capitalize font-bold mx-auto  rounded-none text-white'>{ i == 0 ? 'The Problem We Are Solving' : 'The Solution We Are Providing'}</Typography>
                 </AccordionSummary>
                 <AccordionDetails>
                 {
