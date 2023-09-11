@@ -197,7 +197,7 @@ const Home: NextPage = () => {
             <div className='font-sora  text-[16px] text-white'>
             With the continued failure of centralized exchanges, crypto is seeing a return to first principles: new and seasoned investors alike are embracing the trustless, non-custodial, decentralized nature of on-chain finance.
             </div>
-          </div>{} 
+          </div>
       </div>
       <Tokenomics />
       <Launch />

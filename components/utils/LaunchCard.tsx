@@ -1,8 +1,9 @@
 import { Paper } from '@mui/material'
-import React, { FC } from 'react'
+import React, { FC, useEffect, useRef } from 'react'
 import SolidButton from './SolidButton'
 import Image, { StaticImageData } from 'next/image'
 import { SolidButtonProps } from '../../types'
+import { gsap } from 'gsap'
 
 export interface LaunchCardProps {
     title: "Airdrop" | "Presale" | "CEX Listing";
@@ -19,6 +20,32 @@ const LaunchCard: FC<LaunchCardProps> = ({
     text,
     title
 }) => {
+
+  const gsapRef = useRef(null)
+
+  useEffect(() => {
+    
+       let tl = gsap.timeline({ repeat: -1 });
+    tl.to('.gsap-animation', {
+      rotationY: 0,
+      delay: 1,
+      stagger: .5,
+      // duration: 2000
+    })
+    .to('.gsap-animation', {
+      rotationY: 180,
+      delay: 1,
+      stagger: .5,
+      // duration: 2000
+    })
+    .to('.gsap-animation', {
+      rotationY: 0,
+      delay: 1,
+      // duration: 2000
+    })
+   
+  },[])
+
   return (
     <div className='flex flex-col gap-4'>
        <Paper className='bg-[#0F0F0F] rounded-[10px]'>
@@ -32,8 +59,9 @@ const LaunchCard: FC<LaunchCardProps> = ({
                images.map((item, i: number) => (
                 <div 
                 key={i} 
-                style={{ transformStyle: 'preserve-3d', animationDelay: '3s' }}
-                className='animate-flip animation-delay-[30s] rounded-[10px] relative  h-[86px] bg-[#272727] flex flex-col justify-center items-center  '>
+                ref={gsapRef}
+                style={{ transformStyle: 'preserve-3d' }}
+                className=' gsap-animation rounded-[10px] relative  h-[86px] bg-[#272727] flex flex-col justify-center items-center  '>
                     <div style={{ backfaceVisibility: 'hidden' }} className='absolute'><Image alt='launch image' src={item.image}/></div>
 
                     <div style={{ backfaceVisibility: 'hidden' }} className='font-sora  absolute text-[14px] text-center [transform:rotateY(180deg)]   text-white '>
