@@ -6,7 +6,7 @@ const SolidButton: FC<SolidButtonProps> = ({
   text,
   handleClick,
   variant,
-  classnames
+  classnames,
 }) => {
   const { palette } = createTheme();
   const { augmentColor } = palette;
@@ -31,7 +31,7 @@ const SolidButton: FC<SolidButtonProps> = ({
       "text-[#FFFFFF] cursor-fancy font-sora font-semibold bg-[#ffffff0b] capitalize md:text-[16px] " + classnames :
       variant === 'textinput' ?  
       'text-black cursor-fancy font-inter  bg-[#FFFFFF] capitalize md:text-[16px]' :
-      "text-black cursor-fancy font-sora rounded-[8px] font-semibold bg-[#FFFFFF] capitalize md:text-[16px] " + classnames
+      `text-black cursor-fancy font-sora rounded-[8px] font-semibold bg-[#FFFFFF] capitalize md:text-[16px] ${classnames}`
     }
     >
         { text }

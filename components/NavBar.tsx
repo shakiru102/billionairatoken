@@ -1,14 +1,16 @@
-import React, { FC, useState } from 'react'
+import React, { FC, useContext, useState } from 'react'
 import Image from 'next/image'
 import Logo from '../assets/tokenlogo.png'
 import LanguageIcon from '../assets/languageicon.png'
 import { NavlinksProps } from '../types'
-import { AppBar, Box, Button, Drawer, List, ListItem, ListItemButton, ListItemText, Toolbar } from '@mui/material'
-import ChevronIcon from '../assets/chevron.svg'
+import { AppBar, Box, Button, Drawer, Input, List, ListItem, ListItemButton, ListItemText, MenuItem, Select, SelectChangeEvent, Toolbar } from '@mui/material'
 import SolidButton from './utils/SolidButton'
 import CloseSharpIcon from '@mui/icons-material/CloseSharp';
 import MenuIcon from '@mui/icons-material/Menu';
 import { useAccount } from 'wagmi'
+import KeyboardArrowDownSharpIcon from '@mui/icons-material/KeyboardArrowDownSharp';
+import { useTranslation } from 'react-i18next'
+import useDownloader from "react-use-downloader";
 
  interface NavBarProps {
   openPresaleModal: () => void;
@@ -18,8 +20,29 @@ const NavBar: FC<NavBarProps> = ({
   openPresaleModal,
 }) => {
 
+  const { download } = useDownloader();
+  const fileUrl = "BlowX-WHITEPAPER_V1.pdf";
+  const filename = "BlowX-WHITEPAPER_V1.pdf";
     
  const [drawer, setDrawer] = useState<boolean>(false)
+ const [selectedLang, setSelectedLang] = useState<string>('en')
+ const { i18n } = useTranslation()
+
+ const languages: { label: string, value: string }[] = [
+  {
+    label: 'ENG',
+    value: 'en'
+  },
+  { label: 'FRA', value: 'fr' },
+  { label: 'ARB', value: 'ar' },
+  { label: 'CHN', value: 'ch' },
+  { label: 'SPA', value: 'sp' },
+  { label: 'POR', value: 'po' },
+  { label: 'GER', value: 'ge' },
+  { label: 'DUT', value: 'du' },
+ ]
+
+ 
     
     const navigations:NavlinksProps[] = [
         { text: 'About us', handleClick: () => {
@@ -33,10 +56,12 @@ const NavBar: FC<NavBarProps> = ({
         }  },
         { 
           text: 'Whitepaper', 
-          handleClick: () => null
-          // to: 'https://acrobat.adobe.com/link/review?uri=urn:aaid:scds:US:696772c6-01f7-42db-8ce5-372df6864801'
+          handleClick: () => {
+            download(fileUrl, filename)
+          },
+          // to: 'http://localh ost:3000/public/BlowX-WHITEPAPER_V1.pdf'
          },
-        { text: 'Join Presale', contained: true }
+        { text: 'Private Sale', contained: true }
     ]
 
     const { address } = useAccount()
@@ -76,10 +101,33 @@ const NavBar: FC<NavBarProps> = ({
                     </Button>)
                 )
         }
-        <div className='flex gap-3 items-center ml-2 border-l pl-2 border-[#242424]'>
-            <Image alt='language' className='contain' src={LanguageIcon} />
+        <div className='w-[155px] items-center ml-2 border-l pl-2 border-[#242424]'>
+            {/* <Image alt='language' className='contain' src={LanguageIcon} />
             <span className='text-[#A8A8A8]'>ENG</span>
-            <Image alt='icon' src={ChevronIcon} />
+            <Image alt='icon' src={ChevronIcon} /> */}
+            <Select
+            value={selectedLang}
+            IconComponent={() => <KeyboardArrowDownSharpIcon className='text-white'  />}
+            startAdornment={<div className='mr-2'><Image alt='language' width={'70px'} height={'70px'} className='contain' src={LanguageIcon} /></div>}
+            onChange={(e: SelectChangeEvent<typeof selectedLang>) => {
+              i18n.changeLanguage(e.target.value)
+              setSelectedLang(e.target.value)
+            }}
+            MenuProps={{
+              PaperProps: {
+                  className: "bg-black text-white"
+              }
+            }}
+            input={
+              <Input
+              disableUnderline
+              className={`bg-transparent  text-[#FFF] px-3`}
+                />}
+            >
+              { languages.map((item, i) => (
+                <MenuItem value={item.value} key={i}>{item.label}</MenuItem>
+              )) }
+            </Select>
         </div>
       </div>
       <div className="lg:hidden">

@@ -12,6 +12,7 @@ import TextInput from './utils/TextInput'
 import ContainerLayout from '../Layout/ContainerLayout'
 import LottieFile from '../assets/scrolldown.json'
 import Lottie from "lottie-react";
+import { useTranslation } from 'react-i18next'
 
 interface onBoardProps {
     openPresaleModal: () => void;
@@ -20,10 +21,13 @@ interface onBoardProps {
 const OnBoard: FC<onBoardProps> = ({
     openPresaleModal
 }) => {
+
+    const { t } = useTranslation()
+
     const [airdrop, setAirdrop] = useState<boolean>(false)
     const buttons: SolidButtonProps[] = [
         {
-            text: "Join Presale",
+            text: "Private Sale",
             variant: "solid",
             handleClick: () => openPresaleModal()
         },
@@ -41,9 +45,9 @@ const OnBoard: FC<onBoardProps> = ({
   return (
     <div className="min-h-screen md:min-h-full lg:min-h-screen flex pt-36 md:pt-0 md:items-center">
        <ContainerLayout>
-        <div className="lg:w-[40%]">
+        <div className="lg:w-[50%]">
         <div className='md:leading-[96px] text-[36px] md:text-[75px] bg-gradient-to-b from-[#FAFAFA] to-[#AAA5A5] bg-clip-text text-transparent font-detacher'>
-        Evolution of Digital Assets
+        { t('onBoardTitle') }
         </div>
         <div className='bg-[#08080897] my-2 pt-2 lg:pt-0 lg:bg-transparent relative'>
         {/* bg-gradient-to-r from-[#FAFAFA] to-[#AAA5A5] bg-clip-text text-transparent */}

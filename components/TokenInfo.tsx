@@ -28,7 +28,7 @@ const TokenInfo = () => {
               <p className='text-black text-[11px] md:text-[18px]'>Blow</p>
             </p>
             <p className='text-[#AAA]'>
-              Smartcontract address
+              Contract Address
               <p className='text-black text-[11px] md:text-[18px] flex gap-3 items-center'>
               0x435252521848591ae0e6a<br className='md:hidden'/>5trb12536328f61a80e
               <span>
@@ -37,7 +37,7 @@ const TokenInfo = () => {
               </p>
             </p>
             <p className='text-[#AAA]'>
-              Decimals
+              Decimal
               <p className='text-black text-[11px] md:text-[18px]'>18</p>
             </p>
           </div>

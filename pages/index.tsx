@@ -11,7 +11,7 @@ import Footer from '../components/Footer'
 import Ecosystem from '../components/Ecosystem'
 import NavBar from '../components/NavBar'
 import CoinModal from '../components/utils/CoinModal'
-import { Suspense, useState } from 'react'
+import { Suspense, useEffect, useState } from 'react'
 import { Formik } from 'formik'
 import TextInput from '../components/utils/TextInput'
 import SolidButton from '../components/utils/SolidButton'
@@ -24,7 +24,7 @@ import * as THREE from 'three'
 import OnBoardModel from '../models/OnBoardModel'
 import UtilButton from '../components/utils/UtilButton'
 import UseCustomHook from '../hooks/UseCustomHook'
-import { Accordion, AccordionDetails, AccordionSummary, Typography } from '@mui/material'
+import { Accordion, AccordionDetails, AccordionSummary, Button, Typography } from '@mui/material'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import TokenInfo from '../components/TokenInfo'
 import UtilModal from '../components/utils/UtilModal'
@@ -51,6 +51,7 @@ const Home: NextPage = () => {
 
   const [presaleModal, setPresaleModal] = useState<boolean>(false)
   const [buyBlowModal, setBuyBlowModal] = useState<boolean>(false)
+  const [kyc, setKyc] = useState<boolean>(false)
   const [expanded, setExpanded] = useState<string | false>('panel1');
   const { problemDetails, activeId, buyBlowDetails } = UseCustomHook(['section-1', 'section-2'], 300)
   const handleChange =
@@ -62,7 +63,19 @@ const Home: NextPage = () => {
     const { open, close } = useWeb3Modal()
     const { isConnected } = useAccount()
 
+    const loadBlockPassWidget = () => {
+      // @ts-ignore
+      const blockpass = new window.BlockpassKYCConnect('sportrexauthenticator')
+      
+      blockpass.startKYCConnect()
   
+      blockpass.on('KYCConnectSuccess', () => {
+        //add code that will trigger when data have been sent.
+        setKyc(true)
+      })
+    }
+  
+
 
   return (
    <>
@@ -74,9 +87,9 @@ const Home: NextPage = () => {
     // if(screen.width >= 768) state.camera.position.x = 2
    }}
    >
-      <OnBoardModel >
+      {/* <OnBoardModel >
         
-      </OnBoardModel>
+      </OnBoardModel> */}
    </Canvas>
    <OnBoard openPresaleModal={() => setPresaleModal(prev => !prev)}/>
    </div>
@@ -203,34 +216,17 @@ const Home: NextPage = () => {
       <Launch />
       <Ecosystem />
       <RoadMap />
-    <RenderComponent title='Backed by' />
+    {/* <RenderComponent title='Backed by' /> */}
     <RenderComponent 
     title='The team'  
     subtitle='The Community constitutes the governing team of the project. No centralise authorities over the project. Built for the game-changers only!'
     >
       <Image alt='chess' src={Chess} />
-      {/* <Suspense fallback={<Image alt='chess' src={Chess} />}>
-      <Canvas
-      id='webgl'
-      shadows
-      camera={{
-        position: [0,Math.PI / 2, 5,]
-      }}
-      >
-        <ChessBoard scale={35}  />
-            <ambientLight intensity={0.5} color={new THREE.Color('#FECF81')}/>
-            <spotLight intensity={10} castShadow position={[-10,20,0]} angle={0.523} decay={2} penumbra={2} distance={0} 
-            // color={new THREE.Color('#FECF81')}
-             />
-            {/* <directionalLight intensity={15} castShadow color={new THREE.Color('#FECF81')} position={[3,1, 0]} /> */}
-        {/* <OrbitControls enableZoom={false}/> */}
-      {/* </Canvas> */}
-      {/* </Suspense> */} 
     </RenderComponent>
     <FAQ />
     <Footer />
     <UtilModal
-    title='Join Presale'
+    title='Join Private Sale'
     subtitle={
       <div>
         <p>Listing Price = $0.080</p>
@@ -301,7 +297,18 @@ const Home: NextPage = () => {
                 handleChange={handleChange('registeredEmail')}
                 placeholder='gamersmerge@blowx.ai'
                  />
-                <SolidButton handleClick={() => open()} variant='solid' text={ isConnected ? 'BUY' : 'CONNECT'} classnames='rounded-[10px] mb-3 py-3' />
+                 {
+                  kyc ?  <SolidButton 
+                  handleClick={() => open()} 
+                  variant='solid' text={ isConnected ? 'BUY' : 'CONNECT'} 
+                  classnames='rounded-[10px] mb-3 py-3' 
+                  /> : 
+                  <Button
+                 id='blockpass-kyc-connect'
+                 className='hover:bg-[#FFFFFF] text-black cursor-fancy font-sora rounded-[10px] font-semibold mb-3 py-3 bg-[#FFFFFF] capitalize md:text-[16px]'
+                 onClick={loadBlockPassWidget}
+                 >VERIFY YOUR IDENTITY</Button>
+                 }
             </form>
             )}
         </Formik>

@@ -42,7 +42,7 @@ const SelectInput: FC<TextinputProps> = ({
           }}
 
           inputProps={{
-            className: "cursor-fancy"
+            className: "cursor-fancy",
           }}
        >
             {

@@ -4,6 +4,8 @@ import type { AppProps } from 'next/app'
 import { EthereumClient, w3mConnectors, w3mProvider } from '@web3modal/ethereum'
 import { configureChains, createConfig, WagmiConfig } from 'wagmi'
 import { arbitrum, mainnet, polygon, bsc  } from 'wagmi/chains'
+import Context from '../context/Context'
+import Script from 'next/script'
 
 const chains = [arbitrum, mainnet, polygon, bsc]
 const projectId = 'f411cba3405901415bd5eddbedde4889'
@@ -19,9 +21,12 @@ const wagmiConfig = createConfig({
 function MyApp({ Component, pageProps }: AppProps) {
   return <StyledEngineProvider injectFirst>
             <WagmiConfig config={wagmiConfig}>
-                <div className="bg-black min-h-screen cursor-fancy">
-                    <Component {...pageProps} />
-                  </div>
+                <Context>
+                  <div className="bg-black min-h-screen cursor-fancy">
+                    <Script src='https://cdn.blockpass.org/widget/scripts/release/3.0.2/blockpass-kyc-connect.prod.js' />
+                      <Component {...pageProps} />
+                    </div>
+                </Context>
             </WagmiConfig>
         </StyledEngineProvider>
   

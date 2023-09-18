@@ -14,7 +14,8 @@ export interface SolidButtonProps {
     variant?: 'solid' | 'transparent' | 'textinput';
     prependIcon?: ReactNode;
     appendIcon?: ReactNode;
-    classnames?: string
+    classnames?: string;
+    disabled?: boolean;
 }
 
 export interface TextinputProps {
@@ -49,4 +50,12 @@ export interface EcosystemProps {
     image?: StaticImageData;
     video?: ReactNode;
     
+}
+
+export interface TranslationProps {
+    onBoardTitle: string;
+    onBoardContent: string
+    // aboutTitle: string;
+    // aboutContent: string;
+
 }
