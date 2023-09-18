@@ -7,7 +7,6 @@ import { AppBar, Box, Button, Drawer, Input, List, ListItem, ListItemButton, Lis
 import SolidButton from './utils/SolidButton'
 import CloseSharpIcon from '@mui/icons-material/CloseSharp';
 import MenuIcon from '@mui/icons-material/Menu';
-import { useAccount } from 'wagmi'
 import KeyboardArrowDownSharpIcon from '@mui/icons-material/KeyboardArrowDownSharp';
 import { useTranslation } from 'react-i18next'
 import useDownloader from "react-use-downloader";
@@ -64,7 +63,6 @@ const NavBar: FC<NavBarProps> = ({
         { text: 'Private Sale', contained: true }
     ]
 
-    const { address } = useAccount()
 
   return (
     <>

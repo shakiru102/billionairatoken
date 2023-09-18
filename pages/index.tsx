@@ -87,9 +87,9 @@ const Home: NextPage = () => {
     // if(screen.width >= 768) state.camera.position.x = 2
    }}
    >
-      {/* <OnBoardModel >
+      <OnBoardModel >
         
-      </OnBoardModel> */}
+      </OnBoardModel>
    </Canvas>
    <OnBoard openPresaleModal={() => setPresaleModal(prev => !prev)}/>
    </div>
