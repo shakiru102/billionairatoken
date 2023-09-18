@@ -7,9 +7,9 @@ import { AppBar, Box, Button, Drawer, Input, List, ListItem, ListItemButton, Lis
 import SolidButton from './utils/SolidButton'
 import CloseSharpIcon from '@mui/icons-material/CloseSharp';
 import MenuIcon from '@mui/icons-material/Menu';
+import { useAccount } from 'wagmi'
 import KeyboardArrowDownSharpIcon from '@mui/icons-material/KeyboardArrowDownSharp';
 import { useTranslation } from 'react-i18next'
-import useDownloader from "react-use-downloader";
 
  interface NavBarProps {
   openPresaleModal: () => void;
@@ -19,9 +19,6 @@ const NavBar: FC<NavBarProps> = ({
   openPresaleModal,
 }) => {
 
-  const { download } = useDownloader();
-  const fileUrl = "BlowX-WHITEPAPER_V1.pdf";
-  const filename = "BlowX-WHITEPAPER_V1.pdf";
     
  const [drawer, setDrawer] = useState<boolean>(false)
  const [selectedLang, setSelectedLang] = useState<string>('en')
@@ -55,14 +52,13 @@ const NavBar: FC<NavBarProps> = ({
         }  },
         { 
           text: 'Whitepaper', 
-          handleClick: () => {
-            download(fileUrl, filename)
-          },
-          // to: 'http://localh ost:3000/public/BlowX-WHITEPAPER_V1.pdf'
+          handleClick: () => null,
+          to: './BlowX-WHITEPAPER_V1.pdf'
          },
         { text: 'Private Sale', contained: true }
     ]
 
+    const { address } = useAccount()
 
   return (
     <>
@@ -91,6 +87,7 @@ const NavBar: FC<NavBarProps> = ({
                     className='capitalize cursor-fancy text-[#A8A8A8] font-sora text-[16px]'
                     key={index} 
                     href={item.to ? item.to : ''}
+                    download={item.to ? 'BlowX-WHITEPAPER_V1.pdf': null}
                     disableElevation 
                     target='_blank'
                     onClick={() => item.handleClick && item.handleClick()}
@@ -119,7 +116,7 @@ const NavBar: FC<NavBarProps> = ({
             input={
               <Input
               disableUnderline
-              className={`bg-transparent  text-[#FFF] px-3`}
+              className={`bg-black  text-[#FFF] px-3`}
                 />}
             >
               { languages.map((item, i) => (

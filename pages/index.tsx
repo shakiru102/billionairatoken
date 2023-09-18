@@ -65,7 +65,7 @@ const Home: NextPage = () => {
 
     const loadBlockPassWidget = () => {
       // @ts-ignore
-      const blockpass = new window.BlockpassKYCConnect('sportrexauthenticator')
+      const blockpass = new window.BlockpassKYCConnect(process.env.NEXT_PUBLIC_BLOCKPASS_CLIENT_ID)
       
       blockpass.startKYCConnect()
   
