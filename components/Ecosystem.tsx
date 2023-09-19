@@ -9,16 +9,20 @@ import BottomLeft from '../assets/bottomleft.png'
 import BottomRight from '../assets/bottomright.png'
 import EastSharpIcon from '@mui/icons-material/EastSharp';
 import { EcosystemProps } from '../types'
-import BlowAi from '../assets/TBT Ecosystem Assets/BlowAI.svg'
-import BlowVerseMarketPlace from '../assets/TBT Ecosystem Assets/BlowMarketplace.svg'
-import BlowStaking from '../assets/TBT Ecosystem Assets/Blow dynamic staking.svg'
+import BlowAi from '../assets/TBT Ecosystem Assets/BlowAI.png'
+import BlowVerseMarketPlace from '../assets/TBT Ecosystem Assets/BlowMarketplace.png'
+import BlowStaking from '../assets/TBT Ecosystem Assets/Blow dynamic staking.png'
 import BlowBlackCard from '../assets/tbt-gif-small.gif'
-import BlowAvia from '../assets/TBT Ecosystem Assets/BlowAVIA.svg'
-import BlowWeb3 from '../assets/TBT Ecosystem Assets/Blow web3 phone.svg'
-import BlowBot from '../assets/TBT Ecosystem Assets/BlowBOT.svg'
-import BlowCali from '../assets/TBT Ecosystem Assets/BlowCALI.svg'
-import BlowLith  from '../assets/TBT Ecosystem Assets/BlowLITH.svg'
-import TbtFound from '../assets/TBT Ecosystem Assets/TBT found.svg'
+import BlowAvia from '../assets/TBT Ecosystem Assets/BlowAVIA.png'
+import BlowWeb3 from '../assets/TBT Ecosystem Assets/Blow web3 phone.png'
+import BlowBot from '../assets/TBT Ecosystem Assets/BlowBOT.png'
+import BlowCali from '../assets/TBT Ecosystem Assets/BlowCALI.png'
+import BlowLith  from '../assets/TBT Ecosystem Assets/BlowLITH.png'
+import TbtFound from '../assets/TBT Ecosystem Assets/TBT found.png'
+import BlowGames from '../assets/TBT Ecosystem Assets/BlowGames.png'
+import BlowHYBRID from '../assets/TBT Ecosystem Assets/BlowHYBRID.png'
+import BlowVault from '../assets/TBT Ecosystem Assets/BlowVault.png'
+import BlowIsland from '../assets/TBT Ecosystem Assets/BlowISLAND.png'
 import { Accordion, AccordionDetails, AccordionSummary } from '@mui/material'
 import  ArrowForwardIosSharpIcon  from '@mui/icons-material/ArrowForwardIosSharp'
 
@@ -76,6 +80,7 @@ const Ecosystem: FC = () => {
         { 
             title: "BlowNFT",
             content: "", 
+            image: BlowIsland
         },
         { 
             title: "Blow Island & Casino",
@@ -83,6 +88,7 @@ const Ecosystem: FC = () => {
                 Escape to the luxurious Blow Island & Casino, an exclusive paradise located in Ras Al Khaimah, UAE, and El Salvador Bitcoin City. Enjoy world-class gaming, lavish accommodations, gourmet dining experiences, exciting entertainment options, and VIP services. Experience luxury and entertainment like never before, exclusively for TBT prime hodlers and VVIPs. 
                 <span className=' bg-gradient-to-b cursor-fancy from-[#AAA5A5] to-[#aaa5a503] bg-clip-text font-biomeW04Regular text-transparent underline'>(Discover) Blow Island & Casino and plan your unforgettable experience today!</span>
             </span>, 
+            image: BlowGames
         },
         { 
             title: "BlowAVIA",
@@ -142,7 +148,8 @@ const Ecosystem: FC = () => {
             button: {
                 text: "Explore",
                 appendIcon: <EastSharpIcon className='text-[#FFF] text-[18px] relative left-2'/>
-            } 
+            },
+            image: BlowHYBRID 
         },
         { 
             title: "The BlowDAO",
@@ -151,7 +158,8 @@ const Ecosystem: FC = () => {
             button: {
                 text: "Get Involved",
                 appendIcon: <EastSharpIcon className='text-[#FFF] text-[18px] relative left-2'/>
-            } 
+            },
+            image: BlowVault 
         },
         { 
             title: "Blow Foundation",
@@ -227,8 +235,13 @@ const Ecosystem: FC = () => {
                 <div className=" hidden lg:grid grid-rows-5 bg-[url('../assets/tokenbg.png')] bg-no-repeat bg-cover bg-center order-first lg:order-last lg:col-span-2">
                     <div className=" row-span-5 lg:row-span-3 border-t border-l lg:border-l-0 border-r border-[#CCC]">
                       { ecosystem.image && 
-                       <div className='text-center mt-8'>
-                        <Image alt={ecosystem.title} height={400} src={ecosystem.image} />
+                       <div className={`text-center ${ ecosystem.title == 'BlowPAY (BlackCard)' ? '' : 'mt-8' }h-[100px]`}>
+                        {
+                            ecosystem.title == 'BlowPAY (BlackCard)' ?  <Image alt={ecosystem.title} height={500} width={900} src={ecosystem.image} />
+                            : 
+                            <Image alt={ecosystem.title} width={500} height={500} src={ecosystem.image} />
+                        }
+                       
                       </div> }
                     </div>
                     <div className="bg-[#00000080] lg:row-span-2 hidden border-t border-r border-b border-[#CCC] lg:py-8 lg:flex flex-col justify-center">

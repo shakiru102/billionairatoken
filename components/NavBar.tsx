@@ -7,7 +7,6 @@ import { AppBar, Box, Button, Drawer, Input, List, ListItem, ListItemButton, Lis
 import SolidButton from './utils/SolidButton'
 import CloseSharpIcon from '@mui/icons-material/CloseSharp';
 import MenuIcon from '@mui/icons-material/Menu';
-import { useAccount } from 'wagmi'
 import KeyboardArrowDownSharpIcon from '@mui/icons-material/KeyboardArrowDownSharp';
 import { useTranslation } from 'react-i18next'
 
@@ -58,7 +57,6 @@ const NavBar: FC<NavBarProps> = ({
         { text: 'Private Sale', contained: true }
     ]
 
-    const { address } = useAccount()
 
   return (
     <>
@@ -116,7 +114,7 @@ const NavBar: FC<NavBarProps> = ({
             input={
               <Input
               disableUnderline
-              className={`bg-black  text-[#FFF] px-3`}
+              className={`bg-transparent  text-[#FFF] px-3`}
                 />}
             >
               { languages.map((item, i) => (
