@@ -2,8 +2,11 @@ import React, { useState } from 'react'
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import Image from 'next/image';
 import PasteIcon from '../assets/pasteicon.png'
+import { useTranslation } from 'react-i18next';
 
 const TokenInfo = () => {
+
+  const {t} = useTranslation()
 
     const [active, setActive] = useState<boolean>(false)
     
@@ -16,19 +19,19 @@ const TokenInfo = () => {
         onClick={() => setActive(prev => !prev)}
         
         >
-            <span className=' text-[20px] font-biomeW04Regular font-bold'>Token Info</span>
+            <span className=' text-[20px] font-biomeW04Regular font-bold'>{t('tokenInfo')}</span>
             <span className={`transition-all duration-300 ease-linear inline-block ${active ? '[transform:rotate(-90deg)]' : '[transform:rotate(90deg)]'}`}><ArrowDropDownIcon fontSize={'large'}  /></span>
         </div>
         <div className='flex-1 text-black font-biomeW04Regular font-bold'>
           <div className='ml-5 md:ml-10 flex flex-col justify-around py-5 h-full'>
-            <p className=' text-[18px] md:text-[20px]'>Token info</p>
+            <p className=' text-[18px] md:text-[20px]'>{t('tokenInfo')}</p>
             
             <p className='text-[#AAA]'>
-              Name
+            {t('tokenInfoName')}
               <p className='text-black text-[11px] md:text-[18px]'>Blow</p>
             </p>
             <p className='text-[#AAA]'>
-              Contract Address
+            {t('tokenInfoContractAdd')}
               <p className='text-black text-[11px] md:text-[18px] flex gap-3 items-center'>
               0x435252521848591ae0e6a<br className='md:hidden'/>5trb12536328f61a80e
               <span>
@@ -37,7 +40,7 @@ const TokenInfo = () => {
               </p>
             </p>
             <p className='text-[#AAA]'>
-              Decimal
+            {t('tokenInfoDecimal')}
               <p className='text-black text-[11px] md:text-[18px]'>18</p>
             </p>
           </div>

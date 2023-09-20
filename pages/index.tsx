@@ -36,6 +36,7 @@ import { EthereumClient, w3mConnectors, w3mProvider } from '@web3modal/ethereum'
 import { configureChains, createConfig, useAccount } from 'wagmi'
 import { arbitrum, mainnet, polygon, bsc  } from 'wagmi/chains'
 import { Web3Modal, useWeb3Modal } from '@web3modal/react'
+import { useTranslation } from 'react-i18next'
 
 const chains = [arbitrum, mainnet, polygon, bsc]
 const projectId = 'f411cba3405901415bd5eddbedde4889'
@@ -49,6 +50,7 @@ const wagmiConfig = createConfig({
 
 const Home: NextPage = () => {
 
+  const { t } = useTranslation()
   const [presaleModal, setPresaleModal] = useState<boolean>(false)
   const [buyBlowModal, setBuyBlowModal] = useState<boolean>(false)
   const [kyc, setKyc] = useState<boolean>(false)
@@ -94,7 +96,7 @@ const Home: NextPage = () => {
    <OnBoard openPresaleModal={() => setPresaleModal(prev => !prev)}/>
    </div>
     <About />
-    <RenderComponent title='Featured On' />
+    <RenderComponent title={`${t('featuredOn')}`} />
       <div 
       className="w-[100%] hidden relative box-border pt-20 3xl:px-96 lg:mb-36  lg:flex scroll-smooth"
       >
@@ -106,16 +108,16 @@ const Home: NextPage = () => {
               href={`#${item}`}
               className={activeId === item ? 'bg-white text-[#2C2C2B] hover:bg-white text-[20px]' : 'text-white text-[20px]'}
               key={i}
-              >{ i == 0 ? 'The Problem We Are Solving' : 'The Solution We Are Providing'}</UtilButton>
+              >{ i == 0 ? t('problemSloving') : t('solutionProviding')}</UtilButton>
             ))
           }
           </div>
           <div className="flex flex-col justify-center items-center">
             <div className=" w-[50%] inline-block mb-4 font-sora text-[20px] md:text-[32px] text-transparent bg-gradient-to-b from-[#FAFAFA] to-[#aaa5a503] bg-clip-text">
-                What about Tokenized Real World Assets?
+              { t('whatAboutTokenizedAsset') }
             </div>
             <div className='font-sora w-[50%] text-[20px] text-white'>
-            With the continued failure of centralized exchanges, crypto is seeing a return to first principles: new and seasoned investors alike are embracing the trustless, non-custodial, decentralized nature of on-chain finance.
+             { t('whatAboutTokenizedAssetContent') }
             </div>
           </div>
         </div>
@@ -139,8 +141,8 @@ const Home: NextPage = () => {
 
            >
             <div>
-              <div className="font-sora font-bold text-white text-[32px]">The Solution</div>
-              <div className="font-sora text-white text-[24px]">Enter Ostium</div>
+              <div className="font-sora font-bold text-white text-[32px]">{t('solutionProvidingHeader')}</div>
+              <div className="font-sora text-white text-[24px]">{t('solutionProvidingSubHeader')}</div>
             </div>
             {
               problemDetails.solution.map((item , i: number) => (
@@ -162,7 +164,7 @@ const Home: NextPage = () => {
                   aria-controls="panel1a-content"
                   id="panel1a-header"
                 >
-                  <Typography className='font-sora block capitalize font-bold mx-auto  rounded-none text-white'>{ i == 0 ? 'The Problem We Are Solving' : 'The Solution We Are Providing'}</Typography>
+                  <Typography className='font-sora block capitalize font-bold mx-auto  rounded-none text-white'>{ i == 0 ? t('problemSloving'): t('solutionProviding')}</Typography>
                 </AccordionSummary>
                 <AccordionDetails>
                 {
@@ -182,8 +184,8 @@ const Home: NextPage = () => {
                  <Typography>
                  { item === 'section-2' && 
                   <div className='mb-4'>
-                      <div className="font-sora font-bold text-white text-[32px]">The Solution</div>
-                      <div className="font-sora text-white text-[24px]">Enter Ostium</div>
+                      <div className="font-sora font-bold text-white text-[32px]">{t('solutionProvidingHeader')}</div>
+                      <div className="font-sora text-white text-[24px]">{t('solutionProvidingSubHeader')}</div>
                     </div>
                   }
                   {
@@ -205,10 +207,10 @@ const Home: NextPage = () => {
           }
           <div className="flex flex-col px-4 mt-10">
             <div className=" inline-block mb-4 font-sora text-[24px] text-transparent bg-gradient-to-b from-[#FAFAFA] to-[#aaa5a503] bg-clip-text">
-                What about Tokenized Real World Assets?
+            { t('whatAboutTokenizedAsset') }
             </div>
             <div className='font-sora  text-[16px] text-white'>
-            With the continued failure of centralized exchanges, crypto is seeing a return to first principles: new and seasoned investors alike are embracing the trustless, non-custodial, decentralized nature of on-chain finance.
+            { t('whatAboutTokenizedAssetContent') }
             </div>
           </div>
       </div>
@@ -218,18 +220,18 @@ const Home: NextPage = () => {
       <RoadMap />
     {/* <RenderComponent title='Backed by' /> */}
     <RenderComponent 
-    title='The team'  
-    subtitle='The Community constitutes the governing team of the project. No centralise authorities over the project. Built for the game-changers only!'
+    title={`${t('theTeam')}`}  
+    subtitle={`${t('theTeamContent')}`}
     >
       <Image alt='chess' src={Chess} />
     </RenderComponent>
     <FAQ />
     <Footer />
     <UtilModal
-    title='Join Private Sale'
+    title={`${t('joinPrivateSale')}`}
     subtitle={
       <div>
-        <p>Listing Price = $0.080</p>
+        <p>{t('listingPrice')}  = $0.080</p>
         <p>1$BLOW = $0.040</p>
       </div>
     }
@@ -261,7 +263,7 @@ const Home: NextPage = () => {
                  <SelectInput 
                 name='walletAddress'
                 textInputType='presale'
-                label='Select Payment Token/Assets'
+                label={`${t('selectPaymentTokenAsset')}`}
                 value={values.walletAddress}
                 handleChange={handleChange('walletAddress')}
                 placeholder='Enter your wallet address'
@@ -274,7 +276,7 @@ const Home: NextPage = () => {
                  />
                 <TextInput 
                 name='token'
-                label={`Amount You Pay In ${values.walletAddress || 'USDT'}`}
+                label={`${t('amountYouPayIn')} ${values.walletAddress || 'USDT'}`}
                 textInputType='presale'
                 value={values.amount}
                 handleChange={handleChange('amount')}
@@ -292,7 +294,7 @@ const Home: NextPage = () => {
                  <TextInput 
                  textInputType='presale'
                 name='registeredEmail'
-                label='Enter  Email Address'
+                label={`${t('enterEmailAddress')}`}
                 value={values.registeredEmail}
                 handleChange={handleChange('registeredEmail')}
                 placeholder='gamersmerge@blowx.ai'
@@ -300,30 +302,30 @@ const Home: NextPage = () => {
                  {
                   kyc ?  <SolidButton 
                   handleClick={() => open()} 
-                  variant='solid' text={ isConnected ? 'BUY' : 'CONNECT'} 
+                  variant='solid' text={ isConnected ? t('buy') : t('connect')} 
                   classnames='rounded-[10px] mb-3 py-3' 
                   /> : 
                   <Button
                  id='blockpass-kyc-connect'
                  className='hover:bg-[#FFFFFF] text-black cursor-fancy font-sora rounded-[10px] font-semibold mb-3 py-3 bg-[#FFFFFF] capitalize md:text-[16px]'
                  onClick={loadBlockPassWidget}
-                 >VERIFY YOUR IDENTITY</Button>
+                 >{t('verifyIdentity')}</Button>
                  }
             </form>
             )}
         </Formik>
 <Web3Modal projectId={projectId} ethereumClient={ethereumClient} />
         <div className='flex cursor-pointer text-[#FFF] mt-4 justify-between font-biomeW04Regular text-[14px] underline'>
-          <span onClick={() => setBuyBlowModal(true)}>How to buy?</span>
-          <span>Refferal link</span>
+          <span onClick={() => setBuyBlowModal(true)}>{t('howToBuy')}</span>
+          <span>{t('refferalLink')}</span>
         </div>
       </div>
     }
     />
 
     <UtilModal
-    title='How to buy $BLOW Token'
-    subtitle="Connect with us to get latest update"
+    title={`${t('howToBuyBlowToken')}`}
+    subtitle={`${t('connectWithUs')}`}
     open={buyBlowModal}
     onClose={() => setBuyBlowModal(false)}
     content={
@@ -349,7 +351,7 @@ const Home: NextPage = () => {
                   ))
                 }
                 <div className='font-sora font-bold text-[14px]'>
-                        <a href={item.readMore} target='_blank'>Read More...</a>
+                        <a href={item.readMore} target='_blank'>{t('readMore')}</a>
                       </div>
                </Typography> 
               </AccordionDetails>

@@ -21,7 +21,7 @@ const NavBar: FC<NavBarProps> = ({
     
  const [drawer, setDrawer] = useState<boolean>(false)
  const [selectedLang, setSelectedLang] = useState<string>('en')
- const { i18n } = useTranslation()
+ const { i18n, t } = useTranslation()
 
  const languages: { label: string, value: string }[] = [
   {
@@ -40,21 +40,21 @@ const NavBar: FC<NavBarProps> = ({
  
     
     const navigations:NavlinksProps[] = [
-        { text: 'About us', handleClick: () => {
+        { text: t('navBtnAboutUs'), handleClick: () => {
           const element = document.getElementById('about');
           element?.scrollIntoView({ behavior: 'smooth' })
 
         } },
-        { text: 'Ecosystem', handleClick: () => {
+        { text: t('navBtnEcosystem'), handleClick: () => {
           const element = document.getElementById('ecosystem');
           element?.scrollIntoView({ behavior: 'smooth' })
         }  },
         { 
-          text: 'Whitepaper', 
+          text: t('navBtnWhitePaper'), 
           handleClick: () => null,
           to: './BlowX-WHITEPAPER_V1.pdf'
          },
-        { text: 'Private Sale', contained: true }
+        { text: t('privateSaleBtnText'), contained: true }
     ]
 
 

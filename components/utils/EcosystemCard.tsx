@@ -4,6 +4,7 @@ import TextButton from './TextButton';
 import { EcosystemProps, SolidButtonProps } from '../../types';
 import OutlineButton from './OutlineButton';
 import Image from 'next/image';
+import { useTranslation } from 'react-i18next';
 
 
 
@@ -14,6 +15,9 @@ const EcosystemCard: FC<EcosystemProps> = ({
     header,
     image
 }) => {
+
+  const {t} = useTranslation()
+
   return (
    <Paper className='rounded-[10px] relative md:m-8 bg-transparent md:w-[90%] p-4 md:px-4 md:py-8'>
       <div className="md:hidden">
@@ -29,7 +33,7 @@ const EcosystemCard: FC<EcosystemProps> = ({
      <div className='flex flex-col md:flex-row items-start md:justify-between md:items-center'>
      { button ?  <TextButton { ...button}  /> : <div /> }
         <div className="self-end mt-3 md:mt-0 ">
-          <OutlineButton text='Coming soon' />
+          <OutlineButton text={`${t('comingSoon')}`} />
         </div>
       </div>
    </Paper>

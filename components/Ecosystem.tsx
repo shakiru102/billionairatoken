@@ -25,6 +25,7 @@ import BlowVault from '../assets/TBT Ecosystem Assets/BlowVault.png'
 import BlowIsland from '../assets/TBT Ecosystem Assets/BlowISLAND.png'
 import { Accordion, AccordionDetails, AccordionSummary } from '@mui/material'
 import  ArrowForwardIosSharpIcon  from '@mui/icons-material/ArrowForwardIosSharp'
+import { useTranslation } from 'react-i18next'
 
 
 const ActiveEcoImage = () => (
@@ -37,75 +38,83 @@ const ActiveEcoImage = () => (
 )
 
 const Ecosystem: FC = () => {
+    const {t} = useTranslation()
 
     const ecosystems: EcosystemProps[] = [
         { 
-            title: "Blow.ai Web3 Mobile",
-            content: "Introducing Blow.ai Web3 Mobile, a blockchain-enabled mobile device that brings the power of blockchain and AI technology to your fingertips. Seamlessly integrate with decentralized applications (DApps), manage digital assets, and communicate securely with military-grade encryption.",
+            title: t('blowaiWeb3Mobile'),
+            content: t('blowaiWeb3Content'),
             button: {
-                text: "LEARN MORE",
+                text: t('blowaiWeb3ContentBtn'),
                 appendIcon: <EastSharpIcon className='text-[#FFF] text-[18px] relative left-2'/>
             } ,
             image: BlowWeb3
         },
         { 
-            title: "BlowVerse Marketplace",
-            content: "Discover the BlowVerse Marketplace, your gateway to the decentralised economy. Explore a wide range of products and services, securely transact with smart contracts, empower creators and entrepreneurs, and enjoy frictionless payments using the native cryptocurrency, TBT.",
+            title: t('blowVerseMarketplace'),
+            content:t('blowVerseMarketplaceContent'),
             button: {
-                text: "Explore",
+                text: t('blowVerseMarketplaceContentBtn'),
                 appendIcon: <EastSharpIcon className='text-[#FFF] text-[18px] relative left-2'/>
             } ,
             image: BlowVerseMarketPlace
         },
         { 
-            title: "BlowPAY (BlackCard)",
-            header: "BlowPAY & BlackCard:",
-            content: "Revolutionise payments with BlowPAY, leveraging blockchain technology for fast and secure transactions. The BlowPAY BlackCard offers exclusive benefits and privileges, enhanced security, global acceptance, instant fund access, expense tracking, and integration within the BlowPAY ecosystem.",
+            title: t('blowPayCard'),
+            header: t('blowPayCardHeader'), 
+            content: t('blowPayCardContent'),
             button: {
-                text: "Accept payment now",
+                text: t('blowPayCardContentBtn'),
                 appendIcon: <EastSharpIcon className='text-[#FFF] text-[18px] relative left-2'/>
             },
             image: BlowBlackCard
         },
         { 
-            title: "BlowEARN (Staking)",
-            header: "BlowEARN (Dynamic Staking)",
-            content: "Maximise Your Returns with Flexible Staking Solutions. Earn dynamic staking rewards based on market conditions and network performance. Stake your assets now.",
+            title: t('blowEarnStake'),
+            header: t('blowEarnStakeHeader'),
+            content: t('blowEarnStakeContent'),
             button: {
-                text: "Start Earning Now",
+                text: t('blowEarnStakeContentBtn'),
                 appendIcon: <EastSharpIcon className='text-[#FFF] text-[18px] relative left-2'/>
             },
             image: BlowStaking 
         },
         { 
             title: "BlowNFT",
-            content: "", 
+            content: t('blowNftContent'), 
+            button: {
+                text: t('blowNftContentBtn'),
+                appendIcon: <EastSharpIcon className='text-[#FFF] text-[18px] relative left-2'/>
+            },
             image: BlowIsland
         },
         { 
-            title: "Blow Island & Casino",
+            title: t('blowIslands'),
             content: <span>
-                Escape to the luxurious Blow Island & Casino, an exclusive paradise located in Ras Al Khaimah, UAE, and El Salvador Bitcoin City. Enjoy world-class gaming, lavish accommodations, gourmet dining experiences, exciting entertainment options, and VIP services. Experience luxury and entertainment like never before, exclusively for TBT prime hodlers and VVIPs. 
-                <span className=' bg-gradient-to-b cursor-fancy from-[#AAA5A5] to-[#aaa5a503] bg-clip-text font-biomeW04Regular text-transparent underline'>(Discover) Blow Island & Casino and plan your unforgettable experience today!</span>
+                {t('blowIslandsContent')}
+                <span className=' bg-gradient-to-b cursor-fancy from-[#AAA5A5] to-[#aaa5a503] bg-clip-text font-biomeW04Regular text-transparent underline'>
+                    {' '}
+                    {t('blowIslandsContentLink')}
+                    </span>
             </span>, 
             image: BlowGames
         },
         { 
             title: "BlowAVIA",
-            header: "BlowAVIA (Smart Airport)",
+            header: t('blowAviaHeader'),
             content: <span>
-               Redefine your travel experience with BlowAVIA Smart Airport. Seamlessly navigate through the airport with advanced biometric identification, intelligent self-service kiosks, real-time flight information, and smart luggage tracking. Experience convenience and efficiency at its best with BlowAVIA.
+                    {t('blowAviaContent')}
                 <span className=' bg-gradient-to-b cursor-fancy from-[#AAA5A5] to-[#aaa5a503] bg-clip-text font-biomeW04Regular text-transparent underline'>
-                    (Learn more) about BlowAVIA and embark on a hassle-free journey!
+                   {t('blowAviaContentLink')}
                 </span>
             </span>,   
             image: BlowAvia
         },
         { 
             title: "Blow AI",
-            content: "Empower innovation and automation with Blow AI, a solution that utilises advanced artificial intelligence algorithms. Streamline workflows, personalise user experiences, gain valuable insights through predictive analytics, and enhance security measures with this intelligent decision-making platform.",
+            content: t('blowaiContent'),
             button: {
-                text: "Explore",
+                text: t('blowaiContentBtn'),
                 appendIcon: <EastSharpIcon className='text-[#FFF] text-[18px] relative left-2'/>
             },
             image: BlowAi 
@@ -113,20 +122,21 @@ const Ecosystem: FC = () => {
         { 
             title: "BlowBOT",
             content: <span>
-                    Introducing BlowBOT, your intelligent virtual assistant for personal and business needs! Experience 24/7 automated support, personalised recommendations, task automation, and more. Discover the power of BlowBOT and optimise your efficiency today! 
+                    {t('blowBotContent')}
                     <span className=' bg-gradient-to-b cursor-fancy from-[#AAA5A5] to-[#aaa5a503] bg-clip-text font-biomeW04Regular text-transparent underline'>
-                    Get started with BlowBOT and revolutionize your daily tasks.
+                    {' '}
+                    {t('blowBotContentLink')}
                     </span>
                 </span>,  
             image: BlowBot    
         },
         { 
             title: "BlowCALIFORNIUM",
-            header: "BlowCALIFORNIUM Mineral",
+            header: t('blowCaliforniumHeader'),
             content: <span>
-                        Harness the power of nature with BlowCALIFORNIUM Mineral, a unique mineral formulation. Promote mineral balance, enhance cellular function, and support overall health. Unlock the potential of BlowCALIFORNIUM Mineral and experience its benefits! 
+                        {t('blowCaliforniumContent')}
                         <span className='bg-gradient-to-b cursor-fancy from-[#AAA5A5] to-[#aaa5a503] bg-clip-text font-biomeW04Regular text-transparent underline'>
-                        Explore BlowCALIFORNIUM Mineral and elevate your well-being now!
+                        {t('blowCaliforniumContentLink')}
                         </span>
                     </span>, 
             image: BlowCali        
@@ -134,38 +144,38 @@ const Ecosystem: FC = () => {
         { 
             title: "BlowLITHIUM",
             content: <span>
-                        Empower smart product manufacturers with BlowLITHIUM, the ultimate power solution. Enjoy advanced power management, extended battery life, and quick charging technology. Join the future of smart devices with BlowLITHIUM! {' '}
+                        {t('blowLithContent')} {' '}
                         <span className=' bg-gradient-to-b cursor-fancy from-[#AAA5A5] to-[#aaa5a503] bg-clip-text font-biomeW04Regular text-transparent underline'>
-                         {' '} Upgrade your smart products with BlowLITHIUM and boost performance!
+                         {' '} {t('blowLithContentLink')}
                         </span>
                     </span>, 
             image: BlowLith        
         },
         { 
-            title: "BlowEVC Station",
-            header: "Blow Hybrid EVC Station",
-            content: "A versatile electric vehicle charging station that combines fast DC charging and standard AC charging in one unit. It offers compatibility with various EV models, user-friendly interface, intelligent charging management, and scalability for future expansion. Experience the future of electric vehicle charging with Blow Hybrid EVC Station. ",
+            title: t('blowEvc'),
+            header: t('blowEvcHeader'),
+            content: t('blowEvcContent'),
             button: {
-                text: "Explore",
+                text: t('blowEvcContentBtn'),
                 appendIcon: <EastSharpIcon className='text-[#FFF] text-[18px] relative left-2'/>
             },
             image: BlowHYBRID 
         },
         { 
-            title: "The BlowDAO",
-            header: "The Billionaires DAO",
-            content: "Join a decentralised autonomous organization built on blockchain technology. The Billionaires DAO empowers token holders to participate in governance, access investment opportunities, and earn rewards. Be part of a transparent and community-driven ecosystem that shapes the future of decentralized governance and investments.",
+            title: t('blowDao'),
+            header: t('blowDaoHeader'),
+            content: t('blowDaoContent'),
             button: {
-                text: "Get Involved",
+                text: t('blowDaoContentBtn'),
                 appendIcon: <EastSharpIcon className='text-[#FFF] text-[18px] relative left-2'/>
             },
             image: BlowVault 
         },
         { 
-            title: "Blow Foundation",
-            content: "The TBT Foundation is dedicated to nurturing talent, providing scholarships, and supporting educational initiatives globally. It offers programs for skill-building, entrepreneurship support, cultural exchange, environmental sustainability, and global outreach. Join us in making a lasting impact and empowering the next generation across the globe.",
+            title: t('blowFoundation'),
+            content: t('blowFoundationContent'),
             button: {
-                text: "Support the Foundation",
+                text: t('blowFoundationContentBtn'),
                 appendIcon: <EastSharpIcon className='text-[#FFF] text-[18px] relative left-2'/>
             },
             image: TbtFound 
@@ -180,10 +190,10 @@ const Ecosystem: FC = () => {
       <ContainerLayout>
             <div className="text-center">
                     <div className="inline-block my-4 font-detacher text-[20px] md:text-[40px] uppercase text-transparent bg-gradient-to-b from-[#FAFAFA] to-[#aaa5a503] bg-clip-text">
-                        Ecosystem Overview
+                        {t('ecosysemTitle')}
                     </div>
                     <div className=" text-[12px] font-sora md:text-[18px] text-transparent bg-gradient-to-b from-[#AAA5A5] to-[#aaa5a576] bg-clip-text mb-8">
-                    Why TBT Ecosystem: Decentralised system is the future, and so is the Real World Assets (RWAs) tokenisation. Whether you adopt it now or not. Value is value, Innovation is Innovation. TBT is positioned to build the first ever Real World Assets (RWAs) decentralised ecosystem, leveraging the Blockchain, Ai, Metaverse and other disruptive technologies.
+                    {t('ecosysemSubTitle')}
                     </div>
                 </div>
             <div className="grid grid-rows-3 lg:grid-rows-1 lg:grid-cols-3 lg:h-[782px]">

@@ -10,93 +10,96 @@ import TimelineSeparator from '@mui/lab/TimelineSeparator';
 import TimelineConnector from '@mui/lab/TimelineConnector';
 import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineDot from '@mui/lab/TimelineDot';
+import { useTranslation } from 'react-i18next'
 
 const RoadMap: FC = () => {
+
+    const {t} = useTranslation()
 
     const roadMapList: RoadMapProps[] = [
         {
             title: "Q4 2022",
             position: "left",
             list: [
-                "Ideation and research",
-                "Team building"
+                t('q42022List1'),
+                t('q42022List2'),
             ]
         },
         {
             title: "Q1 2023",
             position: "right",
             list: [
-                "White-paper development",
-                "Tokenomics development"
+                t('q12023List1'),
+                t('q12023List2')
             ]
         },
         {
             title: "Q2 2023",
             position: "left",
             list: [
-                "Web development",
-                "Community building",
-                "Influencer marketing",
-                "Brand Ambassadorship"
+                t('q22023List1'),
+                t('q22023List2'),
+                t('q22023List3'),
+                t('q22023List4')
             ]
         },
         {
             title: "Q3 2023",
             position: "right",
             list: [
-                "Airdrop Phase 1 Snapshot",
-                "Blow Private sale",
-                "Blow Pre-sale",
-                "Airdrop Phase 1 Released",
-                "Public launch"
+                t('q32023List1'),
+                t('q32023List2'),
+                t('q32023List3'),
+                t('q32023List4'),
+                t('q32023List5')
             ]
         },
         {
             title: "Q4 2023",
             position: "left",
             list: [
-                "BlowEARN (Dynamic Staking) is announced and launched.",
-                "Blow.ai Web3 Mobile: The beta version of the Blow.ai Web3 Mobile is launched.",
-                "Blow.ai Web3 Mobile: The official version of the Blow.ai Web3 Mobile is released.",
-                "Airdrop phase ll released"
+                t('q42023List1'),
+                t('q42023List2'),
+                t('q42023List3'),
+                t('q42023List4')
             ]
         },
         {
             title: "Q1 2024",
             position: "right",
             list: [
-                "BlowCHAIN is announced",
-                "BlowVerse Marketplace Development begins.",
-                "BLOW COIN tokenomics/utilities are finalized."
+                t('q12024List1'),
+                t('q12024List2'),
+                t('q12024List3')
             ]
         },
         {
             title: "Q2 2024",
             position: "left",
             list: [
-                "BlowCHAIN is launched.",
-                "BLOW COIN Private sale begins",
-                "BLOW COIN Pre sale begins",
-                "BlowVerse Marketplace announcement",
-                "Airdrop phase lll released"
+                t('q22024List1'),
+                t('q22024List2'),
+                t('q22024List3'),
+                t('q22024List4'),
+                t('q22024List5')
             ]
         },
         {
             title: "Q3 2024",
             position: "right",
             list: [
-                "BlowCHAIN: The second DApp for the BlowCHAIN platform is released.",
-                "BlowVerse Marketplace launched",
-                "BlowVerse Marketplace: New products and services are added to the marketplace.",
-                "BLOW COIN is integrated with other blockchain-based platforms."
+                t('q32024List1'),
+                t('q32024List2'),
+                t('q32024List3'),
+                t('q32024List4')
             ]
         },
         {
             title: "Q4 2024",
             position: "left",
             list: [
-                "BlowCHAIN: New features and capabilities are added to the BlowCHAIN platform.",
-                "BlowVerse Marketplace: New marketing campaigns are launched to promote the marketplace. Onboarding of developers to use the BlowCHAIN continues"
+                t('q42024List1'),
+                t('q42024List2')
             ]
         },
     ]
@@ -107,7 +110,7 @@ const RoadMap: FC = () => {
         <div className='hidden pt-20  md:block mt'>
             <ContainerLayout>
                     <div className="text-center mb-4 font-detacher text-[20px] md:text-[40px] uppercase text-transparent bg-gradient-to-b from-[#FAFAFA] to-[#aaa5a503] bg-clip-text">
-                        Roadmap
+                        {t('roadMap')}
                     </div>
                     <Timeline position='alternate'>
                        {

@@ -24,15 +24,18 @@ import { Formik } from 'formik'
 import TextInput from './utils/TextInput'
 import UtilModal from './utils/UtilModal'
 import SocialCapsule from './utils/SocialCapsule'
+import { useTranslation } from 'react-i18next'
 
 
 const Launch = () => {
 
+    const {t} = useTranslation()
+
     const launch: LaunchCardProps[] = [
         {
             buttons: [
-                { text: "Join community", variant: 'transparent', handleClick: () => setCommunity(true), classnames: '' },
-                { text: "Join Airdrop", variant: 'solid', classnames: '' }
+                { text: t('joinCommunityBtn'), variant: 'transparent', handleClick: () => setCommunity(true), classnames: '' },
+                { text: t('joinAirdropBtnText'), variant: 'solid', classnames: '' }
             ],
             imageCols: '2',
             images: [ {
@@ -42,13 +45,13 @@ const Launch = () => {
                 image: Airdrop2,
                 name: "AirLyft"
             } ],
-            text: "Download Metamask or TrustWallet from the AppStore or GooglePlay Store. Follow the steps to be eligible.",
-            title: "Airdrop"
+            text: t('launchProcessText'),
+            title: t('launchProcessAirdrop')
         },
         {
             buttons: [
-                { text: "Join community", variant: 'transparent', handleClick: () => setCommunity(true), classnames: '' },
-                { text: "Buy Blow Presale", variant: 'solid', classnames: '' }
+                { text: t('joinCommunityBtn'), variant: 'transparent', handleClick: () => setCommunity(true), classnames: '' },
+                { text: t('blowPreSaleBtn'), variant: 'solid', classnames: '' }
             ],
             imageCols: '3',
             images: [ 
@@ -76,12 +79,12 @@ const Launch = () => {
                     image: Presale6,
                     name: "SyncSwap"
                   }],
-            text: "Download Metamask or TrustWallet from the AppStore or GooglePlay Store. Follow the steps to be eligible.",
-            title: "Presale"
+                  text: t('launchProcessText'),
+                  title: t('launchProcessPresale')
         },
         {
             buttons: [
-                { text: "Public Sale", variant: 'solid', handleClick: () => setCexlisting(true) }
+                { text: t('publicSaleBtn'), variant: 'solid', handleClick: () => setCexlisting(true) }
             ],
             imageCols: '3',
             images: [
@@ -121,8 +124,8 @@ const Launch = () => {
                 image: Listing9,
                 name: "ByBit"
             }],
-            text: "Download Metamask or TrustWallet from the AppStore or GooglePlay Store. Follow the steps to be eligible.",
-            title: "CEX Listing"
+            text: t('launchProcessText'),
+            title: t('launchProcessCexListing')
         }
     ]
     const [cexlisting, setCexlisting] = useState<boolean>(false)
@@ -132,7 +135,7 @@ const Launch = () => {
    <>
     <div className="my-16 md:flex justify-center items-center">
         <RenderComponent 
-        title='BlowX Launch Process' 
+        title={`${t('launchProcessTitle')}`}
         >
         <div className='grid grid-cols-1 lg:grid-cols-3 gap-4'>
                 {

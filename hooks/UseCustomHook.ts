@@ -1,6 +1,10 @@
 import React, { useLayoutEffect, useState } from 'react'
+import { useTranslation } from 'react-i18next';
 
 const UseCustomHook = (ids: string[], offset: number ) => {
+
+  const {t} = useTranslation()
+
 // Restrict value to be between the range [0, value]
 const clamp = (value: number) => Math.max(0, value);
 
@@ -10,51 +14,35 @@ const isBetween = (value: number, floor: number, ceil: number) =>
     const problemDetails = {
             problems: [
                 {
-                    title: "Finance is moving on-chain",
-                    text: "With the continued failure of centralized exchanges, crypto is seeing a return to first principles: new and seasoned investors alike are embracing the trustless, non-custodial, decentralized nature of on-chain finance."
-                },
-                {
-                    title: "Finance is moving on-chain",
-                    text: "With the continued failure of centralized exchanges, crypto is seeing a return to first principles: new and seasoned investors alike are embracing the trustless, non-custodial, decentralized nature of on-chain finance."
-                },
-                {
-                    title: "Finance is moving on-chain",
-                    text: "With the continued failure of centralized exchanges, crypto is seeing a return to first principles: new and seasoned investors alike are embracing the trustless, non-custodial, decentralized nature of on-chain finance."
+                    title: t("problemSlovingTitle1"),
+                    text: t('problemSlovingContent1')
                 }
             ],
             solution: [
                 {
-                    title: "Finance is moving on-chain",
-                    text: "With the continued failure of centralized exchanges, crypto is seeing a return to first principles: new and seasoned investors alike are embracing the trustless, non-custodial, decentralized nature of on-chain finance."
-                },
-                {
-                    title: "Finance is moving on-chain",
-                    text: "With the continued failure of centralized exchanges, crypto is seeing a return to first principles: new and seasoned investors alike are embracing the trustless, non-custodial, decentralized nature of on-chain finance."
-                },
-                {
-                    title: "Finance is moving on-chain",
-                    text: "With the continued failure of centralized exchanges, crypto is seeing a return to first principles: new and seasoned investors alike are embracing the trustless, non-custodial, decentralized nature of on-chain finance."
+                    title: t('solutionProvidingTitle1'),
+                    text: t('solutionProvidingContent1')
                 }
             ]
     }
 
     const buyBlowDetails = [
       {
-        header: "Buy With Crypto",
-        title: "How to buy $BLOW token with card?",
+        header: t('buyWithCrypto'),
+        title: t('buyWithCryptoTitle'),
         content: [
-          "To buy either ETH/BNB/ARB/USDT using your card, bank transfer, or other methods, such as Apple Pay, you will be directed to our partner, Pyypl. Once there, you can complete your purchase directly in the widget.",
-          "Select your preferred currency, enter the amount you wish to pay, and choose your payment method. The widget will display the estimated ETH/BNB/ARB/USDT you will receive, the rate, and the total fees to carry out the transaction. After selecting your payment method and amount, click the 'Buy Now' button."
+          t('buyWithCryptoContent1'),
+          t('buyWithCryptoContent2')
         ],
         readMore: "https://medium.com/@BlowX_Official/the-definitive-guide-how-to-safely-purchase-blow-tokens-with-crypto-3387e28e798"
       },
       {
-        header: "Buy With Card",
-        title: "How to buy $BLOW token with crypto?",
+        header: t('buyWithCard'),
+        title: t('buyWithCardTitle'),
         content: [
-          "1. Firstly, make sure you have one of the supported wallets ready either TrustWallet, or Metamask.",
-          `2. Click on the "Buy $BLOW" button to enable BlowX chosen network extension to connect with your wallet. Once connected, you can buy $BLOW tokens using a selection of currencies from the listed network chain such as ETH, BNB, ARB or USDT.`,
-          `3. Choose the amount of $BLOW tokens you wish to buy or the amount of your assets you wish to spend and click "Buy now". We recommend having at least $10 equivalent of the network currency to cover gas fees.`
+          t('buyWithCardContent1'),
+          t('buyWithCardContent2'),
+          t('buyWithCardContent3')
         ],
         readMore: "https://medium.com/@BlowX_Official/how-to-easily-buy-blow-tokens-with-your-card-189c90b5c996"
       }

@@ -27,12 +27,12 @@ const OnBoard: FC<onBoardProps> = ({
     const [airdrop, setAirdrop] = useState<boolean>(false)
     const buttons: SolidButtonProps[] = [
         {
-            text: "Private Sale",
+            text: t('privateSaleBtnText'),
             variant: "solid",
             handleClick: () => openPresaleModal()
         },
         {
-            text: "Join Airdrop",
+            text: t('joinAirdropBtnText'),
             variant: "transparent",
             handleClick: () => setAirdrop(prev => !prev)
         }
@@ -52,7 +52,7 @@ const OnBoard: FC<onBoardProps> = ({
         <div className='bg-[#08080897] my-2 pt-2 lg:pt-0 lg:bg-transparent relative'>
         {/* bg-gradient-to-r from-[#FAFAFA] to-[#AAA5A5] bg-clip-text text-transparent */}
             <div className=' lg:pr-8 text-[12px]  md:text-[18px] text-white font-sora'>
-           From buildings to bonds, we are redefining the concept  of ownership. Leading charge in Real-World Digital Assets ecosystem, leveraging Blockchain, Web3, AI and the Metaverse.
+            { t('onBoardContent') }
             </div>
         </div>
             <div className='flex gap-4 my-4'>
@@ -91,7 +91,7 @@ const OnBoard: FC<onBoardProps> = ({
                 }) => (
                     <form className="flex flex-col gap-6">
                         <SelectInput
-                       label='Choose Wallet'
+                       label={`${t('chooseWallet')}`}
                        value={values.wallet}
                        placeholder='example; Jones & Harii Int.'
                        handleChange={handleChange('wallet')}
@@ -103,7 +103,7 @@ const OnBoard: FC<onBoardProps> = ({
                        ]}
                        />
                        <TextInput
-                       label='Wallet Address'
+                       label={`${t('walletAddressLabel')}`}
                        value={values.walletAddress}
                        placeholder='Wallet Address'
                        handleChange={handleChange('walletAddress')}
@@ -127,7 +127,7 @@ const OnBoard: FC<onBoardProps> = ({
                        placeholder='Telegram'
                        />
                        <SolidButton
-                       text="Submit"
+                       text={`${t('submit')}`}
                        handleClick={handleSubmit}
                        variant='solid'
                        />

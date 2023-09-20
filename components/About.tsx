@@ -6,7 +6,11 @@ import ContainerLayout from '../Layout/ContainerLayout'
 import { Canvas } from '@react-three/fiber'
 import AboutModel from '../models/AboutModel'
 import { OrbitControls } from '@react-three/drei'
+import { useTranslation, Trans } from 'react-i18next'
 const About: FC = () => {
+
+  const { t } = useTranslation()
+
   return (
      <div id='about' className="md:h-screen 3xl:h-[80vh] relative">
       <Canvas
@@ -46,10 +50,12 @@ const About: FC = () => {
                  <div className="flex flex-col mt-10 lg:mt-0 lg:p-5 rounded-[10px] lg:bg-black">
                     
              <div className="font-detacher text-[20px] text-center lg:text-left md:text-[32px] text-transparent bg-gradient-to-b from-[#FAFAFA] to-[#aaa5a503] bg-clip-text">
-                About BlowX
+                { t('aboutTitle') }
             </div>
              <div className='text-[14px] md:text-[18px] text-center lg:text-left  text-[#A8A8A8] mt-4 font-biomeW04Regular'>
-             At the New Frontier Empire we are a highly experienced community of cryptocurrency pioneers, united by a shared culture and vision. Our aim is to revolutionise the web3  landscape and the global economy by introducing real-world utilities through our native token, <span className='text-white font-bold text-[18px] md:text-[22px] '>Blow</span>. Built on a multi chain network, <span className='text-white font-bold text-[18px] md:text-[22px] '>BlowX</span> powers transactions and activities within the Blow ecosystem, enabling seamless and efficient interactions.
+              <Trans components={{big: <span className='text-white text-[24px] font-bold' />}}>
+                aboutContent
+              </Trans>
                </div>
                  </div>
           </div> 

@@ -7,7 +7,10 @@ import tokenImage from "../assets/png/tokens.png"
 import MTokenomics from '../assets/mtokenomics.png'
 import TokenPlacholder from '../assets/mtokenomics.png'
 import TokenomicsCard, { TokenomicsCardProps } from './utils/TokenomicsCard'
+import { useTranslation } from 'react-i18next'
 const Tokenomics: FC = () => {
+
+    const {t} = useTranslation()
 
     const tokenomics: { content: string[]; subtext: string; percent: number; text: string; color: string }[] = [
         { 
@@ -78,13 +81,13 @@ const Tokenomics: FC = () => {
       <div className=''>
         <ContainerLayout>
         <div className=" mb-4 mt-8 text-[20px] text-center font-detacher md:text-[40px] uppercase text-transparent bg-gradient-to-b from-[#FAFAFA] to-[#aaa5a503] bg-clip-text">
-            Tokenomics
+            {t('TokenomicsTitle')}
         </div>
         <div className="font-sora md:mx-36 px-6 md:px-0 text-[#A8A8A8] text-[14px] md:text-[16px] text-center">
-            The total supply of Metatime Coin, which is offered to everyone with its unique tokenomics structure, has been limited to 10 billion MTC.
+        {t('TokenomicsSubTitle')}
         </div>
         <div className="md:mt-4 hidden md:block font-sora text-[#C0C0C0] md:text-[18px] capitalize font-semibold text-center">
-            One Token, Limitless Possibilities!
+        {t('TokenomicsSubText')}
         </div>
         {/* Desktop */}
         <div className="flex flex-col py-10 lg:py-0 lg:px-10 md:flex-row  justify-evenly mt-10 border rounded-[20px] border-[#242424]">
