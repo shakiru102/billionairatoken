@@ -1,5 +1,6 @@
 import { TranslationProps } from "../types";
 
+
 export const translationEnglish: TranslationProps = {
     onBoardTitle: 'Evolution of Digital Assets',
     onBoardContent: 'From buildings to bonds, we are redefining the concept of ownership. Leading charge in Real-World Digital Assets ecosystem, leveraging Blockchain, Web3, AI and the Metaverse.',
@@ -9,7 +10,15 @@ export const translationEnglish: TranslationProps = {
     aboutTitle: "About BlowX",
     featuredOn: "FEATURED ON",
     problemSloving: "The Problem  We Are Solving",
-    problemSlovingContent1: "With the continued failure of centralized exchanges, crypto is seeing a return to first principles: new and seasoned investors alike are embracing the trustless, non-custodial, decentralized nature of on-chain finance.",
+    problemSlovingContent1: "• Lack of Payment and Transactions Security",
+    problemSlovingContent2: "• Lack of Luxury and Entertainment Exclusivity",
+    problemSlovingContent3: "• Lack of Seamless Airport Navigation and Travel self-service intelligence",
+    problemSlovingContent4: "• Lack of Artificial intelligence integration in real world assets",
+    problemSlovingContent5: "• Lack of Bot/automated support systems",
+    problemSlovingContent6: "• Lack of mineral Balance, Cellular Functions",
+    problemSlovingContent7: "• Lack of Fast DC and standard AC Charging",
+    problemSlovingContent8: "• Lack of innovative educational initiatives and entrepreneurial support.",
+    problemSlovingContent9: "• Lack of Advanced Power management and Quick charging",
     problemSlovingTitle1: "Finance is moving on-chain",
     solutionProviding: "The Solution We Are Providing",
     solutionProvidingContent1: "With the continued failure of centralized exchanges, crypto is seeing a return to first principles: new and seasoned investors alike are embracing the trustless, non-custodial, decentralized nature of on-chain finance. BlowX is rewriting the rules of investment, and you're invited to the front row seat. View Our Whitepaper to see our Full Solution-Based Ecosystem (insert link to Whitepaper)",

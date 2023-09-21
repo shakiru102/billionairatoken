@@ -100,7 +100,7 @@ const Home: NextPage = () => {
       <div 
       className="w-[100%] hidden relative box-border pt-20 3xl:px-96 lg:mb-36  lg:flex scroll-smooth"
       >
-        <div className="sidemenu hidden lg:flex flex-col justify-around  flex-1 h-screen sticky top-0 w-[50%]">
+        <div className="sidemenu hidden lg:flex flex-col justify-around  flex-1 h-screen sticky top-5 w-[50%]">
           <div className='flex flex-col justify-center items-center gap-4'>
           {
             ['section-1', 'section-2'].map((item, i: number) => (
@@ -123,7 +123,7 @@ const Home: NextPage = () => {
         </div>
         <div className="flex-1 ">
           <div 
-          className="flex flex-col justify-evenly 2xl:h-[80vh] 2xl:justify-center 2xl:gap-8 h-screen mb-28"
+          className="flex flex-col justify-evenly h-[250vh] 2xl:h-[80vh] 2xl:justify-center 2xl:gap-8  mb-28"
           id='section-1'
           >
             {
@@ -169,7 +169,7 @@ const Home: NextPage = () => {
                 <AccordionDetails>
                 {
                       // @ts-ignore
-                 activeId === 'section-1' ? 
+                 item === 'panel1' ? 
                  <Typography>
                   {
                     problemDetails.problems.map((item: any , i: number) => (

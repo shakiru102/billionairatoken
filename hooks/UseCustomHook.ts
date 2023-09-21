@@ -16,7 +16,40 @@ const isBetween = (value: number, floor: number, ceil: number) =>
                 {
                     title: t("problemSlovingTitle1"),
                     text: t('problemSlovingContent1')
-                }
+                },
+                {
+                  title: t("problemSlovingTitle1"),
+                  text: t('problemSlovingContent2')
+                },
+                {
+                  title: t("problemSlovingTitle1"),
+                  text: t('problemSlovingContent3')
+                },
+                {
+                  title: t("problemSlovingTitle1"),
+                  text: t('problemSlovingContent4')
+                },
+                {
+                  title: t("problemSlovingTitle1"),
+                  text: t('problemSlovingContent5')
+                },
+                {
+                  title: t("problemSlovingTitle1"),
+                  text: t('problemSlovingContent6')
+                },
+                {
+                  title: t("problemSlovingTitle1"),
+                  text: t('problemSlovingContent7')
+                },
+                {
+                  title: t("problemSlovingTitle1"),
+                  text: t('problemSlovingContent8')
+                },
+                {
+                  title: t("problemSlovingTitle1"),
+                  text: t('problemSlovingContent9')
+                },
+
             ],
             solution: [
                 {

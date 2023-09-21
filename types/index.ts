@@ -66,6 +66,14 @@ export interface TranslationProps {
     problemSloving: string;
     problemSlovingTitle1: string;
     problemSlovingContent1: string;
+    problemSlovingContent2: string;
+    problemSlovingContent3: string;
+    problemSlovingContent4: string;
+    problemSlovingContent5: string;
+    problemSlovingContent6: string;
+    problemSlovingContent7: string;
+    problemSlovingContent8: string;
+    problemSlovingContent9: string;
     solutionProviding: string;
     solutionProvidingHeader: string;
     solutionProvidingSubHeader: string;
