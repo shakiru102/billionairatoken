@@ -185,10 +185,10 @@ export const translationEnglish: TranslationProps = {
   faqTitle2Content1:
     "BlowX token is a utility token deeply embedded into the BlowX ecosystem, designed to provide a series of perks and benefits to holders as well as to enhance the user experience across the BlowX platform. ",
   faqTitle3Content1:
-    "Join our waitlist and we'll notify you when the public sale starts on May 15, 2023. We expect a lot of interest, which is why you will receive a KYC link ahead of time so you can get set up for the sale early.",
+    "Join our waitlist and we'll notify you when the public sale starts.",
   faqTitle4Content1: "Total supply is 10 billion Blow",
   faqTitle5Content1:
-    "Join our waitlist and we'll notify you when the public sale starts on May 15, 2023. We expect a lot of interest, which is why you will receive a KYC link ahead of time so you can get set up for the sale early.",
+    "Join our waitlist and we'll notify you when the public sale starts.",
   joinOurCommunityTitle: "Join our community",
   joinOurCommunityText: "Subscribe to get latest updates about Blow Ecosystem",
   partnerWithUs: "Partner with us",
