@@ -36,7 +36,7 @@ import { EthereumClient, w3mConnectors, w3mProvider } from '@web3modal/ethereum'
 import { configureChains, createConfig, useAccount } from 'wagmi'
 import { arbitrum, mainnet, polygon, bsc  } from 'wagmi/chains'
 import { Web3Modal, useWeb3Modal } from '@web3modal/react'
-import { useTranslation } from 'react-i18next'
+import { Trans, useTranslation } from 'react-i18next'
 
 const chains = [arbitrum, mainnet, polygon, bsc]
 const projectId = 'f411cba3405901415bd5eddbedde4889'
@@ -117,7 +117,12 @@ const Home: NextPage = () => {
               { t('whatAboutTokenizedAsset') }
             </div>
             <div className='font-sora w-[50%] text-[20px] text-white'>
-             { t('whatAboutTokenizedAssetContent') }
+              <Trans components={{
+                linkRef: <a href='./BlowX-WHITEPAPER_V1.pdf' className='underline' download={'BlowX-WHITEPAPER_V1.pdf'} />
+              }}>
+                whatAboutTokenizedAssetContent
+                </Trans>
+             {/* { t('') } */}
             </div>
           </div>
         </div>
@@ -129,7 +134,7 @@ const Home: NextPage = () => {
             {
               problemDetails.problems.map((item , i: number) => (
                 <div key={i} className='p-[28px] mb-8 w-[75%] bg-white font-sora'>
-                  <div className='font-bold mb-4 text-[20px]'>{item.title}</div>
+                  {/* <div className='font-bold mb-4 text-[20px]'>{item.title}</div> */}
                   <div>{item.text}</div>
                 </div>
               ))
@@ -147,7 +152,7 @@ const Home: NextPage = () => {
             {
               problemDetails.solution.map((item , i: number) => (
                 <div key={i} className='p-[28px] mb-8  w-[75%] bg-white font-sora'>
-                  <div className='font-bold mb-4 text-[20px]'>{item.title}</div>
+                  {/* <div className='font-bold mb-4 text-[20px]'>{item.title}</div> */}
                   <div>{item.text}</div>
                 </div>
               ))
@@ -174,7 +179,7 @@ const Home: NextPage = () => {
                   {
                     problemDetails.problems.map((item: any , i: number) => (
                       <div key={i} className='p-[28px] relative mb-4 bg-white font-sora'>
-                        <div className='font-bold mb-4 text-[20px]'>{item.title}</div>
+                        {/* <div className='font-bold mb-4 text-[20px]'>{item.title}</div> */}
                         <div>{item.text}</div>
                         <div className='absolute bottom-0 left-0 w-full  h-[10px] bg-black' />
                       </div>
@@ -191,7 +196,7 @@ const Home: NextPage = () => {
                   {
                      problemDetails.solution.map((item: any , i: number) => (
                       <div key={i} className='p-[28px] relative bg-white font-sora'>
-                        <div className='font-bold mb-4 text-[20px]'>{item.title}</div>
+                        {/* <div className='font-bold mb-4 text-[20px]'>{item.title}</div> */}
                         <div>{item.text}</div>
                         <div className='absolute bottom-0 left-0 w-full  h-[10px] bg-black' />
                       </div>
@@ -210,7 +215,11 @@ const Home: NextPage = () => {
             { t('whatAboutTokenizedAsset') }
             </div>
             <div className='font-sora  text-[16px] text-white'>
-            { t('whatAboutTokenizedAssetContent') }
+            <Trans components={{
+                linkRef: <a href='./BlowX-WHITEPAPER_V1.pdf' className='underline' download={'BlowX-WHITEPAPER_V1.pdf'} />
+              }}>
+                whatAboutTokenizedAssetContent
+                </Trans>
             </div>
           </div>
       </div>
@@ -251,7 +260,6 @@ const Home: NextPage = () => {
         }}
         onSubmit={(e) => {
           console.log(e);
-          
         }}
         >
             {({ 

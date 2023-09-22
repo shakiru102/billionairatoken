@@ -66,16 +66,16 @@ const LaunchCard: FC<LaunchCardProps> = ({
 
                     <div style={{ backfaceVisibility: 'hidden' }} className='font-sora  absolute text-[14px] text-center [transform:rotateY(180deg)]   text-white '>
                       <div className='font-bold'>{item.name}</div>
-                      <div className='text-[12px]'>31/03/2023</div>
+                      {/* <div className='text-[12px]'>31/03/2023</div> */}
                     </div>
                 </div>
                ))
             }
           </div>
-          <div className='text-[#A8A8A8] text-[14px] font-sora text-center my-8'>
+          {/* <div className='text-[#A8A8A8] text-[14px] font-sora text-center my-8'>
             { text }
-          </div>
-          <div className='flex flex-col justify-center px-20 gap-4'>
+          </div> */}
+          <div className='flex flex-col justify-center px-20 gap-4 mt-8'>
             {
                 buttons.map((item: SolidButtonProps, i: number) => (
                     <SolidButton key={i} text={item.text} variant={item.variant} handleClick={item.handleClick} />

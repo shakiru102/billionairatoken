@@ -70,7 +70,7 @@ const RoadMap: FC = () => {
             list: [
                 t('q12024List1'),
                 t('q12024List2'),
-                t('q12024List3')
+                // t('q12024List3')
             ]
         },
         {
@@ -78,8 +78,8 @@ const RoadMap: FC = () => {
             position: "left",
             list: [
                 t('q22024List1'),
-                t('q22024List2'),
-                t('q22024List3'),
+                // t('q22024List2'),
+                // t('q22024List3'),
                 t('q22024List4'),
                 t('q22024List5')
             ]
