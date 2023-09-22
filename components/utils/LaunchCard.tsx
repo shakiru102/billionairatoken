@@ -72,9 +72,6 @@ const LaunchCard: FC<LaunchCardProps> = ({
                ))
             }
           </div>
-          {/* <div className='text-[#A8A8A8] text-[14px] font-sora text-center my-8'>
-            { text }
-          </div> */}
           <div className='flex flex-col justify-center px-20 gap-4 mt-8'>
             {
                 buttons.map((item: SolidButtonProps, i: number) => (
