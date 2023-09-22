@@ -142,7 +142,7 @@ const Home: NextPage = () => {
            >
             <div>
               <div className="font-sora font-bold text-white text-[32px]">{t('solutionProvidingHeader')}</div>
-              <div className="font-sora text-white text-[24px]">{t('solutionProvidingSubHeader')}</div>
+              {/* <div className="font-sora text-white text-[24px]">{t('solutionProvidingSubHeader')}</div> */}
             </div>
             {
               problemDetails.solution.map((item , i: number) => (
@@ -185,7 +185,7 @@ const Home: NextPage = () => {
                  { item === 'section-2' && 
                   <div className='mb-4'>
                       <div className="font-sora font-bold text-white text-[32px]">{t('solutionProvidingHeader')}</div>
-                      <div className="font-sora text-white text-[24px]">{t('solutionProvidingSubHeader')}</div>
+                      {/* <div className="font-sora text-white text-[24px]">{t('solutionProvidingSubHeader')}</div> */}
                     </div>
                   }
                   {

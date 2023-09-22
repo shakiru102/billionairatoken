@@ -5,7 +5,7 @@ export const translationChinese: TranslationProps = {
     onBoardContent: '从建筑到债券，我们正在重新定义所有权的概念。我们领导了实际数字资产生态系统的发展，利用区块链、Web3、人工智能和元宇宙。',
     privateSaleBtnText: "私人销售",
     joinAirdropBtnText: "加入空投",
-    aboutContent: "在<big>BlowX</big> Empire，我们是一群经验丰富的加密货币先驱所组成的社区，我们共同拥有文化和愿景。我们的目标是通过我们的原生代币<big>Blow</big>在Web3景观和全球经济中引入实际用途，从而彻底改变它。基于多链网络构建的<big>BlowX</big>支持Blow生态系统内的交易和活动，实现无缝高效的互动。",
+    aboutContent: "在<big>BlowX</big> Empire，我们是一群经验丰富的加密货币先驱所组成的社区，我们共同拥有文化和愿景。我们的目标是通过我们的原生代币<big>Blow</big>在Web3景观和全球经济中引入实际用途，从而彻底改变它。基于多链网络构建的<big>Blow</big>支持Blow生态系统内的交易和活动，实现无缝高效的互动。",
     aboutTitle: "关于BlowX",
     featuredOn: "特色报道",
     problemSloving: "我们要解决的问题",

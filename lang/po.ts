@@ -5,7 +5,7 @@ export const translationPortuguese: TranslationProps = {
     onBoardContent: 'From buildings to bonds, we are redefining the concept of ownership. Leading charge in Real-World Digital Assets ecosystem, leveraging Blockchain, Web3, AI and the Metaverse.',
     privateSaleBtnText: "Private Sale",
     joinAirdropBtnText: "Join Airdrop",
-    aboutContent: "At the <big>BlowX</big> Empire we are a highly experienced community of cryptocurrency pioneers, united by a shared culture and vision. Our aim is to revolutionise the web3  landscape and the global economy by introducing real-world utilities through our native token, <big>Blow</big>. Built on a multi chain network, <big>BlowX</big> powers transactions and activities within the Blow ecosystem, enabling seamless and efficient interactions.",
+    aboutContent: "At the <big>BlowX</big> Empire we are a highly experienced community of cryptocurrency pioneers, united by a shared culture and vision. Our aim is to revolutionise the web3  landscape and the global economy by introducing real-world utilities through our native token, <big>Blow</big>. Built on a multi chain network, <big>Blow</big> powers transactions and activities within the Blow ecosystem, enabling seamless and efficient interactions.",
     aboutTitle: "About BlowX",
     featuredOn: "FEATURED ON",
     problemSloving: "The Problem  We Are Solving",

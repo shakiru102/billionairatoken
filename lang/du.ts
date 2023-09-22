@@ -5,7 +5,7 @@ export const translationDutch: TranslationProps = {
     onBoardContent: 'Van gebouwen tot obligaties, we herdefiniëren het concept van eigendom. We leiden de charge in het ecosysteem van Real-World Digital Assets, waarbij we gebruikmaken van Blockchain, Web3, AI en de Metaverse.',
     privateSaleBtnText: 'Private Sale',
     joinAirdropBtnText: 'Doe mee aan de Airdrop',
-    aboutContent: 'Bij het <big>BlowX</big> Empire zijn we een zeer ervaren gemeenschap van cryptocurrency pioniers, verenigd door een gedeelde cultuur en visie. Ons doel is om het web3-landschap en de wereldeconomie te revolutioneren door echte wereldvoorzieningen te introduceren via onze eigen token, <big>Blow</big>. Gebouwd op een multi-chain netwerk, stelt <big>BlowX</big> transacties en activiteiten binnen het Blow-ecosysteem in staat, waardoor naadloze en efficiënte interacties mogelijk zijn.',
+    aboutContent: 'Bij het <big>BlowX</big> Empire zijn we een zeer ervaren gemeenschap van cryptocurrency pioniers, verenigd door een gedeelde cultuur en visie. Ons doel is om het web3-landschap en de wereldeconomie te revolutioneren door echte wereldvoorzieningen te introduceren via onze eigen token, <big>Blow</big>. Gebouwd op een multi-chain netwerk, stelt <big>Blow</big> transacties en activiteiten binnen het Blow-ecosysteem in staat, waardoor naadloze en efficiënte interacties mogelijk zijn.',
     aboutTitle: 'Over BlowX',
     featuredOn: 'GEKENMERKT OP',
     problemSloving: 'Het Probleem Dat We Oplossen',

@@ -5,7 +5,7 @@ export const translationFrance: TranslationProps = {
     onBoardContent: `Des immeubles aux obligations, nous redéfinissons le concept de la propriété. En tête de la charge dans l'écosystème des actifs numériques du monde réel, en tirant parti de la blockchain, de Web3, de l'IA et du Métavers.`,
     privateSaleBtnText: "Vente privée",
     joinAirdropBtnText: "Rejoindre l'AirDrop",
-    aboutContent: "Au sein de l'Empire <big>BlowX</big>, nous sommes une communauté hautement expérimentée de pionniers de la cryptomonnaie, unis par une culture et une vision communes. Notre objectif est de révolutionner le paysage du Web3 et l'économie mondiale en introduisant des services publics du monde réel grâce à notre jeton natif, <big>Blow</big>. Construit sur un réseau multi-chaînes, <big>BlowX</big> alimente les transactions et les activités au sein de l'écosystème Blow, permettant des interactions fluides et efficaces.",
+    aboutContent: "Au sein de l'Empire <big>BlowX</big>, nous sommes une communauté hautement expérimentée de pionniers de la cryptomonnaie, unis par une culture et une vision communes. Notre objectif est de révolutionner le paysage du Web3 et l'économie mondiale en introduisant des services publics du monde réel grâce à notre jeton natif, <big>Blow</big>. Construit sur un réseau multi-chaînes, <big>Blow</big> alimente les transactions et les activités au sein de l'écosystème Blow, permettant des interactions fluides et efficaces.",
     aboutTitle: "À propos de BlowX",
     featuredOn: "EN VEDETTE SUR",
     problemSloving: "Le problème que nous résolvons",
