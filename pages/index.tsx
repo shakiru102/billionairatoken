@@ -123,7 +123,7 @@ const Home: NextPage = () => {
         </div>
         <div className="flex-1 ">
           <div 
-          className="flex flex-col justify-evenly h-auto 2xl:h-[80vh] 2xl:justify-center 2xl:gap-8  mb-28"
+          className="flex flex-col justify-evenly h-auto  2xl:justify-center 2xl:gap-8  mb-28"
           id='section-1'
           >
             {
@@ -136,7 +136,7 @@ const Home: NextPage = () => {
             }
           </div>
           <div
-           className="flex flex-col justify-evenly h-auto 2xl:h-[80vh] 2xl:justify-start 2xl:gap-8"
+           className="flex flex-col justify-evenly h-auto  2xl:justify-start 2xl:gap-8"
           id='section-2'
 
            >
