@@ -79,6 +79,14 @@ export interface TranslationProps {
     solutionProvidingSubHeader: string;
     solutionProvidingTitle1: string;
     solutionProvidingContent1: string;
+    solutionProvidingContent2: string;
+    solutionProvidingContent3: string;
+    solutionProvidingContent4: string;
+    solutionProvidingContent5: string;
+    solutionProvidingContent6: string;
+    solutionProvidingContent7: string;
+    solutionProvidingContent8: string;
+    solutionProvidingContent9: string;
     whatAboutTokenizedAsset: string;
     whatAboutTokenizedAssetContent: string;
     TokenomicsTitle: string;
@@ -219,4 +227,5 @@ export interface TranslationProps {
     walletAddressLabel: string;
     submit: string;
     buyWithCardTitle: string;
+    // blowEvcContentLink: any
 }

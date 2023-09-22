@@ -247,7 +247,7 @@ const Ecosystem: FC = () => {
                       { ecosystem.image && 
                        <div className={`text-center ${ ecosystem.title == 'BlowPAY (BlackCard)' ? '' : 'mt-8' }h-[100px]`}>
                         {
-                            ecosystem.title == 'BlowPAY (BlackCard)' ?  <Image alt={ecosystem.title} height={500} width={900} src={ecosystem.image} />
+                            ecosystem.title == t('blowPayCard') ?  <Image alt={ecosystem.title} height={500} width={900} src={ecosystem.image} />
                             : 
                             <Image alt={ecosystem.title} width={500} height={500} src={ecosystem.image} />
                         }

@@ -55,7 +55,39 @@ const isBetween = (value: number, floor: number, ceil: number) =>
                 {
                     title: t('solutionProvidingTitle1'),
                     text: t('solutionProvidingContent1')
-                }
+                },
+                {
+                  title: t('solutionProvidingTitle1'),
+                  text: t('solutionProvidingContent2')
+                },
+                {
+                  title: t('solutionProvidingTitle1'),
+                  text: t('solutionProvidingContent3')
+                },
+                {
+                  title: t('solutionProvidingTitle1'),
+                  text: t('solutionProvidingContent4')
+                },
+                {
+                  title: t('solutionProvidingTitle1'),
+                  text: t('solutionProvidingContent5')
+                },
+                {
+                  title: t('solutionProvidingTitle1'),
+                  text: t('solutionProvidingContent6')
+                },
+                {
+                  title: t('solutionProvidingTitle1'),
+                  text: t('solutionProvidingContent7')
+                },
+                {
+                  title: t('solutionProvidingTitle1'),
+                  text: t('solutionProvidingContent8')
+                },
+                {
+                  title: t('solutionProvidingTitle1'),
+                  text: t('solutionProvidingContent9')
+                },
             ]
     }
 

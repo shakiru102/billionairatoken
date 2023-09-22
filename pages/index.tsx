@@ -123,12 +123,12 @@ const Home: NextPage = () => {
         </div>
         <div className="flex-1 ">
           <div 
-          className="flex flex-col justify-evenly h-[250vh] 2xl:h-[80vh] 2xl:justify-center 2xl:gap-8  mb-28"
+          className="flex flex-col justify-evenly h-auto 2xl:h-[80vh] 2xl:justify-center 2xl:gap-8  mb-28"
           id='section-1'
           >
             {
               problemDetails.problems.map((item , i: number) => (
-                <div key={i} className='p-[28px] w-[75%] bg-white font-sora'>
+                <div key={i} className='p-[28px] mb-8 w-[75%] bg-white font-sora'>
                   <div className='font-bold mb-4 text-[20px]'>{item.title}</div>
                   <div>{item.text}</div>
                 </div>
@@ -136,7 +136,7 @@ const Home: NextPage = () => {
             }
           </div>
           <div
-           className="flex flex-col justify-evenly h-screen 2xl:h-[80vh] 2xl:justify-start 2xl:gap-8"
+           className="flex flex-col justify-evenly h-auto 2xl:h-[80vh] 2xl:justify-start 2xl:gap-8"
           id='section-2'
 
            >
@@ -146,8 +146,8 @@ const Home: NextPage = () => {
             </div>
             {
               problemDetails.solution.map((item , i: number) => (
-                <div key={i} className='p-[28px] w-[75%] bg-white font-sora'>
-                  <div className='font-bold mb-4 '>{item.title}</div>
+                <div key={i} className='p-[28px] mb-8  w-[75%] bg-white font-sora'>
+                  <div className='font-bold mb-4 text-[20px]'>{item.title}</div>
                   <div>{item.text}</div>
                 </div>
               ))
