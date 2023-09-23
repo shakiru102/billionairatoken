@@ -70,7 +70,7 @@ const Launch = () => {
             handleClick: () => setCommunity(true),
             classnames: "",
           },
-          { text: t("blowPreSaleBtn"), variant: "solid", classnames: "" },
+          { text: t("blowPreSaleBtn"), variant: "solid", classnames: "", handleClick: () => setCexlisting(true), },
         ],
         imageCols: "3",
         images: [
