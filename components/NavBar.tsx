@@ -82,7 +82,7 @@ const NavBar: FC<NavBarProps> = ({
                 ) : 
                 (
                   <Button 
-                    className='capitalize cursor-fancy text-[#A8A8A8] font-sora text-[16px]'
+                    className='capitalize cursor-fancy text-[#A8A8A8] font-sora text-[16px] hover:text-white'
                     key={index} 
                     href={item.to ? item.to : ''}
                     download={item.to ? 'BlowX-WHITEPAPER_V1.pdf': null}

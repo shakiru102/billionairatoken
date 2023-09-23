@@ -10,7 +10,7 @@ export const translationEnglish: TranslationProps = {
   aboutContent:
     "At the <big>BlowX</big> Empire we are a highly experienced community of cryptocurrency pioneers, united by a shared culture and vision. Our aim is to revolutionise the web3  landscape and the global economy by introducing real-world utilities through our native token, <big>Blow</big>. Built on a multi chain network, <big>Blow</big> powers transactions and activities within the Blow ecosystem, enabling seamless and efficient interactions.",
   aboutTitle: "About BlowX",
-  featuredOn: "FEATURED ON",
+  featuredOn: "FEATURED SOON ON",
   problemSloving: "The Problem  We Are Solving",
   problemSlovingContent1: "• Lack of Payment and Transactions Security",
   problemSlovingContent2: "• Lack of Luxury and Entertainment Exclusivity",
