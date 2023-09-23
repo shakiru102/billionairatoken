@@ -171,7 +171,7 @@ const Launch = () => {
       <CoinModal
         open={cexlisting}
         onClose={() => setCexlisting(false)}
-        dialogText="Subscribe to get latest updates about TBT CEX listing."
+        dialogText="Subscribe to get latest updates about Blow CEX listing."
         dialogTitle="Coming Soon..."
         dialogChildren={
           <Formik
