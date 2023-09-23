@@ -212,7 +212,7 @@ const Launch = () => {
         open={airdrop}
         onClose={() => setAirdrop(false)}
         dialogTitle="Join Waitlist & Airdrop"
-        dialogText="Kindly fill in the form and join our community to follow the development progress. You will be notified when TBT launch."
+        dialogText="Kindly fill in the form and join our community to follow the development progress. You will be notified when Blow launch."
         dialogChildren={
           <Formik
             initialValues={{

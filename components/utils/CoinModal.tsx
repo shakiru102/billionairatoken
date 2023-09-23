@@ -5,6 +5,7 @@ import Logo from '../../assets/blowlogo.png'
 import MediaIcons from './ MediaIcons'
 import SolidButton from './SolidButton'
 import { CoinModalProps } from '../../types'
+import CancelIcon from '@mui/icons-material/Cancel';
 
 const CoinModal: FC<CoinModalProps> = ({
   dialogChildren,
@@ -22,6 +23,7 @@ const CoinModal: FC<CoinModalProps> = ({
       className: "md:w-[482px] text-left bg-[#1A1A1A] mx-auto my-16 rounded-[20px] p-8"
     }}
     >
+      <span onClick={onClose} className='text-white absolute  right-2 top-2'><CancelIcon fontSize={"medium"}  /></span>
       <div className="text-center mb-4">
             <Image alt='logo' src={Logo} width={120} height={100} />
         </div>
