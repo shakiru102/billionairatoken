@@ -82,7 +82,7 @@ const Home: NextPage = () => {
   return (
    <>
    {/* <TokenInfo /> */}
-   <div className='relative overflow-hidden'>
+   <div className=' overflow-hidden'>
    <NavBar openPresaleModal={() => setPresaleModal(prev => !prev)} />
    <Canvas id='webgl'
    onCreated={(state: RootState) => {

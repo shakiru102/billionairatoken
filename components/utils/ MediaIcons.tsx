@@ -45,7 +45,7 @@ const  MediaIcons: FC<MediaIconsProps> = ({
     
 
   return (
-    <div className={`flex gap-8 mt-4 items-center
+    <div className={`flex gap-8 mt-4 items-center z-50
      ${ position === 'center' ? 'justify-center' :
      position === 'right' ? 'justify-end' : 'justify-start' }`}>
     {

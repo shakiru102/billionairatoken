@@ -43,9 +43,9 @@ const OnBoard: FC<onBoardProps> = ({
     
 
   return (
-    <div className="min-h-screen md:min-h-full lg:min-h-screen flex pt-36 md:pt-0 md:items-center">
+    <div className="min-h-screen md:min-h-full z-50 lg:min-h-screen flex pt-36 md:pt-0 md:items-center">
        <ContainerLayout>
-        <div className="lg:w-[50%]">
+        <div className="lg:w-[50%] ">
         <div className='md:leading-[96px] text-[36px] md:text-[75px] bg-gradient-to-b from-[#FAFAFA] to-[#AAA5A5] bg-clip-text text-transparent font-detacher'>
         { t('onBoardTitle') }
         </div>
@@ -62,12 +62,12 @@ const OnBoard: FC<onBoardProps> = ({
                     ))
                 }
             </div>
-           <div className='mt-10 md:mt-14'>
+           <div className='mt-10 md:mt-8'>
             <MediaIcons />
            </div>
         </div>
        </ContainerLayout>
-       <div className='absolute bottom-32 md:bottom-0 pb-8 w-full flex justify-center items-center'><Lottie className=' w-[90px] md:w-[150px]' autoPlay animationData={LottieFile} loop={true} /></div>
+       <div className='absolute  bottom-32 md:bottom-0 pb-8 w-full flex justify-center items-center'><Lottie className=' w-[90px] md:w-[120px]' autoPlay animationData={LottieFile} loop={true} /></div>
        <CoinModal
          open={airdrop}
          onClose={() => setAirdrop(false)}
