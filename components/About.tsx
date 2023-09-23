@@ -47,12 +47,12 @@ const About: FC = () => {
                 </div>
               <div className=' w-full lg:w-5/12 flex flex-col md:flex-row items-center  '>
                 
-                 <div className="flex flex-col mt-10 lg:mt-0 lg:p-5 rounded-[10px] lg:bg-black">
+                 <div data-aos="fade" className="flex flex-col mt-10 lg:mt-0 lg:p-5 rounded-[10px] lg:bg-black">
                     
-             <div className="font-detacher text-[20px] text-center lg:text-left md:text-[32px] text-transparent bg-gradient-to-b from-[#FAFAFA] to-[#aaa5a503] bg-clip-text">
+             <div data-aos="fade-left" data-aos-delay="500" className="font-detacher text-[20px] text-center lg:text-left md:text-[32px] text-transparent bg-gradient-to-b from-[#FAFAFA] to-[#aaa5a503] bg-clip-text">
                 { t('aboutTitle') }
             </div>
-             <div className='text-[14px] md:text-[18px] text-center lg:text-left  text-[#A8A8A8] mt-4 font-biomeW04Regular'>
+             <div data-aos="fade-up" data-aos-delay="1000"  className='text-[14px] md:text-[18px] text-center lg:text-left  text-[#A8A8A8] mt-4 font-biomeW04Regular'>
               <Trans components={{big: <span className='text-white text-[24px] font-bold' />}}>
                 aboutContent
               </Trans>

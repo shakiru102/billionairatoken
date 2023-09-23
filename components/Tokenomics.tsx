@@ -80,17 +80,17 @@ const Tokenomics: FC = () => {
   return (
       <div className=''>
         <ContainerLayout>
-        <div className=" mb-4 mt-8 text-[20px] text-center font-detacher md:text-[40px] uppercase text-transparent bg-gradient-to-b from-[#FAFAFA] to-[#aaa5a503] bg-clip-text">
+        <div data-aos="fade-up" data-aos-delay="500" className=" mb-4 mt-8 text-[20px] text-center font-detacher md:text-[40px] uppercase text-transparent bg-gradient-to-b from-[#FAFAFA] to-[#aaa5a503] bg-clip-text">
             {t('TokenomicsTitle')}
         </div>
-        <div className="font-sora md:mx-36 px-6 md:px-0 text-[#A8A8A8] text-[14px] md:text-[16px] text-center">
+        <div data-aos="fade-up" data-aos-delay="600" className="font-sora md:mx-36 px-6 md:px-0 text-[#A8A8A8] text-[14px] md:text-[16px] text-center">
         {t('TokenomicsSubTitle')}
         </div>
-        <div className="md:mt-4 hidden md:block font-sora text-[#C0C0C0] md:text-[18px] capitalize font-semibold text-center">
+        <div data-aos="fade-up" data-aos-delay="700" className="md:mt-4 hidden md:block font-sora text-[#C0C0C0] md:text-[18px] capitalize font-semibold text-center">
         {t('TokenomicsSubText')}
         </div>
         {/* Desktop */}
-        <div className="flex flex-col py-10 lg:py-0 lg:px-10 md:flex-row  justify-evenly mt-10 border rounded-[20px] border-[#242424]">
+        <div data-aos="fade" data-aos-delay="800" className="flex flex-col py-10 lg:py-0 lg:px-10 md:flex-row  justify-evenly mt-10 border rounded-[20px] border-[#242424]">
             <div className='flex-1 my-10 flex justify-center'><Image  alt='placeholder' className='' src={TokenPlacholder}/></div>
             <div className="flex-1 flex py-10 lg:py-0 flex-col border-b-[#242424] border-t-[#242424] lg:border-r-[#242424]  lg:border-l-[#242424] border-t border-b lg:border-l lg:border-r justify-center gap-4 lg:gap-8">
                {

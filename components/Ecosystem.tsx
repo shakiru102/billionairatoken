@@ -189,21 +189,21 @@ const Ecosystem: FC = () => {
     <div id='ecosystem' className='lg:my-8'>
       <ContainerLayout>
             <div className="text-center">
-                    <div className="inline-block my-4 font-detacher text-[20px] md:text-[40px] uppercase text-transparent bg-gradient-to-b from-[#FAFAFA] to-[#aaa5a503] bg-clip-text">
+                    <div data-aos="fade-up" data-aos-delay="500" className="inline-block my-4 font-detacher text-[20px] md:text-[40px] uppercase text-transparent bg-gradient-to-b from-[#FAFAFA] to-[#aaa5a503] bg-clip-text">
                         {t('ecosysemTitle')}
                     </div>
-                    <div className=" text-[12px] font-sora md:text-[18px] text-transparent bg-gradient-to-b from-[#AAA5A5] to-[#aaa5a576] bg-clip-text mb-8">
+                    <div data-aos="fade-up" data-aos-delay="600" className=" text-[12px] font-sora md:text-[18px] text-transparent bg-gradient-to-b from-[#AAA5A5] to-[#aaa5a576] bg-clip-text mb-8">
                     {t('ecosysemSubTitle')}
                     </div>
                 </div>
-            <div className="grid grid-rows-3 lg:grid-rows-1 lg:grid-cols-3 lg:h-[782px]">
+            <div data-aos="fade" data-aos-delay="700" className="grid grid-rows-3 lg:grid-rows-1 lg:grid-cols-3 lg:h-[782px]">
                 <ul className="border-t border-r row-span-3 lg:row-span-1 lg:col-span-1  border-b border-l border-[#CCC] flex flex-col">
                     {
                         ecosystems.map((item:EcosystemProps, i: number) => {
                             const isLastItem = i === ecosystems.length -1 
                             if(isLastItem) {
                                 return (
-                                    <li key={i} style={{ background: item.title === ecosystem?.title ? '#1A1613' : 'transparent' }} onClick={() => setEcosystem(item)} className=" relative text-[#A8A8A8] font-sora text-[15px] md:text-[18px] flex-1 hidden lg:flex gap-2 pl-16 items-center">
+                                    <li data-aos="fade" data-aos-delay={`${i + 8}00`} key={i} style={{ background: item.title === ecosystem?.title ? '#1A1613' : 'transparent' }} onClick={() => setEcosystem(item)} className=" relative text-[#A8A8A8] font-sora text-[15px] md:text-[18px] flex-1 hidden lg:flex gap-2 pl-16 items-center">
                                         { item.title === ecosystem?.title ? <ActiveEcoImage /> : null}
                                         <span className='inline-block w-[5px] h-[5px] bg-[#A8A8A8]' /> { item.title }
                                     </li>
@@ -211,7 +211,7 @@ const Ecosystem: FC = () => {
                             }
 
                             return (
-                                <li key={i} style={{ background: item.title === ecosystem?.title ? '#1A1613' : 'transparent' }} onClick={() => setEcosystem(item)} className=" relative text-[#A8A8A8] font-sora text-[15px] md:text-[18px] flex-1 hidden lg:flex border-b border-b-[#CCC] gap-2 pl-16 items-center">
+                                <li data-aos="fade" data-aos-delay={`${i + 8}00`} key={i} style={{ background: item.title === ecosystem?.title ? '#1A1613' : 'transparent' }} onClick={() => setEcosystem(item)} className=" relative text-[#A8A8A8] font-sora text-[15px] md:text-[18px] flex-1 hidden lg:flex border-b border-b-[#CCC] gap-2 pl-16 items-center">
                                     { item.title === ecosystem?.title ? <ActiveEcoImage /> : null}
                                     <span className='inline-block w-[5px] h-[5px] bg-[#A8A8A8]' /> { item.title }
                                 </li>
@@ -220,7 +220,7 @@ const Ecosystem: FC = () => {
                     }
                     {
                         ecosystems.map((item: EcosystemProps, i:number) => (
-                            <Accordion key={i} className='lg:hidden bg-transparent border-b border-b-[#CCC]'>
+                            <Accordion key={i} data-aos="fade-up" data-aos-delay={`${i + 8}00`}  className='lg:hidden bg-transparent border-b border-b-[#CCC]'>
                                 <AccordionSummary 
                                 sx={{
                                     '& .MuiAccordionSummary-expandIconWrapper.Mui-expanded': {

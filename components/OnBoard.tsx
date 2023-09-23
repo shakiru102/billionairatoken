@@ -46,23 +46,23 @@ const OnBoard: FC<onBoardProps> = ({
     <div className="min-h-screen md:min-h-full z-50 lg:min-h-screen flex pt-36 md:pt-0 md:items-center">
        <ContainerLayout>
         <div className="lg:w-[50%] ">
-        <div className='md:leading-[96px] text-[36px] md:text-[75px] bg-gradient-to-b from-[#FAFAFA] to-[#AAA5A5] bg-clip-text text-transparent font-detacher'>
+        <div data-aos="fade-left"data-aos-delay="1000" className='md:leading-[96px] text-[36px] md:text-[75px] bg-gradient-to-b from-[#FAFAFA] to-[#AAA5A5] bg-clip-text text-transparent font-detacher'>
         { t('onBoardTitle') }
         </div>
-        <div className='bg-[#08080897] my-2 pt-2 lg:pt-0 lg:bg-transparent relative'>
+        <div data-aos="fade-up" data-aos-delay="1500" className='bg-[#08080897] my-2 pt-2 lg:pt-0 lg:bg-transparent relative'>
         {/* bg-gradient-to-r from-[#FAFAFA] to-[#AAA5A5] bg-clip-text text-transparent */}
             <div className=' lg:pr-8 text-[12px]  md:text-[18px] text-white font-sora'>
             { t('onBoardContent') }
             </div>
         </div>
-            <div className='flex gap-4 my-4'>
+            <div data-aos="fade" data-aos-delay="2000" className='flex gap-4 my-4'>
                 {
                     buttons.map((item: SolidButtonProps, i: number) => (
                         <SolidButton key={i} {...item}/>
                     ))
                 }
             </div>
-           <div className='mt-10 md:mt-8'>
+           <div data-aos="fade" data-aos-delay="2000" className='mt-10 md:mt-8'>
             <MediaIcons />
            </div>
         </div>

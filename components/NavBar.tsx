@@ -61,6 +61,8 @@ const NavBar: FC<NavBarProps> = ({
   return (
     <>
       <AppBar 
+       data-aos={`fade`}
+       data-aos-delay="300"
     elevation={0}
       className='bg-transparent backdrop-blur-lg pt-2'
       sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}
@@ -75,7 +77,7 @@ const NavBar: FC<NavBarProps> = ({
           navigations.map((item: NavlinksProps, index: number )=> item.contained ? 
                 (
                     <SolidButton 
-                    key={index} 
+                    
                     {...item}
                     handleClick={openPresaleModal}
                     variant='solid'/>

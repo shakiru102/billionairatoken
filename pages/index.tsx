@@ -106,6 +106,8 @@ const Home: NextPage = () => {
             ['section-1', 'section-2'].map((item, i: number) => (
               <UtilButton 
               href={`#${item}`}
+              data-aos="fade-right"
+              data-aos-delay={`${i + 1}00`}
               className={activeId === item ? 'bg-white text-[#2C2C2B] hover:bg-white text-[20px]' : 'text-white text-[20px]'}
               key={i}
               >{ i == 0 ? t('problemSloving') : t('solutionProviding')}</UtilButton>
@@ -113,10 +115,10 @@ const Home: NextPage = () => {
           }
           </div>
           <div className="flex flex-col justify-center items-center">
-            <div className=" w-[50%] inline-block mb-4 font-sora text-[20px] md:text-[32px] text-transparent bg-gradient-to-b from-[#FAFAFA] to-[#aaa5a503] bg-clip-text">
+            <div data-aos="fade-up" data-aos-delay="300" className=" w-[50%] inline-block mb-4 font-sora text-[20px] md:text-[32px] text-transparent bg-gradient-to-b from-[#FAFAFA] to-[#aaa5a503] bg-clip-text">
               { t('whatAboutTokenizedAsset') }
             </div>
-            <div className='font-sora w-[50%] text-[20px] text-white'>
+            <div data-aos="fade-up" data-aos-delay="400" className='font-sora w-[50%] text-[20px] text-white'>
               <Trans components={{
                 linkRef: <a href='./BlowX-WHITEPAPER_V1.pdf' className='underline' download={'BlowX-WHITEPAPER_V1.pdf'} />
               }}>
@@ -133,7 +135,7 @@ const Home: NextPage = () => {
           >
             {
               problemDetails.problems.map((item , i: number) => (
-                <div key={i} className='p-[28px] mb-8 w-[75%] bg-white font-sora'>
+                <div data-aos="fade-left" data-aos-delay={`${i + 1}00`} key={i} className='p-[28px] mb-8 w-[75%] bg-white font-sora'>
                   {/* <div className='font-bold mb-4 text-[20px]'>{item.title}</div> */}
                   <div>{item.text}</div>
                 </div>
@@ -151,7 +153,7 @@ const Home: NextPage = () => {
             </div>
             {
               problemDetails.solution.map((item , i: number) => (
-                <div key={i} className='p-[28px] mb-8  w-[75%] bg-white font-sora'>
+                <div data-aos="fade-left" data-aos-delay={`${i + 1}00`} key={i} className='p-[28px] mb-8  w-[75%] bg-white font-sora'>
                   {/* <div className='font-bold mb-4 text-[20px]'>{item.title}</div> */}
                   <div>{item.text}</div>
                 </div>
@@ -163,7 +165,10 @@ const Home: NextPage = () => {
       <div className="lg:hidden pt-20">
       {
             ['panel1', 'panel2'].map((item, i: number) => (
-              <Accordion key={i} expanded={expanded === item} onChange={handleChange(item)} elevation={0} className='rounded-none bg-[#000]'>
+              <Accordion
+              data-aos="fade-right"
+              data-aos-delay={`${i + 1}00`}
+              key={i} expanded={expanded === item} onChange={handleChange(item)} elevation={0} className='rounded-none bg-[#000]'>
                 <AccordionSummary
                   expandIcon={<ExpandMoreIcon style={{ color: 'white' }}/>}
                   aria-controls="panel1a-content"
@@ -211,10 +216,16 @@ const Home: NextPage = () => {
             ))
           }
           <div className="flex flex-col px-4 mt-10">
-            <div className=" inline-block mb-4 font-sora text-[24px] text-transparent bg-gradient-to-b from-[#FAFAFA] to-[#aaa5a503] bg-clip-text">
+            <div 
+            data-aos="fade-up"
+            data-aos-delay={`100`}
+            className=" inline-block mb-4 font-sora text-[24px] text-transparent bg-gradient-to-b from-[#FAFAFA] to-[#aaa5a503] bg-clip-text">
             { t('whatAboutTokenizedAsset') }
             </div>
-            <div className='font-sora  text-[16px] text-white'>
+            <div 
+            data-aos="fade-up"
+            data-aos-delay={`200`}
+            className='font-sora  text-[16px] text-white'>
             <Trans components={{
                 linkRef: <a href='./BlowX-WHITEPAPER_V1.pdf' className='underline' download={'BlowX-WHITEPAPER_V1.pdf'} />
               }}>

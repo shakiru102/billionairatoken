@@ -6,6 +6,9 @@ import { configureChains, createConfig, WagmiConfig } from 'wagmi'
 import { arbitrum, mainnet, polygon, bsc  } from 'wagmi/chains'
 import Context from '../context/Context'
 import Script from 'next/script'
+import Aos from 'aos'
+import 'aos/dist/aos.css'
+import { useEffect } from 'react'
 
 const chains = [arbitrum, mainnet, polygon, bsc]
 const projectId = 'f411cba3405901415bd5eddbedde4889'
@@ -19,6 +22,14 @@ const wagmiConfig = createConfig({
 
 
 function MyApp({ Component, pageProps }: AppProps) {
+
+  useEffect(() => {
+  Aos.init({
+    duration: 800,
+    once: false
+  })
+  },[])
+
   return <StyledEngineProvider injectFirst>
             <WagmiConfig config={wagmiConfig}>
                 <Context>

@@ -109,7 +109,7 @@ const RoadMap: FC = () => {
     <>
         <div className='hidden pt-20  md:block mt'>
             <ContainerLayout>
-                    <div className="text-center mb-4 font-detacher text-[20px] md:text-[40px] uppercase text-transparent bg-gradient-to-b from-[#FAFAFA] to-[#aaa5a503] bg-clip-text">
+                    <div data-aos="fade-up" data-aos-delay={`500`} className="text-center mb-4 font-detacher text-[20px] md:text-[40px] uppercase text-transparent bg-gradient-to-b from-[#FAFAFA] to-[#aaa5a503] bg-clip-text">
                         {t('roadMap')}
                     </div>
                     <Timeline position='alternate'>
@@ -121,7 +121,9 @@ const RoadMap: FC = () => {
                                     <TimelineConnector />
                                 </TimelineSeparator>
                                 <TimelineContent>
-                                <RoadMapCard  {...item}/>
+                                    <div data-aos={`fade-${item.position}`} data-aos-delay={`${i + 1}00`}>
+                                    <RoadMapCard  {...item}/>
+                                    </div>
                                 </TimelineContent>
                             </TimelineItem>
                         ))
@@ -134,7 +136,9 @@ const RoadMap: FC = () => {
                 <div className='flex  flex-col gap-6'>
                 {
                     roadMapList.map((item: RoadMapProps, index: number) => (
-                        <RoadMapCard  key={index} {...item}/>
+                        <div data-aos={`fade-${item.position}`} key={index} data-aos-delay={`${index + 1}00`}>
+                        <RoadMapCard  {...item}/>
+                        </div>
                     ))
                 }
                 </div>
