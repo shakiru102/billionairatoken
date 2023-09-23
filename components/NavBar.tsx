@@ -77,7 +77,7 @@ const NavBar: FC<NavBarProps> = ({
           navigations.map((item: NavlinksProps, index: number )=> item.contained ? 
                 (
                     <SolidButton 
-                    
+                    key={index}
                     {...item}
                     handleClick={openPresaleModal}
                     variant='solid'/>
