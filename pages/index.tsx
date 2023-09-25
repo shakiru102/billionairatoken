@@ -135,7 +135,7 @@ const Home: NextPage = () => {
           >
             {
               problemDetails.problems.map((item , i: number) => (
-                <div data-aos="fade-left" data-aos-delay={`${i + 1}00`} key={i} className='p-[28px] mb-8 w-[75%] bg-white font-sora'>
+                <div data-aos="fade-left" data-aos-delay={`${i + 1}00`} key={i} className='p-[28px] mb-2 w-[75%] bg-white font-sora'>
                   {/* <div className='font-bold mb-4 text-[20px]'>{item.title}</div> */}
                   <div>{item.text}</div>
                 </div>
@@ -153,7 +153,7 @@ const Home: NextPage = () => {
             </div>
             {
               problemDetails.solution.map((item , i: number) => (
-                <div data-aos="fade-left" data-aos-delay={`${i + 1}00`} key={i} className='p-[28px] mb-8  w-[75%] bg-white font-sora'>
+                <div data-aos="fade-left" data-aos-delay={`${i + 1}00`} key={i} className='p-[28px] mb-2  w-[75%] bg-white font-sora'>
                   {/* <div className='font-bold mb-4 text-[20px]'>{item.title}</div> */}
                   <div>{item.text}</div>
                 </div>
@@ -166,15 +166,13 @@ const Home: NextPage = () => {
       {
             ['panel1', 'panel2'].map((item, i: number) => (
               <Accordion
-              data-aos="fade-right"
-              data-aos-delay={`${i + 1}00`}
               key={i} expanded={expanded === item} onChange={handleChange(item)} elevation={0} className='rounded-none bg-[#000]'>
                 <AccordionSummary
                   expandIcon={<ExpandMoreIcon style={{ color: 'white' }}/>}
                   aria-controls="panel1a-content"
                   id="panel1a-header"
                 >
-                  <Typography className='font-sora block capitalize font-bold mx-auto  rounded-none text-white'>{ i == 0 ? t('problemSloving'): t('solutionProviding')}</Typography>
+                  <Typography className='font-sora block capitalize font-bold  rounded-none text-white'>{ i == 0 ? t('problemSloving'): t('solutionProviding')}</Typography>
                 </AccordionSummary>
                 <AccordionDetails>
                 {
@@ -183,7 +181,7 @@ const Home: NextPage = () => {
                  <Typography>
                   {
                     problemDetails.problems.map((item: any , i: number) => (
-                      <div key={i} className='p-[28px] relative mb-4 bg-white font-sora'>
+                      <div key={i} className='p-[28px] relative mb-2 bg-white font-sora'>
                         {/* <div className='font-bold mb-4 text-[20px]'>{item.title}</div> */}
                         <div>{item.text}</div>
                         <div className='absolute bottom-0 left-0 w-full  h-[10px] bg-black' />

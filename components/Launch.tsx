@@ -31,7 +31,7 @@ import SelectInput from './utils/SelectInput'
 const Launch = () => {
 
     const {t} = useTranslation()
-
+    const [text, setText] = useState('CEX listing')
     const launch: LaunchCardProps[] = [
       {
         buttons: [
@@ -70,7 +70,10 @@ const Launch = () => {
             handleClick: () => setCommunity(true),
             classnames: "",
           },
-          { text: t("blowPreSaleBtn"), variant: "solid", classnames: "", handleClick: () => setCexlisting(true), },
+          { text: t("blowPreSaleBtn"), variant: "solid", classnames: "", handleClick: () => {
+            setCexlisting(true)
+            setText('Presale')
+          }, },
         ],
         imageCols: "3",
         images: [
@@ -107,7 +110,10 @@ const Launch = () => {
           {
             text: t("publicSaleBtn"),
             variant: "solid",
-            handleClick: () => setCexlisting(true),
+            handleClick: () => {
+              setCexlisting(true)
+              setText('Cex Listing')
+            },
           },
         ],
         imageCols: "3",
@@ -171,7 +177,7 @@ const Launch = () => {
       <CoinModal
         open={cexlisting}
         onClose={() => setCexlisting(false)}
-        dialogText="Subscribe to get latest updates about Blow CEX listing."
+        dialogText={`Subscribe to get latest updates about Blow ${text}.`}
         dialogTitle="Coming Soon..."
         dialogChildren={
           <Formik
